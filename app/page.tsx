@@ -1,47 +1,105 @@
+'use client';
+
 import Script from 'next/script';
-import dic, { acronymToWord, Formation } from '../lib/words';
-import { letters, toIpa } from '../lib/write';
+import dic, { acronymToWord, Formation, translate, Value } from '../lib/words';
+import { glidise, letters, toIpa } from '../lib/write';
 import { dateToObject } from '../submodules/shared/date';
 import Head from 'next/head';
+import { replaceEach } from '../submodules/shared/string';
 
 const name = dic.get('_self').token;
 
-const Translate = (props) => (
-  <span className="target">
-    {props.children
-      .split(
-        /(?<![$_a-z]+(\*#)?)(?=[$_a-z]+(\*#)?)|(?<=[$_a-z]+(\*#)?)(?![$_a-z]+(\*#)?)/g
-      )
-      .filter((it, i, self) =>
-        dic.get(self?.[i + 1])?.token.startsWith('-') ? it.trimEnd() : it
-      )
-      .map((it, i) => {
-        const value = dic.get(it);
-        return dic.has(it) ? (
-          <span key={i}>
-            <ruby>
-              {value.token}
-              <rt>{it}</rt>
-            </ruby>
-            {entry(it)}
-          </span>
-        ) : it.startsWith('$') ? (
-          it.substring(1)
-        ) : i === 0 && it.startsWith('?') ? (
-          it
-        ) : (
-          <span key={i} style={{ color: 'lightgray' }}>
-            {it}
-          </span>
-        );
-      })}
-  </span>
+const speak = (text) => {
+  const spoken = replaceEach(glidise(text), [
+    [/(?<=[b-df-hj-np-tv-xz]) *(?=[aiueo])/g, ''],
+    [/(?<=[b-df-hj-np-tv-xz])(?= [b-df-hj-np-tv-xz]|$)/g, 'ъ'],
+    //[/(?<=[fhkpstx])ъ$/g, ''],
+
+    [/a/g, 'а'],
+    [/b/g, 'б'],
+    [/c/g, 'г'],
+    [/d/g, 'д'],
+    [/e/g, 'е'],
+    [/f/g, 'ф'],
+    [/g/g, 'нг'],
+    [/h/g, 'х'],
+    [/i/g, 'и'],
+    [/j/g, 'ь'],
+    [/k/g, 'к'],
+    [/l/g, 'л'],
+    [/m/g, 'м'],
+    [/n/g, 'н'],
+    [/o/g, 'о'],
+    [/p/g, 'п'],
+    [/q/g, ''],
+    [/r/g, 'р'],
+    [/s/g, 'с'],
+    [/t/g, 'т'],
+    [/u/g, 'у'],
+    [/v/g, 'в'],
+    [/w/g, 'у'],
+    [/x/g, 'ш'],
+    [/y/g, ''],
+    [/z/g, 'з'],
+    [/ʒ/g, 'ж'],
+
+    [/ьа/, 'я'],
+    [/ьу/, 'ю'],
+    [/ьо/, 'ё'],
+  ]);
+  console.log(spoken);
+
+  const u = new SpeechSynthesisUtterance(spoken);
+  u.lang = 'bg';
+  u.rate = 0.75;
+  u.voice =
+    speechSynthesis
+      .getVoices()
+      .filter(
+        (it) =>
+          it.lang.startsWith(u.lang) &&
+          (it.voiceURI.startsWith('com.apple.voice') ||
+            it.name.includes('Google'))
+      )[0] ?? speechSynthesis.getVoices().filter((it) => it.lang === u.lang)[0];
+  window.speechSynthesis.speak(u);
+};
+
+const Button = (props: { children: string }) => (
+  <button onClick={() => speak(props.children)}>🗣</button>
 );
 
+const Translate = (props: { children: string }) => {
+  return (
+    <span className="target">
+      {props.children
+        .split(/(?<![$_a-z*#])(?=[$_a-z])|(?<=[$_a-z*#]?)(?![$_a-z])/g)
+        .map((it, key) => {
+          return dic.has(it) ? (
+            <span key={key} data-token={dic.get(it).token}>
+              <ruby>
+                {dic.get(it).token}
+                <rt>{it}</rt>
+              </ruby>
+              {entry(it)}
+            </span>
+          ) : it.startsWith('$') ? (
+            <span key={key} style={{ fontStyle: 'italic' }}>
+              {it.substring(1)}
+            </span>
+          ) : (
+            <span key={key} style={{ color: 'lightgray' }}>
+              {it}
+            </span>
+          );
+        })}
+    </span>
+  );
+};
+
 const highlight = (meant: string) =>
-  meant.split(/(?=@[nad])|(?<=@[nad])/g).map((it, i) =>
+  meant.split(/(?=@[nad])|(?<=@[nad])/g).map((it, key) =>
     /^@[nad]$/.test(it) ? (
-      <span key={i} className="term">
+      <span key={key} className="term">
         {it.substring(1)}
       </span>
     ) : (
@@ -52,11 +110,14 @@ const highlight = (meant: string) =>
 const samples = (entries: (string | [string, string])[]) => (
   <table className="samples">
     <tbody>
-      {entries.map((it, i) => {
+      {entries.map((it, key) => {
         if (typeof it === 'string') {
           const { token, klass, formation, ja, en } = dic.get(it);
           return (
-            <tr>
+            <tr key={key}>
+              <td>
+                <Button>{token}</Button>
+              </td>
               <td>
                 {klass
                   .replace(/^/, formation === Formation.Complex ? '複合' : '')
@@ -70,6 +131,9 @@ const samples = (entries: (string | [string, string])[]) => (
         } else
           return (
             <tr>
+              <td>
+                <Button>{translate(it[0])}</Button>
+              </td>{' '}
               <td>文</td>
               <td colSpan={2}>
                 <Translate>{it[0]}</Translate>
@@ -86,7 +150,7 @@ const entry = (key) => {
   const { token, klass, formation, ja, en } = dic.get(key);
   return (
     <span className="entry">
-      <span className="target">{token}</span>
+      <button onClick={() => speak(token)}>{token}</button>{' '}
       {toIpa(token) === token ? (
         ''
       ) : (
@@ -115,6 +179,7 @@ export default () => (
       async={true}
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4331089007895019"
       crossOrigin="anonymous"
+      strategy="afterInteractive"
     ></Script>
     <ins
       className="adsbygoogle"
@@ -124,7 +189,7 @@ export default () => (
       data-ad-format="auto"
       data-full-width-responsive="true"
     ></ins>
-    <Script>{`(adsbygoogle = window.adsbygoogle || []).push({});`}</Script>
+    <Script strategy="afterInteractive">{`(adsbygoogle = window.adsbygoogle || []).push({});`}</Script>
 
     <h1>sumi-lang-2024 (草案)</h1>
 
@@ -152,27 +217,12 @@ export default () => (
         </a>
         が作成する人間言語.
         <br />
-        主動客-對格言語.
+        孤立語.
+        <br />
+        s-v-o言語.
+        <br />
+        jbo語が統語に, gem語が能記に影響した.
       </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>が影響した</th>
-            <th>に影響した</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>jbo</td>
-            <td>統語</td>
-          </tr>
-          <tr>
-            <td>gem</td>
-            <td>詞素と音の對應</td>
-          </tr>
-        </tbody>
-      </table>
     </section>
 
     <section>
@@ -192,7 +242,9 @@ export default () => (
           <tr>
             <th>鼻</th>
             <td></td>
-            <td></td>
+            <td>
+              g <span className="ipa">ŋ</span>
+            </td>
             <td></td>
             <td>n</td>
             <td>m</td>
@@ -210,7 +262,7 @@ export default () => (
           <tr>
             <th>無聲破裂</th>
             <td>
-              <span className="ipa">ʔ</span>
+              q <span className="ipa">ʔ</span>
             </td>
             <td>k</td>
             <td></td>
@@ -240,7 +292,7 @@ export default () => (
             </td>
             <td>z</td>
             <td rowSpan={2}>
-              v <span className="ipa">v,β,w,ʋ</span>
+              v <span className="ipa">v,β,ʋ,w</span>
             </td>
           </tr>
           <tr>
@@ -257,7 +309,7 @@ export default () => (
             <td></td>
             <td>a</td>
             <td>i</td>
-            <td></td>
+            <td>y</td>
             <td>u</td>
           </tr>
           <tr>
@@ -276,23 +328,17 @@ export default () => (
       {/*<p>‹j›, ‹v› は詞頭と母音間で摩擦音, それ以外で接近音を指す.</p>*/}
 
       <p>
-        <span className="ipa">ʔ</span>を指す字は無い.
-        <br />
-        詞頭の母音の前に現れ得る.
-      </p>
-
-      <p>
         <span className="ipa">ǝ</span>を指す字は無い.
         <br />
-        詞尾の子音の後に現れ得る.
+        詞末子音に陰に後置する.
       </p>
     </section>
 
     <section>
       <h2>字の名</h2>
       <div className="letters">
-        {'aäbcdeǝfghijklmnoöpqrstuvwxyz'.split('').map((l, i) => (
-          <div key={i}>
+        {'aäbcgdeǝfzhijklmnoöpqrstuvywx'.split('').map((l, key) => (
+          <div key={key}>
             {letters.includes(l)
               ? `‹${l}›`
               : l
@@ -317,15 +363,14 @@ export default () => (
         動詞は事物の關係を指す.
       </p>
       <p>
-        jpn語 例文 ‹猫が星を見る› では主要な關係 ‹…が…を見る› が事物
-        猫と星を結ぶ.
+        jpn語文 ‹猫が星を見る› では主要な關係 ‹…が…を見る› が事物 猫と星を結ぶ.
       </p>
       <p>
         ‹猫が星を見る› と ‹星が猫を見る› が指す物は違ふ.
         <br />
         關係の中の空欄は固有の機能を持ち, 一般には交換しない.
         <br />
-        空欄の, 他の空欄と區別される機能を<dfn>格 (case)</dfn> と言ふ.
+        空欄の, 他の空欄と區別される機能を<dfn>格 (case)</dfn> と呼ぶ.
       </p>
 
       {samples(['cat', 'see', 'give'])}
@@ -342,8 +387,8 @@ export default () => (
 
       <pre>
         {`
-see─┬n──
-    └a──`.trim()}
+see┬n─(something)
+   └a─(something)`.trim()}
       </pre>
     </section>
 
@@ -398,7 +443,7 @@ see─┬n──
       <p>
         隣接する動詞は主格を共有して兩立する.
         <br />
-        これを<dfn>同格 (apposition)</dfn> と言ふ.
+        これを<dfn>同格 (apposition)</dfn> と呼ぶ.
       </p>
 
       <p>同格は主格 ‹何かが› を具體化する.</p>
@@ -418,7 +463,7 @@ see─┬n──
   cat──n┐
 black──n┤
   see─┬n┘
-      └a──`.substring(1)}
+      └a─`.substring(1)}
       </pre>
     </section>
 
@@ -427,7 +472,7 @@ black──n┤
       <p>
         格に對應する<dfn>前置詞 (preposition)</dfn>が有る.
       </p>
-      {samples(['by', 'because', 'him', 'to', 'with', 'ly'])}
+      {samples(['by', 'him', 'to', 'at', 'because', 'with', 'ly'])}
 
       <p>
         二個の動詞の主格が等しい事を同格が指す樣に,
@@ -538,8 +583,8 @@ water──n-a┘`.substring(1)}
     <section>
       <h2>逐次と同期</h2>
       <p>
-        有る動詞が指す事象の始點の後に別の動詞が指す事象の始點が有る事を
-        <dfn>逐次 (consecution)</dfn> が指す
+        二個の動詞が指す事象の始點が前後する事を<dfn>逐次 (consecution)</dfn>{' '}
+        が指す
       </p>
       {samples([
         'sequentially',
@@ -548,7 +593,7 @@ water──n-a┘`.substring(1)}
       ])}
 
       <p>
-        有る動詞が指す事象と別の動詞が指す事象が時間に共有點を持つ事を
+        二個の動詞が指す事象が時間に共有點を持つ事を
         <dfn>同期 (synchronisation)</dfn> が指す.
       </p>
       {samples([
@@ -597,11 +642,16 @@ water──n-a┘`.substring(1)}
 
     <section>
       <h2>名</h2>
-      <p>言語外の字列を動詞化する.</p>
+      <p>
+        言語外の字列を<dfn>借用 (loan)</dfn>して動詞化する.
+      </p>
 
       {samples([
         '_loan',
-        ['done _loan $sumi do make him _self', `sumiは${name}を作ってゐる`],
+        [
+          'person _loan $sumi do make him done speak _loan _self',
+          `人sumiは言語${name}を作ってゐる`,
+        ],
       ])}
     </section>
 

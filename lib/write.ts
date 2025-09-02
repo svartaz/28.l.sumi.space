@@ -1,30 +1,37 @@
 import { replaceEach } from '../submodules/shared/string';
 
-const consonants = 'nmcdbktphxsfjzvrl';
+const consonants = 'gnmcdbqktphxsfjzvrl';
 const vowels = 'aiueo';
 export const letters = consonants + vowels;
 
+export const glidise = (it) =>
+  replaceEach(it, [
+    [/(?<=[bcdfgklmnpqrstvxz])j(?=[aeiouy])/, 'J'],
+    [/(?<=[bcdfgjklmnpqrstxz])v(?=[aeiouy])/, 'w'],
+    [/j/g, 'ʒ'],
+    [/J/g, 'j'],
+  ]);
+
 export const toIpa = (s: string): string =>
-  s.replace(new RegExp(`[-${letters}]+`, 'g'), (it) =>
-    replaceEach(it.toUpperCase(), [
-      [/^(?=[AIUEO])/g, 'ʔ'],
-      [/(?<=[CDBJVZL])$/, 'ə'],
-      [/-/g, ''],
+  s
+    .replace(new RegExp(`[${letters}]+`, 'g'), (it) =>
+      replaceEach(glidise(it).toUpperCase(), [
+        [/(?<![AIUEO])$/, 'ə'],
 
-      [/N(?![AIUEO])/g, '\u0303'],
-      [/C/g, 'G'],
-      [/X/g, 'ʃ'],
+        [/G/g, 'ŋ'],
+        [/N(?![AIUEOə])/g, '\u0303'],
+        [/C/g, 'g'],
+        [/Q/g, 'ʔ'],
+        [/X/g, 'ʃ'],
+        [/.+/, (it) => it.toLowerCase()],
 
-      [/(?<!^|[AIUEO])J(?=[AU])/, 'j'],
-      [/(?<!^|[AIUEO])V(?=[AI])/, 'w'],
-      [/J/g, 'ʒ'],
-      [/.+/, (it) => it.toLowerCase()],
-
-      [/n(j|(?=i))/g, 'ɲ'],
-      [/h(j|(?=i))/g, 'ç'],
-      [/l(j|(?=i))/g, 'ʎ'],
-    ]).normalize('NFC')
-  );
+        // combine
+        [/n(j|(?=i))/g, 'ɲ'],
+        [/h(j|(?=i))/g, 'ç'],
+        [/l(j|(?=i))/g, 'ʎ'],
+      ]).normalize('NFC')
+    )
+    .replace(/ə (?=[aiueo])/g, '');
 
 export const invalid = (word: string): string | null => {
   for (const [item, pattern] of [
