@@ -1,27 +1,33 @@
 {
-  "name": "2024-322",
+  "name": "2024-11-18",
   "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "prettier": {
-    "singleQuote": true,
-    "semi": true
+    "lint": "oxlint --type-aware",
+    "format": "oxfmt"
   },
   "devDependencies": {
-    "@types/node": "^24.3.0",
-    "@types/react": "^19.1.9",
-    "next": "^15.4.5",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "sass": "^1.89.2",
-    "typescript": "^5.9.2"
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "next": "^16.0.3",
+    "oxfmt": "^0.21.0",
+    "oxlint": "^1.36.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "sass": "^1.97.1",
+    "typescript": "^5.9.3"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }

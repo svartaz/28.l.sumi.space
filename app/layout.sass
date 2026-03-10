@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap')
+@font-face
+  font-family: Unifont
+  src: url(https://unifoundry.com/pub/unifont/unifont-17.0.03/font-builds/unifont-17.0.03.otf)
+  font-display: swap
 
 *
   box-sizing: border-box
 
 body
-  font-family: 'Zen Maru Gothic', "Noto Sans", serif
+  font-family: serif
   inline-size: min(100%, 56rem)
   margin-inline: auto
   padding: 1rem
@@ -23,16 +26,7 @@ pre
   margin-inline: auto
   background-color: gainsboro
   padding: 1rem
-  font-size: large
-  font-family: 'Courier New', monospace
-
-ruby
-  border-radius: .25em
-  rt
-    color: darkgray
-
-  &:hover
-    background-color: gainsboro
+  font-family: "Noto Sans Mono", monospace
 
 .entry
   block-size: fit-content
@@ -66,7 +60,7 @@ table
   td, th
     padding: .25rex 1rex
 
-  thead:not(.h)
+  thead
     th
       writing-mode: vertical-lr
       text-align: end
@@ -78,19 +72,12 @@ table
       text-align: end
 
 .term
-  padding-inline: .125rem
-  border-radius: .25rem
+  font: smaller
+  border-radius: 3px
   border: 1px solid
   color: darkgray
 
-.target
-  //padding-inline: .25rem
-  //border-radius: .25rem
-  //background-color: lavender
-
 .ipa
-  font-family: 'Noto Sans', sans-serif
-  font-weight: 300
   color: darkgray
   &:before
     content: '['
@@ -110,6 +97,14 @@ table
 .samples
   td
     white-space: pre-wrap
+
+  ruby
+    border-radius: .25em
+    rt
+      color: darkgray
+
+    &:hover
+      background-color: gainsboro
 
 .progress
   font-size: xx-small
