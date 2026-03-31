@@ -17,7 +17,7 @@ export const phraseToIpa = (phraseToIpa: string): string =>
   phraseToIpa.replace(new RegExp(`[${letters}]+`, "g"), (word) => wordToIpa(word));
 
 const checkSonority = (word: string): boolean => {
-  const clusterGin = /^[hxsfjzv]?[cdbktp]?[hxsfjzv]?[gnm]?[rl]?$/;
+  const clusterGin = /^[hxsfjzv]?[cdbktp]?[hxsfjzv]?[gnm]?[rl]?[jv]?$/;
   const clusterEnd = /^[rl]?[gnm]?[hxsfjzv]?[cdbktp]?[hxsfjzv]?$/;
   const clusterMid =
     /^[hxsfjzv]?[cdbktp]?[hxsfjzv]?[gnm]?[rl]?[gnm]?[hxsfjzv]?[cdbktp]?[hxsfjzv]?$/;
@@ -60,13 +60,8 @@ const state = {
   o: "gnmcdbktphxsfjzvrl",
 };
 
-const validateWord = (word: string) => {
-  let previous = "^";
-  for (const current of [...word]) {
-  }
-};
-
 export const wordIsInvalid = (word: string, klass?: Klass): string | undefined => {
+  if (word === "") return "empty";
   for (const [name, pattern] of [
     ["empty", /^$/],
     ["repeat", /(.)\1/],
@@ -77,24 +72,24 @@ export const wordIsInvalid = (word: string, klass?: Klass): string | undefined =
     ["4 consonants", /[gnmcdbktphxsfjzvrl]{4,}/],
 
     ["beginner vowel", /^[ieaou]/],
-    ["g", /g[gnmdbtphxsfjzvrl]/],
+    ["g", /g[gnmdbtphxsfzrl]/],
     ["n", /n[gnmcbkpr]/],
-    ["m", /m[gnmcdkthxsfjzvrl]/],
-    ["c", /c([gnmcdbktphxsfjzv])/],
-    ["d", /d([gnmcdbktphxsfvl])/],
-    ["b", /b([gnmcdbktphxsfjzv])/],
-    ["k", /k[gcdbkhjzv]/],
-    ["t", /t[ncdbthjzvl]/],
-    ["p", /p[mcdbphjzv]/],
-    ["h", /h[gnmcdbktphxsfjzvrl]/],
-    ["x", /x[cdbhxsjzvr]/],
-    ["s", /s[cdbhxsjzvr]/],
-    ["f", /f[cdbhfjzv]/],
-    ["j", /j([gnmcdbktphxsfjzvrl])/],
+    ["m", /m[gnmcdkthxsfzvrl]/],
+    ["c", /c([gnmcdbktphxsfz])/],
+    ["d", /d([gnmcdbktphxsfl])/],
+    ["b", /b([gnmcdbktphxsfzv])/],
+    ["k", /k[gcdbkhz]/],
+    ["t", /t[ncdbthzl]/],
+    ["p", /p[mcdbphzv]/],
+    ["h", /h[gnmcdbktphxsfzrl]/],
+    ["x", /x[cdbhxsjzr]/],
+    ["s", /s[cdbhxszr]/],
+    ["f", /f[cdbhfzv]/],
+    ["j", /j([gnmcdbktphxsfjzrl])/],
     ["z", /z([gnmcdbktphxsfjzvrl])/],
-    ["v", /v([gnmcdbktphxsfjzvrl])/],
+    ["v", /v([gnmcdbktphxsfzvrl])/],
     ["r", /r[hxsrl]/],
-    ["l", /l[hxsjzrl]/],
+    ["l", /l[hxszrl]/],
   ] as [string, RegExp][])
     if (pattern.test(word)) return name;
 

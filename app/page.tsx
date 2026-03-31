@@ -39,13 +39,13 @@ const TokenIpa = ({ token }: { token: string }) => {
 };
 
 const Entry = (props: { children: string }) => {
-  const { token, klass, formation, ja, en } = dic.get(props.children);
+  const { token, klass, formation, ja } = dic.get(props.children);
   return (
     <span className="entry" style={phraseIsInvalid(token) ? { backgroundColor: "pink" } : {}}>
       <ButtonSpeak text={token} />
       <TokenIpa token={token} />: {formatKlass(klass, formation)}.
       <br />
-      <Highlight>{ja ?? en ?? ""}</Highlight>
+      <Highlight>{ja}</Highlight>
     </span>
   );
 };
@@ -83,7 +83,7 @@ const Translate = (props: { children: string }) => (
 
 const Highlight = ({ children }: { children: string }) => (
   <>
-    {children.split(/(@[nad])/g).map((it, key) =>
+    {(children ?? "").split(/(@[nad])/g).map((it, key) =>
       /^@[nad]$/.test(it) ? (
         <span key={key} className="term">
           {replaceEach(it.substring(1), [
@@ -104,7 +104,7 @@ const samples = (entries: (string | [string, string])[]) => (
     <tbody>
       {entries.map((it, key) => {
         if (typeof it === "string") {
-          const { token, klass, formation, ja, en } = dic.get(it);
+          const { token, klass, formation, ja } = dic.get(it);
           const ipa = wordToIpa(token);
           return (
             <tr key={key}>
@@ -115,7 +115,7 @@ const samples = (entries: (string | [string, string])[]) => (
               <td className="target">{token}</td>
               <td className="ipa">{ipa}</td>
               <td>
-                <Highlight>{ja ?? en}</Highlight>
+                <Highlight>{ja}</Highlight>
               </td>
             </tr>
           );
@@ -124,7 +124,7 @@ const samples = (entries: (string | [string, string])[]) => (
             <tr key={key}>
               <td>
                 <ButtonSpeak text={translate(it[0])}>🗣</ButtonSpeak>
-              </td>{" "}
+              </td>
               <td>文</td>
               <td colSpan={2}>
                 <Translate>{it[0]}</Translate>
@@ -191,9 +191,9 @@ export default () => (
         <br />
         孤立語.
         <br />
-        s-v-o言語.
+        主-述-客言語.
         <br />
-        jbo語が文法へ, gem語が語形へ影響した.
+        文法はjbo語を參照した. gem諸語から能記を借用した.
       </p>
     </section>
 
@@ -260,15 +260,13 @@ export default () => (
           <tr>
             <th>接近</th>
             <td></td>
-            <td>
-              i <Ipa>j</Ipa>
-            </td>
+            <td>j</td>
             <td>
               r <Ipa>ɾ</Ipa>
               <br />l
             </td>
             <td>
-              u <Ipa>w</Ipa>
+              v <Ipa>w</Ipa>
             </td>
           </tr>
           <tr>
@@ -303,13 +301,7 @@ export default () => (
         <tbody>
           {"aäbcgdeǝfzhijklmnoöpqrstuvywx".split("").map((p, i) => (
             <tr key={i} style={letters.includes(p) ? {} : { color: "darkgray" }}>
-              <td>
-                {p
-                  .replace(/ä/, "ä, æ")
-                  .replace(/g/, "g, ŋ")
-                  .replace(/ö/, "ö, œ, ø")
-                  .replace(/y/, "y")}
-              </td>
+              <td>{p.replace(/ä/, "ä, æ").replace(/ö/, "ö, œ, ø").replace(/y/, "y")}</td>
               <td>{acronymToWord(p.toUpperCase())}</td>
             </tr>
           ))}
@@ -332,11 +324,11 @@ export default () => (
             格<rt>case</rt>
           </ruby>
         </dfn>
-        は空欄を區別する.
+        は空欄の區別なる.
       </p>
 
       <p>
-        一個の動詞は述部を成し, 一個の述部は文を成す.
+        一個の動詞は述部を構成し, 一個の述部は文を構成する.
         <br />
         この時に, 動詞の空欄に適當な項が入ると解釋する.
       </p>
@@ -549,7 +541,7 @@ water──n-a┘`.substring(1)}
     <section>
       <h2>複文</h2>
       <p>
-        己格の受動態を用ゐては文 ‹…である› から動詞 ‹<Highlight>@nは…である事である</Highlight>›
+        己格の受動態を用ゐては文 ‹…である› から動詞 ‹<Highlight>$nは…である事である</Highlight>›
         を作り得る.
       </p>
       {samples([
@@ -663,8 +655,8 @@ water──n-a┘`.substring(1)}
     <section>
       <h2>詞彙 ({dic.size})</h2>
       <div className="words">
-        {[...dic.keys()].map((key) => (
-          <Entry>{key}</Entry>
+        {[...dic.keys()].map((key, i) => (
+          <Entry key={i}>{key}</Entry>
         ))}
       </div>
     </section>
