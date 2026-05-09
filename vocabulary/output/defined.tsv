@@ -1,0 +1,396 @@
+gyf		less_than	2024-08-31	numeral	…未滿. <
+gun	xunre	red	2024-02-13	verb	$nは赤い
+gut		back	2024-06-14	verb	$nは$aの逆行
+guf		digest	2024-02-13	verb	$nは$aを消化する
+ges	berti	north	2024-08-24	verb	$nは$aより北 (反時計回りする極點) へ近い
+gaf	jamfu	foot	2024-11-24	verb	$nは足
+got		deny	2024-08-30	verb	$nは$aを否定 (に矛盾) する
+gos		_exp	2024-08-24	numeral	冪乘
+gwi		_log	2024-08-24	numeral	對數
+gwin	limna	swim	2024-08-19	verb	$nは$a (流體) を泳ぐ
+gwe		_mod	2024-08-24	numeral	剩餘
+gwet		nominative	2024-12-23	verb	$nは主格
+gwat	ja'au	up	2024-09-29	numeral	增加量
+gwar	darca	go	2024-08-26	verb	$nは$a (終點, 到達點) へ往く
+ni	ni	how_many	2024-02-13	numeral	數量疑問. 幾つ
+nys	cnita	below	2024-02-13	verb	$nは$aより下に有る (重心へ近い)
+nyr	nanca	year	2024-08-30	verb	$nは$a (惑星) の年 (公轉周期)
+nu		clause	2024-10-05	verb	$nは節
+nuf	nupre	promise	2024-08-19	verb	$nは$aを約束する
+net	nejni	energy	2024-08-31	verb	$nの能源は$a
+nef	cnebo	neck	2024-02-13	verb	$nは首
+nat	snanu	south	2025-03-01	verb	$nは$aよりの南 (時計回りする極點) へ近い
+nax	narju	orange	2024-02-13	verb	$nは橙色を呈する
+nar	nazbi	nose	2024-02-13	verb	$nは鼻
+no	no	zero	2024-02-13	numeral	0
+nox	nakni	man	2024-08-19	verb	$nは$a (精巢, 雄蕊) を持つ (男)
+njo	no'o	level	2024-09-29	numeral	普通. 標準
+njux	ninmu	woman	2024-08-19	verb	$nは$a (卵巢, 雌蕊) を持つ (女)
+mi	mi	i	2024-02-13	verb	$nは我
+mit	minde	command	2024-09-29	verb	$nは$aを命令する (要求する, 推奬する)
+myf	jmive	live	2024-02-13	verb	$nは生く (生命=有)
+mu	mu	five	2024-02-13	numeral	5
+mut	smuci	spoon	2024-12-23	verb	$nは匙
+mux	munje	world	2024-02-13	verb	$nは世界 (宇宙, 時空間)
+muf	muvdu	move	2024-08-31	verb	$nは動く (變動する, 動的)
+mex	cmene	name	2024-07-28	verb	$nは$aを意味する (の名である)
+ma	ma	who	2024-02-13	verb	$nは誰, 何
+mo	moi	th	2024-08-02	other	數に後置し序數を指す. $nは第…
+mox	mokca	point	2024-10-01	verb	$nは點 (位置)
+mjaf	mabru	mammal	2024-02-13	verb	$nは哺乳綱動物
+mjot	morsi	die	2024-08-24	verb	$nは死ぬ (生命=0)
+cit	jgira	pride	2024-09-10	verb	$nは$aを誇る (矜恃=+)
+cu		if_do	2025-05-27	preposition	叙想 現在
+cur	gutra	womb	2024-09-22	verb	$nは前立腺 (子宮)
+cex	gleki	glad	2024-08-02	verb	$nは$aを喜ぶ
+cer	genja	root	2024-09-02	verb	$nは根
+ca		done	2024-02-13	preposition	受動態. 前置詞と動詞に前置し, 動詞の同格を前置詞に對應する格に作用させる. 對格前置詞は省略し得る
+cas	gapci	gas	2024-02-13	verb	$nは氣體
+cjat	ractu	hare	2024-02-13	verb	$nは兔 (兔形目)
+cjas	ganse	feel	2024-02-13	verb	$nは$a (刺戟) を感ずる
+cjus	gusni	light	2024-02-13	verb	$nは光 (電磁波)
+cwe		begin	2024-05-26	preposition	開始相. …し始める
+cwer	gerku	dog	2024-02-13	verb	$nは犬 (犬屬)
+cwa		if_did	2025-05-27	preposition	叙想 過去
+cwax	xabju	dwell	2024-12-20	verb	$nは$a (家) に居住する
+cwas	gapru	above	2024-02-13	verb	$nは$aより上に有る (重心へ遠い)
+di		_add	2024-02-13	numeral	加算. +
+din	jirna	horn	2024-02-13	verb	$nは角
+dix	dikca	electric	2024-08-31	verb	$nの電荷は$a
+dis	jimca	limb	2024-02-13	verb	$nは肢 (腕, 脚, 枝)
+dyn	dacti	thing	2024-02-13	verb	$nは物理的存在物 (物體)
+dyr	darno	far	2024-08-08	verb	$nは$aから遠い
+dun	dunda	give	2024-02-13	verb	$nは$aを$dへ與ふ
+dus	sidju	help	2024-06-18	verb	$nは$aを助ける (支援する)
+duf	dunra	winter	2024-08-30	verb	$nは$a (惑星) の冬 (最も寒い季節)
+dur	cadzu	walk	2024-06-18	verb	$nは$aを步く
+de	de'a	rest	2025-08-05	preposition	停止相. …し已んでゐる
+den	denci	tooth	2024-02-13	verb	$nは齒牙
+der	djedi	day	2024-08-19	verb	$nは$a (惑星) の日 (自轉周期)
+das	dansu	dance	2024-02-13	verb	$nは$a (振り付け) を踊る
+do		at	2025-08-31	preposition	處格. …にて
+dof	danfu	answer	2024-07-28	verb	$nはを$aを$dへ答ふ
+dwi	do	thou	2024-02-13	verb	$nは汝
+dwin	jdini	money	2024-08-25	verb	$nは金 (貨幣, 紙幣, 硬貨)
+dwen	denmi	dense	2024-07-15	verb	$nは高密度
+dwan	danmo	smoke	2024-09-16	verb	$nは煙 (氣體中の固體または液體の粒子)
+dwax	darxi	hit	2024-11-23	verb	$nは$aを打つ (毆る, 蹴る)
+bi	bi	eight	2024-02-13	numeral	8
+bif	jibni	near	2024-08-08	verb	$nは$aへ近い
+byf	balvi	after	2024-02-13	verb	$nは$aの未來に有る (時間方向で大きい)
+buf	bumru	fog	2024-08-19	verb	$nは霧
+bur	ciblu	blood	2024-07-29	verb	$nは血
+ba	ba'o	already	2025-08-05	preposition	已然相. 既に
+baf	banfi	amphibia	2024-02-13	verb	$nは兩棲綱に屬する
+bo		by	2024-02-13	preposition	主格. …が
+box	bongu	bone	2024-02-13	verb	$nは骨
+bof	betfu	belly	2024-09-22	verb	$nは腹
+bjat	bakni	cow	2024-02-13	verb	$nは牛 (牛族)
+bjax	bajra	run	2024-06-18	verb	$nは$aを走る (驅ける)
+bjaf	bapli	force	2024-10-01	verb	$nは力
+bjot	batci	bite	2024-08-24	verb	$nは$aを嚙む
+bjun	djuno	know	2024-02-13	verb	$nは$a (事象, 存在) を知る
+kyn	kanpe	expect	2024-09-10	verb	$nは$aを豫期する (意外性=低)
+kyx	klaku	weep	2024-02-13	verb	$nは$a (涙) を泣く
+kus	kuspe	interval	2024-10-01	verb	$nは區間 (容積, 領域)
+kex	kecti	pity	2024-09-10	verb	$nは$aを憐れむ (に同情する)
+ker	ckeji	shame	2024-09-10	verb	$nは$aを恥づ (矜恃=-)
+ko	ko'a	he	2024-02-13	verb	$nは彼, あれ, それ, これ
+kon	kanba	goat	2024-02-13	verb	$nは山羊 (山羊屬)
+kot	kanro	healthy	2024-08-24	verb	$nは健康
+kja		recover	2024-12-24	verb	$nは恢復する
+kjax	katna	cut	2024-11-21	verb	$nは$aを切る (斷つ)
+kjox		rod	2024-07-28	verb	$nは棒 (杖, 棍)
+kjut	kunti	empty	2024-08-02	verb	$nは$aを缺く (空)
+kjux	ciska	write	2024-06-14	verb	$nはを$a (表現) を書く
+kjur	xutla	smooth	2024-09-26	verb	$nは$aに對して滑らか
+kwix	ckini	family	2025-02-08	verb	$nは$aの血族
+kwir	xirma	horse	2024-02-13	verb	$nは馬 (馬屬)
+kwet	xekri	black	2024-04-26	verb	$nは黑い (明度=最低)
+kwef	jelca	burn	2024-12-08	verb	$n (燃料) は$a (酸化劑) で燃焼する
+kwer	kerlo	ear	2024-02-13	verb	$nは耳
+tir	tinri	bore	2024-09-10	verb	$nは$aに飽きる (意外性=-)
+tyf	tavla	speak	2024-06-14	verb	$nは$a (言語, 規約) で話す (交信する)
+tuf	tunba	sibling	2025-02-08	verb	$nは$aの同胞 (と親を共有する)
+te		of	2024-08-02	other	數に後置し基數を指す. $nは…個
+tef	ctebi	lip	2024-02-13	verb	$nは脣
+ter	temci	time	2024-02-13	verb	$nは1次元物理的時間
+ta		_mul	2024-02-13	numeral	乘算, ×
+tas	tance	tongue	2024-02-13	verb	$nは舌
+to		to	2024-02-13	preposition	與格. …へ
+twis	tilju	heavy	2024-07-14	verb	$nは重い
+twen	terdi	earth	2024-02-13	verb	$nは惑星 (地球)
+twef	terpa	fear	2024-09-10	verb	$nは$aを恐れる
+pi	pi	decimal	2024-02-13	numeral	小數點
+pyn	prami	love	2024-09-10	verb	$nは$aを愛する (を戀ふ)
+pex	pencu	touch	2024-02-13	verb	$nは$a (力) を觸覺する
+pes	pezli	leaf	2024-09-02	verb	$nは葉
+pa	pa	one	2024-02-13	numeral	1
+pax	spaji	amaze	2024-08-02	verb	$nは$aに驚く (意外性=高)
+pas	palci	bad	2024-08-02	verb	$nは邪惡
+paf	pagbu	part	2024-08-06	verb	$nは$a (全體) の部分
+po	pu'o	yet	2025-08-05	preposition	未然相. 未だに
+pos	ponse	have	2024-08-19	verb	$nは$aを有する (保持する)
+pja		accusative	2024-12-23	verb	$nは對格
+pjan	lamji	contact	2024-08-08	verb	$nは$aに接する
+pjat	palta	dish	2024-12-23	verb	$nは器 (皿, 碗, 盆, 杯, 壺, 瓶, 罐)
+pjas	plasimi	plasm	2024-07-15	verb	$nは電漿
+pjon	boxna	wave	2024-08-19	verb	$n (媒體) の波は$a (形狀) を成す
+xu		_sub	2024-02-13	numeral	減算. -
+xe		little	2024-09-29	numeral	少量
+xa	xa	six	2024-02-13	numeral	6
+xat	xarju	pig	2024-02-13	verb	$nは豚 (猪屬)
+xaf	xadni	body	2024-02-13	verb	$nは肉體
+xo		with	2024-12-24	preposition	共格. …が關はって
+xos	xamsi	sea	2024-02-13	verb	$nは海 (湖)
+ši	ci	three	2024-02-13	numeral	3
+šis	cipni	bird	2024-02-13	verb	$nは鳥 (鳥類)
+šyn	canti	viscera	2024-02-13	verb	$nは內臟
+šut	citka	eat	2024-02-13	verb	$nは$a (食料) を食ふ
+šet	cpedu	ask	2024-07-28	verb	$nはを$a (質問) を$dへ問ふ
+šes	citsi	season	2024-08-30	verb	$nは$a (惑星) の季節
+šer	cinla	thin	2025-07-17	verb	$nは薄い
+ša	ca'o	keep	2024-05-26	preposition	進行相. …してゐる
+šar	cmalu	small	2024-09-26	verb	$nは小さい
+šo		because	2025-07-15	preposition	因格. …に因って
+šor	carmi	bright	2024-08-19	verb	$nは明るい (明度=高)
+sy		forget	2024-08-01	verb	$nは$aを忘る
+syx	sanga	sing	2024-02-13	verb	$nは$a (歌, 曲) を歌ふ (演奏する)
+sut	sudga	dry	2024-09-16	verb	$nは乾く
+se		test	2024-07-26	verb	$nは$aを確認する (檢查する, 精查する)
+set	stedu	head	2024-02-13	verb	$nは頭
+sat	salta	salt	2024-02-13	verb	$nは鹽 (NaCl)
+so	so	nine	2024-02-13	numeral	9
+swen	senpi	doubt	2024-09-10	verb	$nは$aを疑ふ
+swet	sevzi	self	2024-02-13	verb	$nは己
+fix	frica	differ	2024-02-13	verb	$nは$aと異なる (差分=有)
+fis	finpe	fish	2024-02-13	verb	$nは魚 (魚類)
+fu		scorn	2024-09-10	verb	$nは$aを侮る (軽蔑する, 見くびる)
+fur	frumu	frown	2024-02-13	verb	$nは顰む
+fex	fengu	angry	2024-09-10	verb	$nは$aに怒る
+for	fusra	rot	2024-02-13	verb	$nは腐敗する
+fja		infinite	2024-09-06	numeral	(加算または非可算の) 無限
+fjox	fraxu	forgive	2024-02-13	verb	$nは$aを許す
+fjur	zirpu	purple	2024-02-13	verb	$nは紫色を呈する
+žix	jimpe	understand	2024-06-14	verb	$nはを$a (表現) を理解する
+žef	jensi	scissor	2024-07-28	verb	$nは鋏
+žer	jgena	knot	2024-12-23	verb	$nは結び目 (絡まり)
+ža		afterwards	2025-06-11	preposition	時點前後. 以降. それから. さうして
+žax	djacu	water	2024-02-13	verb	$nは水 (H₂O)
+zu		which	2024-02-13	other	動詞に後置して作用域を開く
+zun	zulna	left	2024-02-13	verb	$nは$aの左に有る
+ze	ze	seven	2024-02-13	numeral	7
+zat	zbasu	make	2024-08-02	verb	$nは$a (材料, 部品) から$d (完成品) を作る (構成する)
+zo		ly	2024-02-13	preposition	己格. この文自身が指す事象を…として
+zwis	zdile	enjoy	2024-09-10	verb	$nは$aを樂しむ
+zwif	livga	liver	2024-09-02	verb	$nは肝臟
+zwir	dilnu	cloud	2024-08-19	verb	$nは雲
+zwex	ze'au	down	2024-09-29	numeral	減少量
+zwef	rebla	tail	2024-02-13	verb	$nは尾
+zwa		relate	2024-09-14	verb	$nは$aに關はる ($a的)
+vyt	vamtu	vomit	2024-06-14	verb	$nは$aを嘔吐する
+vys	vensa	spring	2024-11-21	verb	$nは$a (惑星) の春 (暖まる季節)
+vyr	jgari	hug	2024-11-23	verb	$nは$aを抱擁する
+vun	vrude	good	2024-08-02	verb	$nは善良
+vuf	jufra	sentence	2024-10-05	verb	$nは文 (命題)
+ve		while	2025-08-04	preposition	時點同期. 同時に
+ves	vibna	vagina	2024-09-22	verb	$nは膣
+vef	vreta	lie	2024-08-30	verb	$nは$aに寢る (臥す)
+va		_period	2025-07-30	other	文が終はり發話が終はる
+vax	vajni	care	2024-09-10	verb	$nは$aを氣に掛ける (關心=有)
+vo	vo	four	2024-02-13	numeral	4
+vos	vrusi	taste	2024-02-13	verb	$nは$a (化學物質) を味はふ
+vof	vifne	fresh	2024-07-24	verb	$nは新鮮
+vor	rorci	beget	2024-08-19	verb	$nは生殖する ($aを生む, $aの親である)
+vjat	ratcu	rat	2024-02-13	verb	$nは鼠 (齧歯目)
+vjas	vasru	contain	2024-08-02	verb	$nは$aを內側に持つ
+vjon	crino	green	2024-02-13	verb	$nは綠色を呈する
+vjor	vofli	fly	2024-07-28	verb	$nは$aを飛翔する
+vju		_comma	2025-07-30	other	文が終はり別の文が始まる
+vjus	viska	see	2024-02-13	verb	$nは$a (光) を見る
+ris	risna	heart	2024-09-02	verb	$nは心臟
+ryn	ladru	milk	2024-08-31	verb	$nは乳
+ryr	xrula	flower	2024-09-02	verb	$nは花
+ru	ro	most	2024-02-13	numeral	最多量
+re	re	two	2024-02-13	numeral	2
+res	rectu	flesh	2024-02-13	verb	$nは筋肉
+ro		him	2024-02-13	preposition	對格. …を
+ros	lacri	trust	2024-08-02	verb	$nは$aを信ずる
+rof	lorxu	fox	2024-02-13	verb	$nは狐
+crit	cliva	come	2024-08-26	verb	$nは$a (始點, 起源, 由來) から來る
+cry		break	2024-06-14	verb	$nは$aを$d (部品) へ壞す (分解する)
+cryn	ranti	soft	2024-09-26	verb	$nは$aに對して軟らかい
+cryr	jdari	hard	2024-09-26	verb	$nは$aに對して軟らかい
+cruf	rufsu	rough	2024-08-24	verb	$nは$aに對して粗い
+cret	gletu	fuck	2024-02-13	verb	$nは$aと性交する
+cres	pagre	pass	2024-08-26	verb	$nは$a (通過點, 途中, 媒體) を通る
+crax	glare	hot	2024-08-30	verb	$nは熱い (暑い, 温かい)
+craf	blabi	white	2024-02-13	verb	$nは白い (明度=最高)
+cron	gunka	work	2024-02-13	verb	$nは勞働する
+dri		if_be	2025-07-19	preposition	叙想 不變
+drin	didni	reason	2024-08-31	verb	$nは$aを判ずる (推論する, 理性に照らす)
+drix	badri	sad	2024-09-10	verb	$nは$aを悲しむ
+dris	rinsa	greet	2024-02-13	verb	$nは$aへ挨拶する
+dry		do	2024-02-13	preposition	叙實 現在
+dryn	janco	shoulder	2024-02-13	verb	$nは肩 (尻)
+dryt	lanme	sheep	2024-02-13	verb	$nは羊 (羊屬)
+dru		lick	2024-08-19	verb	$nは$aを舐める
+drun	mluni	moon	2024-02-13	verb	$nは衞星 (月)
+dra		kilo	2024-02-13	numeral	1000. 3桁ごとの區切り
+drof	donri	morning	2024-08-19	verb	$nは$a (惑星) の晝
+brix	tricu	tree	2024-08-19	verb	$nは木本植物
+brif	bridi	verb	2024-10-05	verb	$nは動詞
+bryt	bratu	sleet	2024-08-19	verb	$nは雹
+brex	bilma	sick	2024-02-13	verb	$nは病む (故障する)
+bres	respa	reptile	2024-02-13	verb	$nは爬虫綱に屬する
+bra		want	2024-02-13	verb	$nは$aを求む
+bran	barda	big	2024-02-13	verb	$nは大きい
+brax	blanu	blue	2024-02-13	verb	$nは青い
+bros	bloti	ship	2024-10-05	verb	$nは舟
+knix	krixa	yell	2024-06-14	verb	$nは$a (聲) を叫ぶ (鳴く)
+knis	crisa	summer	2024-08-30	verb	$nは$a (惑星) の夏 (最も暑い季節)
+knif	mirli	deer	2024-02-13	verb	$nは鹿 (鹿科)
+knyf		spine	2025-02-06	verb	$nは脊椎
+knu		iff	2024-02-13	joiner	同値. 即ち
+knat	natmi	nation	2024-08-24	verb	$nは國家
+knas	xrani	harm	2024-08-19	verb	$nは$aを害する (傷附ける)
+knaf	skapi	skin	2024-02-13	verb	$nは皮膚 (皮革)
+knar	kanla	eye	2024-02-13	verb	$nは目
+kšit	cikna	wake	2024-02-13	verb	$nは起きる (意識=有)
+kšir	ckire	thank	2024-02-13	verb	$nは$aに感謝する
+kšyr	canlu	space	2024-02-13	verb	$nは3次元物理的空間
+kša		least	2024-02-13	numeral	最少量
+kšas	kalci	shit	2024-06-14	verb	$nは$a (糞尿) を排泄する
+kšo		or	2024-02-13	joiner	選言. または
+kšor	cortu	hurt	2025-03-01	verb	$nは$a (力) に痛む
+ksy		_close	2024-02-13	other	構造を閉ぢる. 非曖昧な時に省略する
+kse		case	2024-10-05	verb	$nは格
+kset	xebni	hate	2024-09-10	verb	$nは$aを憎惡する
+kfis	cisma	smile	2024-02-13	verb	$nは笑む
+kfir	kinli	sharp	2024-07-28	verb	$nは鋭い
+kfot		serene	2024-09-10	verb	$nは$aに平穩 (冷靜)
+kfor	korvo	crow	2024-07-15	verb	$nは烏 (烏科)
+krix	litki	liquid	2024-02-13	verb	$nは液體
+kryt	mlatu	cat	2024-02-13	verb	$nは猫 (猫屬)
+kres	kerfa	hair	2024-02-13	verb	$nは毛
+krox	rokci	stone	2024-08-19	verb	$nは石 (巖, 鑛物)
+tšit	tcidu	read	2024-06-14	verb	$nはを$a (表現) を讀む
+tšy		much	2024-09-29	numeral	多量
+tšys	carna	turn	2024-08-19	verb	$nは$a (中心, 軸) を回る
+tšyr	jcalu	nail	2024-02-13	verb	$nは爪
+tše		spear	2024-07-28	verb	$nは槍 (鋲, 串)
+tšan	tsani	sky	2024-08-19	verb	$nは空 (大氣)
+tšat	tatru	breast	2024-09-22	verb	$nは胸
+tsys		oblique	2024-12-23	verb	$nは非主格
+tsu		so	2024-02-13	preposition	非制限修飾. 當然に…である
+tsun	tunta	stab	2024-11-24	verb	$nは$aを刺す
+tsut	rotsu	thick	2024-02-13	verb	$nは厚い
+tsuf	tuple	leg	2024-11-24	verb	$nは肢 (腕, 脚)
+tsur	tunlo	swallow	2024-08-24	verb	$nは$aを嚥下する
+tsen	zutse	sit	2024-08-30	verb	$nは$aに座る
+tsax	satre	caress	2024-11-23	verb	$nは$aを撫でる (愛撫する)
+tfin	tirna	hear	2024-02-13	verb	$nは$a (音) を聞く
+tfyf		noble	2024-10-01	verb	$nは特權を持つ (貴族)
+tfun	tumla	land	2024-02-13	verb	$nは陸地 (島)
+tfut		lead	2024-09-01	verb	$nは$aを導く
+tfes	fepri	lung	2024-09-02	verb	$nは肺
+tfat	cfari	happen	2024-08-23	verb	$nは存在する (起こる, 實現する, 實際である)
+tfo		age	2024-12-07	verb	$nは$a歲
+tfor	tordu	short	2024-09-26	verb	$nは短い
+tryf	labno	wolf	2024-02-13	verb	$nは狼
+trun	truni	govern	2024-07-28	verb	$nは$aを統治する (支配する)
+trat	clani	long	2024-02-13	verb	$nは長い (一次元方向に大きく他次元方向に小さい)
+trax	crane	front	2025-02-07	verb	$nは$aの前 (進行方向) に有る
+pnif	plipe	leap	2024-07-28	verb	$nは$aを跳躍する
+pny		if_will	2025-05-27	preposition	叙想 未來
+pnut	pinji	penis	2024-09-22	verb	$nは陰莖 (陰核)
+pnur	purci	before	2024-02-13	verb	$nは$aの過去に有る (時間方向で小さい)
+pne		gray	2024-08-19	verb	$nは無彩色を呈する (彩度=最低)
+pnes	pensi	think	2024-02-13	verb	$nは$aを考ふ (思ふ)
+pna		word	2024-10-05	verb	$nは單詞
+pnat	cmana	hill	2024-02-13	verb	$nは山 (丘)
+pšin	cilmo	wet	2024-09-16	verb	$nは濕る (潤う)
+pšit	critu	autumn	2024-11-21	verb	$nは$a (惑星) の秋 (冷える季節)
+pšy		randy	2024-09-12	verb	$nは$aに欲情する
+pšyn	cinza	tong	2024-12-23	verb	$nは箸 (鉗子)
+pšu		neglect	2024-09-10	verb	$nは$aを無視する (關心=0)
+pšur	culno	full	2024-08-02	verb	$nは$aに滿ちる
+pšar	carvi	rain	2024-08-19	verb	$nは雨
+pšos		wont	2024-09-01	verb	$nは$aに慣れる (意外性=低)
+psy		_var	2025-02-27	other	變項選言と本文を區切る
+pser	pelxu	yellow	2024-02-13	verb	$nは黃色を呈する
+psox		hue	2024-11-20	verb	$nは$a (色相) を發する
+pri		pick	2024-09-09	verb	$nは$aを拾ふ (狩る, 収穫する)
+prit	pilno	use	2024-06-14	verb	$nは$a (道具) を使ふ
+prix	sligu	solid	2024-02-13	verb	$nは個體
+prif	cribe	bear	2024-02-13	verb	$nは熊 (熊科)
+pry		heat	2024-09-06	verb	$nの熱量は$a
+pryt	pritu	right	2025-02-07	verb	$nは$aの右に有る
+prys	grasu	fat	2024-09-16	verb	$nは體脂肪
+pruf	birka	arm	2024-11-24	verb	$nは腕
+pren	remna	human	2024-02-13	verb	$nは人 (人屬)
+pret	prenu	person	2024-02-13	verb	$nは人間 (個人, 市民)
+prex	lenku	cold	2024-08-30	verb	$nは冷たい (寒い, 涼しい)
+pra		will	2024-02-13	preposition	叙實 未來
+sgy		_loan	2024-02-13	other	言語外の表現に前置して動詞化する. $nを表現$a…が指す
+sgyr	jilra	envy	2024-09-12	verb	$nは$aを羨む (妬む)
+sgu		and	2024-02-13	joiner	連言. かつ
+sgun	sumne	smell	2024-02-13	verb	$nは$a (化學物質) を嗅ぐ
+sgut	sutra	swift	2024-06-18	verb	$nは速い
+sges		mass	2024-08-31	verb	$nの質量は$a
+sga		chew	2024-08-24	verb	$nは$aを咀嚼する
+sgof	sovda	egg	2024-09-16	verb	$nは卵 (卵子)
+snit	since	snake	2024-07-15	verb	$nは蛇 (蛇亞目)
+snix	stici	west	2024-08-24	verb	$nは$aの西 (自轉方向の逆) に有る
+snir	cinmo	emotion	2024-08-02	verb	$nは$a (感情) を持つ
+sny		punch	2024-11-23	verb	$nは$aを毆る
+snys		kill	2024-08-24	verb	$nは殺す
+snu		dative	2024-12-23	verb	$nは與格
+snuf		learn	2024-08-01	verb	$nは$aを學ぶ
+snes	senva	dream	2024-10-16	verb	$nは$aを夢見る
+snef	nelci	like	2026-05-09	verb	$nは$aを好む
+snas	sance	sound	2024-08-19	verb	$nは音
+sno		_div	2024-02-13	numeral	除算. /
+snor	masno	slow	2024-09-06	verb	$nは遲い
+smi		simulate	2024-08-27	verb	$nは$aを模倣する (擬裝する) ｓ
+smit	sinma	respect	2024-09-10	verb	$nは$aを敬ふ
+smis	cmima	element	2024-08-06	verb	$nは$a (群, 集合, 列擧) に屬する
+smyt	mintu	same	2024-08-27	verb	$nは$aに等しい (差分=0)
+smux	cmila	laugh	2024-02-13	verb	$nは笑ふ
+sme		frog	2024-07-15	verb	$nは蛙 (無尾目)
+smen	manku	dark	2024-08-19	verb	$nは暗い (明度=低)
+sma		counter	2024-06-14	verb	$nは$aを補完する (の雙對)
+smos	moklu	mouth	2024-02-13	verb	$nは口
+skis	sanli	stand	2024-08-30	verb	$nは$aに立つ
+skif	sipna	sleep	2024-04-26	verb	$nは眠る (意識=0)
+sky		dull	2024-08-19	verb	$nは鈍い (彩度=低)
+skyn	xance	hand	2024-11-24	verb	$nは手
+sku		shun	2024-09-27	verb	$nは$aを避く
+skun	cukta	book	2025-07-19	verb	$nは本 (卷, 册)
+skut	cusku	say	2024-06-14	verb	$nはを$a (表現) を言ふ
+skex	trixe	hind	2024-02-13	verb	$nは$aの後 (進行方向の逆) に有る
+skes	snime	snow	2024-08-19	verb	$nは雪
+skar	skari	colour	2024-02-13	verb	$nは$a (色) を發する
+sko		did	2024-02-13	preposition	叙實 過去
+skox	skori	rope	2025-02-08	verb	$nは紐 (繩, 糸)
+skor	solri	sun	2024-02-13	verb	$nは恆星 (太陽)
+stin	jinme	metal	2025-07-17	verb	$nは金屬
+stix	sisti	stop	2024-08-31	verb	$nは止まる (停止する, 靜的)
+sty		end	2024-05-26	preposition	終了相. …し終へる
+styn	stani	trunk	2024-02-13	verb	$nは胴 (幹, 莖)
+styf		_self	2024-02-17	verb	$nは この言語
+stun	stuna	east	2025-03-01	verb	$nは$aの東 (自轉方向) に有る
+stuf		maw	2024-09-02	verb	$nは胃
+stex	nicte	night	2024-08-19	verb	$nは$a (惑星) の夜
+sta		imagine	2024-02-13	verb	$nは$aを想像する (夢想する)
+stas	stali	stay	2024-02-13	verb	$nは$a (地點, 時點) に有る (存在する)
+spif	limfa	lymph	2024-08-31	verb	$nは りんぱ
+spu	su'e	at_most	2024-02-13	numeral	最大…. ≤
+spus		dislike	2026-05-09	verb	$nは$aを厭ふ
+spaf	spati	plant	2024-08-19	verb	$nは植物
+frin	lindi	thunder	2024-08-19	verb	$nは雷
+frif	cripu	bridge	2025-02-08	verb	$nは橋梁
+fref	flecu	river	2024-02-13	verb	$nは河川
+fra		kick	2024-11-23	verb	$nは$aを蹴る
+fran	fraksino	ash	2024-09-16	verb	$nは灰
+frox	forca	fork	2024-12-23	verb	$nは叉
