@@ -10,10 +10,8 @@ import {
   wordIsInvalid,
   phraseIsInvalid,
 } from "../lib/phonology";
-import { dateToObject } from "../submodules/shared/date";
 import Head from "next/head";
-import { speak, UnixDay } from "../lib/common";
-import { replaceEach } from "../submodules/shared/string";
+import { speak, UnixDay, replaceEach } from "../lib/common";
 
 const name = dic.get("_self").token;
 
@@ -698,7 +696,9 @@ water──n-a┘`.substring(1)}
                   const percent = (acc / sum) * 100;
                   return (
                     <tr key={date}>
-                      <th style={{ textWrap: "nowrap" }}>{dateToObject(new Date(date)).text}</th>
+                      <th style={{ textWrap: "nowrap" }}>
+                        {new Date(date).getTime() / 1000 / 60 / 60 / 24}
+                      </th>
                       <td>
                         {(new Date(date).getTime() - new Date(date0).getTime()) /
                           1000 /

@@ -13,15 +13,15 @@
     "format": "oxfmt"
   },
   "devDependencies": {
-    "@types/node": "^25.0.3",
-    "@types/react": "^19.2.7",
-    "next": "^16.0.3",
-    "oxfmt": "^0.21.0",
-    "oxlint": "^1.36.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "sass": "^1.97.1",
-    "typescript": "^5.9.3"
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "next": "^16.2.6",
+    "oxfmt": "^0.48.0",
+    "oxlint": "^1.63.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "sass": "^1.99.0",
+    "typescript": "^6.0.3"
   },
   "prettier": {
     "semi": true,

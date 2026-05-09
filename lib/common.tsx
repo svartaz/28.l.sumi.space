@@ -1,4 +1,5 @@
-import { replaceEach } from "../submodules/shared/string";
+export const replaceEach = (s: string, replacements: [string | RegExp, string][]): string =>
+  replacements.reduce((s, [regex, to]) => s.replace(regex, to), s);
 
 export const unixDay = (date: Date): number => date.getTime() / (24 * 60 * 60 * 1000);
 
