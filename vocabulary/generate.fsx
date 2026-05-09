@@ -3,6 +3,28 @@ open System.Diagnostics
 open System.IO
 open System.Text.RegularExpressions
 
+let consonants =
+    [ "g" // [ŋ]
+      "n"
+      "m"
+      "c" // [g]
+      "d"
+      "b"
+      "k"
+      "t"
+      "p"
+      "x"
+      "š" // [ɕ]
+      "s"
+      "f"
+      "h" // [ɣ]
+      "ž" // [ʑ]
+      "z"
+      "v"
+      "r" ]
+
+let vowels = [ "i"; "y"; "u"; "e"; "a"; "o"; "ja"; "jo"; "ju" ]
+
 (*
          jjj www
   ieaouy aou iea
@@ -18,58 +40,37 @@ bp           !!!
 fv           !!!
 r        !!! !!!
 *)
-let syllables =
-    [ for initial in
-          [ "g" // [ŋ]
-            "n"
-            "m"
-            "c" // [g]
-            "d"
-            "b"
-            "k"
-            "t"
-            "p"
-            "x"
-            "š" // [ɕ]
-            "s"
-            "f"
-            //"h" // [ɣ]
-            "ž" // [ʑ]
-            "z"
-            "v"
-            "r"
-            "cr"
-            "dr"
-            "br"
-            "kn"
-            "kš"
-            "ks"
-            "kf"
-            "kr"
-            "tš"
-            "ts"
-            "tf"
-            "tr"
-            "pn"
-            "pš"
-            "ps"
-            "pr"
-            "sg"
-            "sn"
-            "sm"
-            "sk"
-            "st"
-            "sp"
-            "fr" ] do
-          for vowel in [ "i"; "y"; "u"; "e"; "a"; "o"; "ja"; "jo"; "ju"; "wi"; "we"; "wa" ] do
-              for coda in [ ""; "n"; "t"; "x"; "s"; "f"; "r" ] do
-                  let syllable = initial + vowel + coda
 
-                  if
-                      not (Regex.IsMatch(syllable, @"(.)[jw]?[ieaou]\1|..[jw]|[gxhsz]i|[gxhšždtszr]j|[xhšžnmbpfvr]w"))
-                  then
-                      yield syllable ]
+let invalid = @"[gxhsz]i|[gxhšždtszr]j|[xhšžnmbpfvr]w|[^iyueaognmktpxssfr]$"
 
+let cv =
+    [ for c in consonants do
+          for v in vowels do
+              let token = c + v
+
+              if not (Regex.IsMatch(token, invalid)) then
+                  yield token ]
+
+let cvc =
+    [ for c0 in consonants do
+          for v in vowels do
+              for c1 in consonants do
+                  let token = c0 + v + c1
+
+                  if not (Regex.IsMatch(token, invalid)) then
+                      yield token ]
+
+let cvcv =
+    [ for c0 in consonants do
+          for v0 in vowels do
+              for c1 in consonants do
+                  for v1 in vowels do
+                      let token = c0 + v0 + c1 + v1
+
+                      if token.Length < 6 && not (Regex.IsMatch(token, invalid)) then
+                          yield token ]
+
+let tokens = cv @ cvc @ cvcv
 
 let pathResourceDir = Path.Combine(__SOURCE_DIRECTORY__, "resource")
 let pathDirIn = Path.Combine(__SOURCE_DIRECTORY__, "input")
@@ -87,8 +88,8 @@ let pathFull = Path.Combine(pathDirOut, "full.tsv")
 let pathDefined = Path.Combine(pathDirOut, "defined.tsv")
 
 
-printfn "%d syllables" syllables.Length
-File.WriteAllLines(pathSyllables, syllables)
+printfn "%d syllables" tokens.Length
+File.WriteAllLines(pathSyllables, tokens)
 
 let normalizeWhitespace (text: string) = Regex.Replace(text.Trim(), @"\s+", " ")
 
@@ -213,20 +214,20 @@ File.WriteAllLines(
         $"{word}\t{rafsi}\t{primaryKeyword}\t{secondaryKeyword}\t{definition}\t{entryType}")
 )
 
-let isVowel c = Set.contains c (set "iyueao")
-
-let hasCoda (syllable: string) =
-    not (isVowel syllable[syllable.Length - 1])
-
-let syllablesWithCoda = syllables |> List.filter hasCoda
-let syllableArray = List.toArray syllables
+let syllableArray = List.toArray tokens
 let syllablePriorityArray: float array = Array.zeroCreate syllableArray.Length
 let allSyllableIndices = Array.init syllableArray.Length id
+let shortSyllableIndices = Array.init (cv.Length + cvc.Length) id
 
-let syllablesWithCodaIndices =
+let cvcvSyllableIndices =
+    Array.init cvcv.Length (fun index -> cv.Length + cvc.Length + index)
+
+let syllableIndexByToken =
     syllableArray
-    |> Array.mapi (fun index syllable -> index, syllable)
-    |> Array.choose (fun (index, syllable) -> if hasCoda syllable then Some index else None)
+    |> Array.mapi (fun index syllable -> syllable, index)
+    |> Map.ofArray
+
+let isVowel c = Set.contains c (set "iyueao")
 
 let normalizeGismu =
     String.collect (function
@@ -492,7 +493,7 @@ let shuffledPriorities items =
 
 let headwordPriority = headwordEntries |> List.map _.Id |> shuffledPriorities
 
-let syllablePriority = shuffledPriorities syllables
+let syllablePriority = shuffledPriorities tokens
 
 do
     syllableArray
@@ -512,15 +513,16 @@ type PreparedEntry =
 let candidateIndicesFor entry =
     match entry.FixedSyllable with
     | Some fixedSyllable ->
-        allSyllableIndices
-        |> Array.filter (fun index -> syllableArray[index] = fixedSyllable)
+        match Map.tryFind fixedSyllable syllableIndexByToken with
+        | Some index -> [| index |]
+        | None -> [||]
     | None when entry.EntryType = "generated" ->
-        allSyllableIndices
-        |> Array.filter (fun index -> entry.WordClass = "verb" || syllableArray[index].Length <= 3)
-    | None when entry.EntryType = "cmavo" ->
-        allSyllableIndices
-        |> Array.filter (fun index -> syllableArray[index].Length <= 3)
-    | None -> syllablesWithCodaIndices
+        if entry.WordClass = "verb" then
+            cvcvSyllableIndices
+        else
+            shortSyllableIndices
+    | None when entry.EntryType = "cmavo" -> shortSyllableIndices
+    | None -> cvcvSyllableIndices
 
 let isBetterCandidate left right =
     left.Score < right.Score
@@ -646,30 +648,30 @@ let assignmentsBySyllable =
 
 File.WriteAllLines(
     pathFull,
-    syllables
-    |> List.map (fun syllable ->
-        match Map.tryFind syllable assignmentsBySyllable with
+    tokens
+    |> List.map (fun token ->
+        match Map.tryFind token assignmentsBySyllable with
         | Some entry ->
             let rafsiText = String.concat " " entry.Rafsi
 
             let outputWord =
                 if String.IsNullOrWhiteSpace entry.Word then
-                    syllable
+                    token
                 else
                     entry.Word
 
-            $"{syllable}\t{outputWord}\t{rafsiText}\t{entry.EnglishKeyword}\t{entry.Meaning}"
-        | None -> $"{syllable}\t\t\t\t")
+            $"{token}\t{outputWord}\t{rafsiText}\t{entry.EnglishKeyword}\t{entry.Meaning}"
+        | None -> $"{token}\t\t\t\t")
 )
 
 File.WriteAllLines(
     pathDefined,
-    syllables
-    |> List.choose (fun syllable ->
-        match Map.tryFind syllable assignmentsBySyllable with
+    tokens
+    |> List.choose (fun token ->
+        match Map.tryFind token assignmentsBySyllable with
         | Some entry ->
             entry.DefinitionOverride
             |> Option.map (fun definitionOverride ->
-                $"{syllable}\t{entry.Word}\t{definitionOverride.Keyword}\t{definitionOverride.Date}\t{definitionOverride.WordClass}\t{definitionOverride.Definition}")
+                $"{token}\t{entry.Word}\t{definitionOverride.Keyword}\t{definitionOverride.Date}\t{definitionOverride.WordClass}\t{definitionOverride.Definition}")
         | None -> None)
 )
