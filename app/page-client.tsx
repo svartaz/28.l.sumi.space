@@ -2,7 +2,7 @@
 
 import Head from "next/head";
 import Script from "next/script";
-import { replaceEach, speak, UnixDay } from "../lib/common";
+import { replaceEach, speak, toArab, UnixDay } from "../lib/common";
 import { type Dictionary, toIpa, translate } from "../lib/words";
 
 const Ipa = (props: { children: string }) => <span className="ipa">{props.children}</span>;
@@ -40,13 +40,11 @@ const Highlight = ({ children }: { children: string }) => (
 );
 
 const Entry = ({ dictionary, entryKey }: { dictionary: Dictionary; entryKey: string }) => {
-  const { token, klass, explanation } = dictionary[entryKey];
+  const { token, klass, description } = dictionary[entryKey];
   return (
     <span className="entry">
       <ButtonSpeak text={token} />
-      <TokenIpa token={token} />: {klass}.
-      <br />
-      <Highlight>{explanation}</Highlight>
+      <TokenIpa token={token} />: {klass}. <Highlight>{description}</Highlight>
     </span>
   );
 };
@@ -87,18 +85,26 @@ const samples = (dictionary: Dictionary, entries: (string | [string, string])[])
       {entries.map((it, key) => {
         if (typeof it === "string") {
           if (it in dictionary) {
-            const { token, klass, explanation } = dictionary[it];
+            const { token, klass, description } = dictionary[it];
             const ipa = toIpa(token);
             return (
               <tr key={key}>
                 <td>
                   <ButtonSpeak text={token}>🗣</ButtonSpeak>
                 </td>
-                <td>{klass}</td>
+                <td>
+                  {{
+                    verb: "動詞",
+                    preverb: "助動詞",
+                    preposition: "介詞",
+                    numeral: "數詞",
+                    other: "他",
+                  }[klass] || klass}
+                </td>
                 <td className="target">{token}</td>
                 <td className="ipa">{ipa}</td>
                 <td>
-                  <Highlight>{explanation}</Highlight>
+                  <Highlight>{description}</Highlight>
                 </td>
               </tr>
             );
@@ -132,7 +138,7 @@ const samples = (dictionary: Dictionary, entries: (string | [string, string])[])
 );
 
 export default function PageClient({ dictionary }: { dictionary: Dictionary }) {
-  const name = "aaaa"; // dictionary._self.token;
+  const name = dictionary._self?.token ?? "aaaa";
 
   return (
     <>
@@ -190,7 +196,7 @@ export default function PageClient({ dictionary }: { dictionary: Dictionary }) {
           <br />
           主-述-客言語.
           <br />
-          文法はjbo語を參照した. gem諸語から能記を借用した.
+          jboの強い影響を受けた.
         </p>
       </section>
 
@@ -234,18 +240,22 @@ export default function PageClient({ dictionary }: { dictionary: Dictionary }) {
             </tr>
             <tr>
               <th>無聲摩擦</th>
-              <td>x</td>
               <td>
-                š <Ipa>ɕ,ʂ,ʃ</Ipa>
+                x <Ipa>h,x</Ipa>
+              </td>
+              <td>
+                l <Ipa>ɕ,ʂ,ʃ</Ipa>
               </td>
               <td>s</td>
               <td>f</td>
             </tr>
             <tr>
               <th>有聲摩擦</th>
-              <td></td>
               <td>
-                ž <Ipa>ʑ,ʐ,ʒ</Ipa>
+                h <Ipa>ɦ,ɣ</Ipa>
+              </td>
+              <td>
+                j <Ipa>ʑ,ʐ,ʒ</Ipa>
               </td>
               <td>z</td>
               <td>v</td>
@@ -253,32 +263,49 @@ export default function PageClient({ dictionary }: { dictionary: Dictionary }) {
             <tr>
               <th>接近</th>
               <td></td>
-              <td>j</td>
+              <td></td>
               <td>
                 r <Ipa>ɾ,l</Ipa>
               </td>
-              <td>w</td>
+              <td></td>
             </tr>
             <tr>
-              <th>狹母</th>
-              <td>
-                y <span className="ipa">ɨ</span>
-              </td>
+              <th>非央母</th>
+              <td>a</td>
               <td>i</td>
-              <td></td>
+              <td>
+                y <Ipa>ju,y</Ipa>
+              </td>
               <td>u</td>
             </tr>
             <tr>
-              <th>廣母</th>
+              <th>央母</th>
               <td>
-                a <span className="ipa">ǝ,a</span>
+                w <Ipa>ǝ,ɨ</Ipa>
               </td>
               <td>e</td>
-              <td></td>
+              <td>
+                q <Ipa>jo,ø</Ipa>
+              </td>
               <td>o</td>
             </tr>
           </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th>中</th>
+              <th>前</th>
+              <th>拗</th>
+              <th>後</th>
+            </tr>
+          </tfoot>
         </table>
+
+        <ul>
+          <li>[g] は ‹γ› の裔たる ‹c›. [ŋ] は溢れた ‹g›.</li>
+          <li> [ɕ] はcym ‹ll› [ɬ] から聯想して ‹l›.</li>
+          <li> [ø] には ‹q› しか殘らない.</li>
+        </ul>
       </section>
 
       <section>
@@ -350,18 +377,14 @@ see┬n─(something)
         <p>動詞は陰に叙實法 習慣時制 進行相を指す.</p>
 
         {samples(dictionary, [
+          "if",
           "did",
           "do",
           "will",
 
-          "if_be",
-          "if_did",
-          "if_do",
-          "if_will",
-
           ["see", "見る物 (gazer) だ"],
           ["do see", "見てゐる"],
-          ["if_did see", "見たなら…"],
+          ["if did see", "見たなら…"],
 
           "yet",
           "begin",
@@ -369,8 +392,6 @@ see┬n─(something)
           "end",
           "already",
           "rest",
-          "pause#",
-          "resume#",
           "live",
 
           ["live", "生物"],
@@ -466,7 +487,7 @@ give┬n─n─i
           "done",
           ["i&(did give him=water to=cat)", "我は水を猫へ與へてゐた"],
           ["water&(did done give by=i to=cat)", "水を我は猫へ與へてゐた"],
-          ["cat&(did done to give by=i him=water)", "猫へ我は水を與へてゐた"],
+          ["cat&(done to did give by=i him=water)", "猫へ我は水を與へてゐた"],
         ])}
       </section>
 
@@ -512,7 +533,7 @@ give┬n─n─i
   see─┬n┘
       └a┬n──cat
         └n┬─eat
-water──n-a┘`.substring(1)}
+water──n─a┘`.substring(1)}
         </pre>
       </section>
 
@@ -577,6 +598,7 @@ water──n-a┘`.substring(1)}
           "least",
           "little",
           "much",
+          "most",
           ["live", "生きてゐる度が初期値\n→生きてゐる"],
           ["least live", "生きてゐる度が最低\n→生きてゐない (死んでゐる)"],
           ["little live", "生きてゐる度が低い\n→死にかけてゐる"],
@@ -633,7 +655,7 @@ water──n-a┘`.substring(1)}
       <section>
         <h2>詞彙 ({Object.entries(dictionary).length})</h2>
         <div className="words">
-          {[...Object.keys(dictionary)].map((key, i) => (
+          {Object.keys(dictionary).map((key, i) => (
             <Entry key={i} dictionary={dictionary} entryKey={key} />
           ))}
         </div>

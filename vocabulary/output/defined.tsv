@@ -1,396 +1,442 @@
-ma	ma	who	2024-02-13	verb	$nは誰, 何
-ca		done	2024-02-13	preposition	受動態. 前置詞と動詞に前置し, 動詞の同格を前置詞に對應する格に作用させる. 對格前置詞は省略し得る
-do		at	2025-08-31	preposition	處格. …にて
-bo		by	2024-02-13	preposition	主格. …が
-bja		did	2024-02-13	preposition	叙實 過去
-to		to	2024-02-13	preposition	與格. …へ
-pu		if_did	2025-05-27	preposition	叙想 過去
-po	pu'o	yet	2025-08-05	preposition	未然相. 未だに
-xo		with	2024-12-24	preposition	共格. …が關はって
-šo		because	2025-07-15	preposition	因格. …に因って
-zo		ly	2024-02-13	preposition	己格. この文自身が指す事象を…として
-ro		him	2024-02-13	preposition	對格. …を
-gom		_close	2024-02-13	other	構造を閉ぢる. 非曖昧な時に省略する
-nir	ni	how_many	2024-02-13	numeral	數量疑問. 幾つ
-non	no	zero	2024-02-13	numeral	0
-nox	no'o	level	2024-09-29	numeral	普通. 標準
-mim	mi	i	2024-02-13	verb	$nは我
-mum	mu	five	2024-02-13	numeral	5
-mom	moi	th	2024-08-02	other	數に後置し序數を指す. $nは第…
-mjon		if_do	2025-05-27	preposition	叙想 現在
-mjof		begin	2024-05-26	preposition	開始相. …し始める
-cip		infinite	2024-09-06	numeral	(加算または非可算の) 無限
-cjam		if_will	2025-05-27	preposition	叙想 未來
-cjat		_add	2024-02-13	numeral	加算. +
-cjun		of	2024-08-02	other	數に後置し基數を指す. $nは…個
-dyk		end	2024-05-26	preposition	終了相. …し終へる
-dyr		much	2024-09-29	numeral	多量
-dex	de'a	rest	2025-08-05	preposition	停止相. …し已んでゐる
-don	do	thou	2024-02-13	verb	$nは汝
-dot		_mod	2024-08-24	numeral	剩餘
-bif	bi	eight	2024-02-13	numeral	8
-bax	ba'o	already	2025-08-05	preposition	已然相. 既に
-bjas		_log	2024-08-24	numeral	對數
-kox	ko'a	he	2024-02-13	verb	$nは彼, あれ, それ, これ
-kof		kilo	2024-02-13	numeral	1000. 3桁ごとの區切り
-kor		less_than	2024-08-31	numeral	…未滿. <
-kjax		_period	2025-07-30	other	文が終はり發話が終はる
-tin		while	2025-08-04	preposition	時點同期. 同時に
-pir	pi	decimal	2024-02-13	numeral	小數點
-pym		_loan	2024-02-13	other	言語外の表現に前置して動詞化する. $nを表現$a…が指す
-paf	pa	one	2024-02-13	numeral	1
-pjux		will	2024-02-13	preposition	叙實 未來
-xak		afterwards	2025-06-11	preposition	時點前後. 以降. それから. さうして
-xaf	xa	six	2024-02-13	numeral	6
-šim	ci	three	2024-02-13	numeral	3
-šit		do	2024-02-13	preposition	叙實 現在
-šup		which	2024-02-13	other	動詞に後置して作用域を開く
-šax	ca'o	keep	2024-05-26	preposition	進行相. …してゐる
-šor		or	2024-02-13	joiner	選言. または
-sup	su'e	at_most	2024-02-13	numeral	最大…. ≤
-seg		iff	2024-02-13	joiner	同値. 即ち
-sef		_var	2025-02-27	other	變項選言と本文を區切る
-sor	so	nine	2024-02-13	numeral	9
-fit		and	2024-02-13	joiner	連言. かつ
-zut		little	2024-09-29	numeral	少量
-zer	ze	seven	2024-02-13	numeral	7
-zag		_div	2024-02-13	numeral	除算. /
-vyx		_mul	2024-02-13	numeral	乘算, ×
-vex		so	2024-02-13	preposition	非制限修飾. 當然に…である
-von	vo	four	2024-02-13	numeral	4
-vof		_sub	2024-02-13	numeral	減算. -
-vjap		least	2024-02-13	numeral	最少量
-rek		if_be	2025-07-19	preposition	叙想 不變
-res		_comma	2025-07-30	other	文が終はり別の文が始まる
-rer	re	two	2024-02-13	numeral	2
-ras		_exp	2024-08-24	numeral	冪乘
-ror	ro	most	2024-02-13	numeral	最多量
-nipe		dislike	2026-05-09	verb	$nは$aを厭ふ
-nihu	ninmu	woman	2024-08-19	verb	$nは$a (卵巢, 雌蕊) を持つ (女)
-niha	cnita	below	2024-02-13	verb	$nは$aより下に有る (重心へ近い)
-nuhe	nupre	promise	2024-08-19	verb	$nは$aを約束する
-nenu	nejni	energy	2024-08-31	verb	$nの能源は$a
-nepi	nelci	like	2026-05-09	verb	$nは$aを好む
-neho	cnebo	neck	2024-02-13	verb	$nは首
-nanu	snanu	south	2025-03-01	verb	$nは$aよりの南 (時計回りする極點) へ近い
-naku	nakni	man	2024-08-19	verb	$nは$a (精巢, 雄蕊) を持つ (男)
-natu	natmi	nation	2024-08-24	verb	$nは國家
-naha	nanca	year	2024-08-30	verb	$nは$a (惑星) の年 (公轉周期)
-nažu	narju	orange	2024-02-13	verb	$nは橙色を呈する
-nazu	nazbi	nose	2024-02-13	verb	$nは鼻
-mimu	cmima	element	2024-08-06	verb	$nは$a (群, 集合, 列擧) に屬する
-midu	minde	command	2024-09-29	verb	$nは$aを命令する (要求する, 推奬する)
-mita		wont	2024-09-01	verb	$nは$aに慣れる (意外性=低)
-mihu	mintu	same	2024-08-27	verb	$nは$aに等しい (差分=0)
-miha	cmila	laugh	2024-02-13	verb	$nは笑ふ
-mizu	mirli	deer	2024-02-13	verb	$nは鹿 (鹿科)
-mušo	smuci	spoon	2024-12-23	verb	$nは匙
-muhu	muvdu	move	2024-08-31	verb	$nは動く (變動する, 動的)
-muhe	munje	world	2024-02-13	verb	$nは世界 (宇宙, 時空間)
-mehe	cmene	name	2024-07-28	verb	$nは$aを意味する (の名である)
-mana	manku	dark	2024-08-19	verb	$nは暗い (明度=低)
-mabu	mabru	mammal	2024-02-13	verb	$nは哺乳綱動物
-maha	cmana	hill	2024-02-13	verb	$nは山 (丘)
-mošy		clause	2024-10-05	verb	$nは節
-mošu	mokca	point	2024-10-01	verb	$nは點 (位置)
-mohu	moklu	mouth	2024-02-13	verb	$nは口
-moža		kill	2024-08-24	verb	$nは殺す
-moro	morsi	die	2024-08-24	verb	$nは死ぬ (生命=0)
-mjuši		age	2024-12-07	verb	$nは$a歲
-cybja		shun	2024-09-27	verb	$nは$aを避く
-cuci	gusni	light	2024-02-13	verb	$nは光 (電磁波)
-cutu	gutra	womb	2024-09-22	verb	$nは前立腺 (子宮)
-cufu		break	2024-06-14	verb	$nは$aを$d (部品) へ壞す (分解する)
-cuha	gunka	work	2024-02-13	verb	$nは勞働する
-cure	pagre	pass	2024-08-26	verb	$nは$a (通過點, 途中, 媒體) を通る
-cura	glare	hot	2024-08-30	verb	$nは熱い (暑い, 温かい)
-cebjo		kick	2024-11-23	verb	$nは$aを蹴る
-ceku	gleki	glad	2024-08-02	verb	$nは$aを喜ぶ
-cepi		rod	2024-07-28	verb	$nは棒 (杖, 棍)
-cehu	gerku	dog	2024-02-13	verb	$nは犬 (犬屬)
-cežu	genja	root	2024-09-02	verb	$nは根
-capu	gapru	above	2024-02-13	verb	$nは$aより上に有る (重心へ遠い)
-cašu	gapci	gas	2024-02-13	verb	$nは氣體
-cahe	ganse	feel	2024-02-13	verb	$nは$a (刺戟) を感ずる
-covja		pick	2024-09-09	verb	$nは$aを拾ふ (狩る, 収穫する)
-cjuca		hue	2024-11-20	verb	$nは$a (色相) を發する
-dinu	didni	reason	2024-08-31	verb	$nは$aを判ずる (推論する, 理性に照らす)
-dici	jdini	money	2024-08-25	verb	$nは金 (貨幣, 紙幣, 硬貨)
-dišu	dikca	electric	2024-08-31	verb	$nの電荷は$a
-dira	dilnu	cloud	2024-08-19	verb	$nは雲
-dyxa		chew	2024-08-24	verb	$nは$aを咀嚼する
-dysu		forget	2024-08-01	verb	$nは$aを忘る
-dyvja		deny	2024-08-30	verb	$nは$aを否定 (に矛盾) する
-duha	dunda	give	2024-02-13	verb	$nは$aを$dへ與ふ
-duže	djedi	day	2024-08-19	verb	$nは$a (惑星) の日 (自轉周期)
-duzu	cadzu	walk	2024-06-18	verb	$nは$aを步く
-duri	badri	sad	2024-09-10	verb	$nは$aを悲しむ
-duru	dunra	winter	2024-08-30	verb	$nは$a (惑星) の冬 (最も寒い季節)
-denu	denci	tooth	2024-02-13	verb	$nは齒牙
-demu	denmi	dense	2024-07-15	verb	$nは高密度
-dani	dacti	thing	2024-02-13	verb	$nは物理的存在物 (物體)
-damo	danmo	smoke	2024-09-16	verb	$nは煙 (氣體中の固體または液體の粒子)
-daxu	darxi	hit	2024-11-23	verb	$nは$aを打つ (毆る, 蹴る)
-dašu	darca	go	2024-08-26	verb	$nは$a (終點, 到達點) へ往く
-dasy	dansu	dance	2024-02-13	verb	$nは$a (振り付け) を踊る
-dafu	danfu	answer	2024-07-28	verb	$nはを$aを$dへ答ふ
-daho	darno	far	2024-08-08	verb	$nは$aから遠い
-dožu	sidju	help	2024-06-18	verb	$nは$aを助ける (支援する)
-doža		frog	2024-07-15	verb	$nは蛙 (無尾目)
-doru	donri	morning	2024-08-19	verb	$nは$a (惑星) の晝
-biha	bilma	sick	2024-02-13	verb	$nは病む (故障する)
-bire	birka	arm	2024-11-24	verb	$nは腕
-bira	blanu	blue	2024-02-13	verb	$nは青い
-bypa		learn	2024-08-01	verb	$nは$aを學ぶ
-bumu	bumru	fog	2024-08-19	verb	$nは霧
-buri	bridi	verb	2024-10-05	verb	$nは動詞
-bura	bratu	sleet	2024-08-19	verb	$nは雹
-buro	bloti	ship	2024-10-05	verb	$nは舟
-beša		imagine	2024-02-13	verb	$nは$aを想像する (夢想する)
-behu	betfu	belly	2024-09-22	verb	$nは腹
-beru	ciblu	blood	2024-07-29	verb	$nは血
-bere	berti	north	2024-08-24	verb	$nは$aより北 (反時計回りする極點) へ近い
-bako	bakni	cow	2024-02-13	verb	$nは牛 (牛族)
-bata	batci	bite	2024-08-24	verb	$nは$aを嚙む
-bapu	bapli	force	2024-10-01	verb	$nは力
-bafu	banfi	amphibia	2024-02-13	verb	$nは兩棲綱に屬する
-bažo	bajra	run	2024-06-18	verb	$nは$aを走る (驅ける)
-bavo	balvi	after	2024-02-13	verb	$nは$aの未來に有る (時間方向で大きい)
-bara	barda	big	2024-02-13	verb	$nは大きい
-bohu	bongu	bone	2024-02-13	verb	$nは骨
-boha	boxna	wave	2024-08-19	verb	$n (媒體) の波は$a (形狀) を成す
-bjamu		case	2024-10-05	verb	$nは格
-bjove		oblique	2024-12-23	verb	$nは非主格
-kici	ckini	family	2025-02-08	verb	$nは$aの血族
-kiha	krixa	yell	2024-06-14	verb	$nは$a (聲) を叫ぶ (鳴く)
-kiru	ckire	thank	2024-02-13	verb	$nは$aに感謝する
-kire	kinli	sharp	2024-07-28	verb	$nは鋭い
-kyce		simulate	2024-08-27	verb	$nは$aを模倣する (擬裝する) ｓ
-kutu	kunti	empty	2024-08-02	verb	$nは$aを缺く (空)
-kuhe	kuspe	interval	2024-10-01	verb	$nは區間 (容積, 領域)
-kenju		test	2024-07-26	verb	$nは$aを確認する (檢查する, 精查する)
-kemja		want	2024-02-13	verb	$nは$aを求む
-kešu	kecti	pity	2024-09-10	verb	$nは$aを憐れむ (に同情する)
-kežu	ckeji	shame	2024-09-10	verb	$nは$aを恥づ (矜恃=-)
-kery	kerlo	ear	2024-02-13	verb	$nは耳
-kere	kerfa	hair	2024-02-13	verb	$nは毛
-kabu	kanba	goat	2024-02-13	verb	$nは山羊 (山羊屬)
-kaku	klaku	weep	2024-02-13	verb	$nは$a (涙) を泣く
-kapi	skapi	skin	2024-02-13	verb	$nは皮膚 (皮革)
-kape	kanpe	expect	2024-09-10	verb	$nは$aを豫期する (意外性=低)
-kaši	kalci	shit	2024-06-14	verb	$nは$a (糞尿) を排泄する
-kaha	katna	cut	2024-11-21	verb	$nは$aを切る (斷つ)
-kažo	kanro	healthy	2024-08-24	verb	$nは健康
-karo	kanla	eye	2024-02-13	verb	$nは目
-kovu	korvo	crow	2024-07-15	verb	$nは烏 (烏科)
-kjomi		counter	2024-06-14	verb	$nは$aを補完する (の雙對)
-kjoda		noble	2024-10-01	verb	$nは特權を持つ (貴族)
-tinu	tirna	hear	2024-02-13	verb	$nは$a (音) を聞く
-tidu	tcidu	read	2024-06-14	verb	$nはを$a (表現) を讀む
-tižu	tilju	heavy	2024-07-14	verb	$nは重い
-tiru	tinri	bore	2024-09-10	verb	$nは$aに飽きる (意外性=-)
-tunu	tunta	stab	2024-11-24	verb	$nは$aを刺す
-tubu	tunba	sibling	2025-02-08	verb	$nは$aの同胞 (と親を共有する)
-tuhe	tuple	leg	2024-11-24	verb	$nは肢 (腕, 脚)
-tuha	tumla	land	2024-02-13	verb	$nは陸地 (島)
-tuho	tunlo	swallow	2024-08-24	verb	$nは$aを嚥下する
-turu	truni	govern	2024-07-28	verb	$nは$aを統治する (支配する)
-temu	temci	time	2024-02-13	verb	$nは1次元物理的時間
-tedu	terdi	earth	2024-02-13	verb	$nは惑星 (地球)
-tebu	ctebi	lip	2024-02-13	verb	$nは脣
-teha	terpa	fear	2024-09-10	verb	$nは$aを恐れる
-tany	tsani	sky	2024-08-19	verb	$nは空 (大氣)
-tatu	tatru	breast	2024-09-22	verb	$nは胸
-tašu	tance	tongue	2024-02-13	verb	$nは舌
-taha	tavla	speak	2024-06-14	verb	$nは$a (言語, 規約) で話す (交信する)
-tohu	tordu	short	2024-09-26	verb	$nは短い
-pini	pinji	penis	2024-09-22	verb	$nは陰莖 (陰核)
-pihe	plipe	leap	2024-07-28	verb	$nは$aを跳躍する
-piri	pritu	right	2025-02-07	verb	$nは$aの右に有る
-pyve		heat	2024-09-06	verb	$nの熱量は$a
-pury	purci	before	2024-02-13	verb	$nは$aの過去に有る (時間方向で小さい)
-pure	prenu	person	2024-02-13	verb	$nは人間 (個人, 市民)
-pesu	pensi	think	2024-02-13	verb	$nは$aを考ふ (思ふ)
-pehu	pencu	touch	2024-02-13	verb	$nは$a (力) を觸覺する
-pezu	pezli	leaf	2024-09-02	verb	$nは葉
-peru	pelxu	yellow	2024-02-13	verb	$nは黃色を呈する
-pacu	pagbu	part	2024-08-06	verb	$nは$a (全體) の部分
-pašu	palci	bad	2024-08-02	verb	$nは邪惡
-pahe	prami	love	2024-09-10	verb	$nは$aを愛する (を戀ふ)
-paža	spaji	amaze	2024-08-02	verb	$nは$aに驚く (意外性=高)
-pari	pilno	use	2024-06-14	verb	$nは$a (道具) を使ふ
-paru	palta	dish	2024-12-23	verb	$nは器 (皿, 碗, 盆, 杯, 壺, 瓶, 罐)
-pohe	ponse	have	2024-08-19	verb	$nは$aを有する (保持する)
-pjami	plasimi	plasm	2024-07-15	verb	$nは電漿
-pjošu		spine	2025-02-06	verb	$nは脊椎
-pjožo		dull	2024-08-19	verb	$nは鈍い (彩度=低)
-xygy		gray	2024-08-19	verb	$nは無彩色を呈する (彩度=最低)
-xuca		neglect	2024-09-10	verb	$nは$aを無視する (關心=0)
-xuhe	xunre	red	2024-02-13	verb	$nは赤い
-xuru	xutla	smooth	2024-09-26	verb	$nは$aに對して滑らか
-xeku	xekri	black	2024-04-26	verb	$nは黑い (明度=最低)
-xeha	xirma	horse	2024-02-13	verb	$nは馬 (馬屬)
-xeži	xebni	hate	2024-09-10	verb	$nは$aを憎惡する
-xadu	xadni	body	2024-02-13	verb	$nは肉體
-xasy	xamsi	sea	2024-02-13	verb	$nは海 (湖)
-xahu	xabju	dwell	2024-12-20	verb	$nは$a (家) に居住する
-xahe	xance	hand	2024-11-24	verb	$nは手
-xaži	xrani	harm	2024-08-19	verb	$nは$aを害する (傷附ける)
-xaža	xarju	pig	2024-02-13	verb	$nは豚 (猪屬)
-šimu	cilmo	wet	2024-09-16	verb	$nは濕る (潤う)
-šiti	citka	eat	2024-02-13	verb	$nは$a (食料) を食ふ
-šitu	citsi	season	2024-08-30	verb	$nは$a (惑星) の季節
-šipi	cipni	bird	2024-02-13	verb	$nは鳥 (鳥類)
-šixu	cikna	wake	2024-02-13	verb	$nは起きる (意識=有)
-šisu	cisma	smile	2024-02-13	verb	$nは笑む
-šise	crisa	summer	2024-08-30	verb	$nは$a (惑星) の夏 (最も暑い季節)
-šiha	ciska	write	2024-06-14	verb	$nはを$a (表現) を書く
-šizu	cinza	tong	2024-12-23	verb	$nは箸 (鉗子)
-širi	critu	autumn	2024-11-21	verb	$nは$a (惑星) の秋 (冷える季節)
-širu	cinla	thin	2025-07-17	verb	$nは薄い
-šyru	culno	full	2024-08-02	verb	$nは$aに滿ちる
-šuni	cinmo	emotion	2024-08-02	verb	$nは$a (感情) を持つ
-šubi		maw	2024-09-02	verb	$nは胃
-šute	nicte	night	2024-08-19	verb	$nは$a (惑星) の夜
-šupe	cpedu	ask	2024-07-28	verb	$nはを$a (質問) を$dへ問ふ
-šusu	cusku	say	2024-06-14	verb	$nはを$a (表現) を言ふ
-šufa	cfari	happen	2024-08-23	verb	$nは存在する (起こる, 實現する, 實際である)
-šury	clani	long	2024-02-13	verb	$nは長い (一次元方向に大きく他次元方向に小さい)
-šeki		_self	2024-02-17	verb	$nは この言語
-šanu	canti	viscera	2024-02-13	verb	$nは內臟
-šamu	carmi	bright	2024-08-19	verb	$nは明るい (明度=高)
-šama	cmalu	small	2024-09-26	verb	$nは小さい
-šahu	canlu	space	2024-02-13	verb	$nは3次元物理的空間
-šazu	carna	turn	2024-08-19	verb	$nは$a (中心, 軸) を回る
-šavu	carvi	rain	2024-08-19	verb	$nは雨
-šara	crane	front	2025-02-07	verb	$nは$aの前 (進行方向) に有る
-šoku	cukta	book	2025-07-19	verb	$nは本 (卷, 册)
-šofja		lead	2024-09-01	verb	$nは$aを導く
-šoru	cortu	hurt	2025-03-01	verb	$nは$a (力) に痛む
-suny	stuna	east	2025-03-01	verb	$nは$aの東 (自轉方向) に有る
-sune	senva	dream	2024-10-16	verb	$nは$aを夢見る
-suna	sance	sound	2024-08-19	verb	$nは音
-suno	masno	slow	2024-09-06	verb	$nは遲い
-sumu	sumne	smell	2024-02-13	verb	$nは$a (化學物質) を嗅ぐ
-sudu	sudga	dry	2024-09-16	verb	$nは乾く
-suda	stali	stay	2024-02-13	verb	$nは$a (地點, 時點) に有る (存在する)
-suko	skori	rope	2025-02-08	verb	$nは紐 (繩, 糸)
-suti	sisti	stop	2024-08-31	verb	$nは止まる (停止する, 靜的)
-suty	sutra	swift	2024-06-18	verb	$nは速い
-seni	senpi	doubt	2024-09-10	verb	$nは$aを疑ふ
-sedu	stedu	head	2024-02-13	verb	$nは頭
-sepu	sipna	sleep	2024-04-26	verb	$nは眠る (意識=0)
-sešu	since	snake	2024-07-15	verb	$nは蛇 (蛇亞目)
-sehe	snime	snow	2024-08-19	verb	$nは雪
-seha	sinma	respect	2024-09-10	verb	$nは$aを敬ふ
-sezu	sevzi	self	2024-02-13	verb	$nは己
-sani	stani	trunk	2024-02-13	verb	$nは胴 (幹, 莖)
-satu	salta	salt	2024-02-13	verb	$nは鹽 (NaCl)
-sapa	spati	plant	2024-08-19	verb	$nは植物
-sahe	satre	caress	2024-11-23	verb	$nは$aを撫でる (愛撫する)
-saha	sanga	sing	2024-02-13	verb	$nは$a (歌, 曲) を歌ふ (演奏する)
-saži	sanli	stand	2024-08-30	verb	$nは$aに立つ
-soka	skari	colour	2024-02-13	verb	$nは$a (色) を發する
-soha	sovda	egg	2024-09-16	verb	$nは卵 (卵子)
-soru	solri	sun	2024-02-13	verb	$nは恆星 (太陽)
-fide		word	2024-10-05	verb	$nは單詞
-fikju		dative	2024-12-23	verb	$nは與格
-fišu	stici	west	2024-08-24	verb	$nは$aの西 (自轉方向の逆) に有る
-fiše	frica	differ	2024-02-13	verb	$nは$aと異なる (差分=有)
-fihe	finpe	fish	2024-02-13	verb	$nは魚 (魚類)
-fypu		accusative	2024-12-23	verb	$nは對格
-furu	frumu	frown	2024-02-13	verb	$nは顰む
-fure	flecu	river	2024-02-13	verb	$nは河川
-fepu	fepri	lung	2024-09-02	verb	$nは肺
-fehu	fengu	angry	2024-09-10	verb	$nは$aに怒る
-fakjo	fraksino	ash	2024-09-16	verb	$nは灰
-faxu	fraxu	forgive	2024-02-13	verb	$nは$aを許す
-foru	fusra	rot	2024-02-13	verb	$nは腐敗する
-foro	forca	fork	2024-12-23	verb	$nは叉
-hycjo		serene	2024-09-10	verb	$nは$aに平穩 (冷靜)
-žimi	jimpe	understand	2024-06-14	verb	$nはを$a (表現) を理解する
-žimu	jinme	metal	2025-07-17	verb	$nは金屬
-žiša	jimca	limb	2024-02-13	verb	$nは肢 (腕, 脚, 枝)
-žihe	jmive	live	2024-02-13	verb	$nは生く (生命=有)
-žiry	jilra	envy	2024-09-12	verb	$nは$aを羨む (妬む)
-žira	jirna	horn	2024-02-13	verb	$nは角
-žuci	jgira	pride	2024-09-10	verb	$nは$aを誇る (矜恃=+)
-žuce	jgena	knot	2024-12-23	verb	$nは結び目 (絡まり)
-žubi	jibni	near	2024-08-08	verb	$nは$aへ近い
-žuša	jcalu	nail	2024-02-13	verb	$nは爪
-žuha	jufra	sentence	2024-10-05	verb	$nは文 (命題)
-žuho	djuno	know	2024-02-13	verb	$nは$a (事象, 存在) を知る
-žesu	jensi	scissor	2024-07-28	verb	$nは鋏
-žery	jelca	burn	2024-12-08	verb	$n (燃料) は$a (酸化劑) で燃焼する
-žany	janco	shoulder	2024-02-13	verb	$nは肩 (尻)
-žaty		nominative	2024-12-23	verb	$nは主格
-žašu	djacu	water	2024-02-13	verb	$nは水 (H₂O)
-žafi	jgari	hug	2024-11-23	verb	$nは$aを抱擁する
-žafu	jamfu	foot	2024-11-24	verb	$nは足
-žaha	ja'au	up	2024-09-29	numeral	增加量
-žary	jdari	hard	2024-09-26	verb	$nは$aに對して軟らかい
-zunu	zulna	left	2024-02-13	verb	$nは$aの左に有る
-zudi	zdile	enjoy	2024-09-10	verb	$nは$aを樂しむ
-zutu	zutse	sit	2024-08-30	verb	$nは$aに座る
-zehu	zirpu	purple	2024-02-13	verb	$nは紫色を呈する
-zeža	ze'au	down	2024-09-29	numeral	減少量
-zaba	zbasu	make	2024-08-02	verb	$nは$a (材料, 部品) から$d (完成品) を作る (構成する)
-zoxo		relate	2024-09-14	verb	$nは$aに關はる ($a的)
-vibu	vibna	vagina	2024-09-22	verb	$nは膣
-vifu	vifne	fresh	2024-07-24	verb	$nは新鮮
-viha	viska	see	2024-02-13	verb	$nは$a (光) を見る
-vize		mass	2024-08-31	verb	$nの質量は$a
-vypa		spear	2024-07-28	verb	$nは槍 (鋲, 串)
-vupe		scorn	2024-09-10	verb	$nは$aを侮る (軽蔑する, 見くびる)
-vusu	vrusi	taste	2024-02-13	verb	$nは$a (化學物質) を味はふ
-vuhe	vrude	good	2024-08-02	verb	$nは善良
-vesu	vensa	spring	2024-11-21	verb	$nは$a (惑星) の春 (暖まる季節)
-vere	vreta	lie	2024-08-30	verb	$nは$aに寢る (臥す)
-vatu	vamtu	vomit	2024-06-14	verb	$nは$aを嘔吐する
-vasu	vasru	contain	2024-08-02	verb	$nは$aを內側に持つ
-važu	vajni	care	2024-09-10	verb	$nは$aを氣に掛ける (關心=有)
-vobju		randy	2024-09-12	verb	$nは$aに欲情する
-vofi	vofli	fly	2024-07-28	verb	$nは$aを飛翔する
-vjoxo		back	2024-06-14	verb	$nは$aの逆行
-rinu	risna	heart	2024-09-02	verb	$nは心臟
-rimu	limna	swim	2024-08-19	verb	$nは$a (流體) を泳ぐ
-ricu	livga	liver	2024-09-02	verb	$nは肝臟
-ridy	lindi	thunder	2024-08-19	verb	$nは雷
-ribo	cribe	bear	2024-02-13	verb	$nは熊 (熊科)
-riku	litki	liquid	2024-02-13	verb	$nは液體
-riko	crino	green	2024-02-13	verb	$nは綠色を呈する
-ripu	cripu	bridge	2025-02-08	verb	$nは橋梁
-rixu	trixe	hind	2024-02-13	verb	$nは$aの後 (進行方向の逆) に有る
-rišo	tricu	tree	2024-08-19	verb	$nは木本植物
-risu	rinsa	greet	2024-02-13	verb	$nは$aへ挨拶する
-rifu	limfa	lymph	2024-08-31	verb	$nは りんぱ
-rihu	sligu	solid	2024-02-13	verb	$nは個體
-rivu	cliva	come	2024-08-26	verb	$nは$a (始點, 起源, 由來) から來る
-rykjo		digest	2024-02-13	verb	$nは$aを消化する
-runu	mluni	moon	2024-02-13	verb	$nは衞星 (月)
-rufu	rufsu	rough	2024-08-24	verb	$nは$aに對して粗い
-ruru	xrula	flower	2024-09-02	verb	$nは花
-remu	rebla	tail	2024-02-13	verb	$nは尾
-recja		lick	2024-08-19	verb	$nは$aを舐める
-recju		recover	2024-12-24	verb	$nは恢復する
-reka	lenku	cold	2024-08-30	verb	$nは冷たい (寒い, 涼しい)
-retu	gletu	fuck	2024-02-13	verb	$nは$aと性交する
-resu	respa	reptile	2024-02-13	verb	$nは爬虫綱に屬する
-rehu	rectu	flesh	2024-02-13	verb	$nは筋肉
-reha	remna	human	2024-02-13	verb	$nは人 (人屬)
-rano	lanme	sheep	2024-02-13	verb	$nは羊 (羊屬)
-ramu	lamji	contact	2024-08-08	verb	$nは$aに接する
-rady	ladru	milk	2024-08-31	verb	$nは乳
-radu	ranti	soft	2024-09-26	verb	$nは$aに對して軟らかい
-rabu	labno	wolf	2024-02-13	verb	$nは狼
-rabo	blabi	white	2024-02-13	verb	$nは白い (明度=最高)
-rati	ratcu	rat	2024-02-13	verb	$nは鼠 (齧歯目)
-rato	mlatu	cat	2024-02-13	verb	$nは猫 (猫屬)
-rašu	ractu	hare	2024-02-13	verb	$nは兔 (兔形目)
-raša	lacri	trust	2024-08-02	verb	$nは$aを信ずる
-rasa	grasu	fat	2024-09-16	verb	$nは體脂肪
-rocy		punch	2024-11-23	verb	$nは$aを毆る
-roku	rokci	stone	2024-08-19	verb	$nは石 (巖, 鑛物)
-rotu	rotsu	thick	2024-02-13	verb	$nは厚い
-rohu	lorxu	fox	2024-02-13	verb	$nは狐
-rora	rorci	beget	2024-08-19	verb	$nは生殖する ($aを生む, $aの親である)
+token	jbo	en	date	class	description	jbo description
+ge		afterwards	2025-06-11	preverb	時點前後. 以降. それから. さうして	
+go		which	2024-02-13	other	動詞に後置して作用域を開く	
+nu	no	zero	2024-02-13	numeral	0	digit/number: 0 (digit) [zero].
+ne		at	2025-08-31	preposition	處格. …にて	
+no	no'o	level	2024-09-29	numeral	普通. 標準	digit/number: typical/average value.
+mi	mi	i	2024-02-13	verb	$nは我	pro-sumti: me/we the speaker(s)/author(s); identified by self-vocative.
+mw	ma	who	2024-02-13	verb	$nは誰, 何	pro-sumti: sumti question (what/who/how/why/etc.); appropriately fill in sumti blank.
+mu	mu	five	2024-02-13	numeral	5	digit/number: 5 (digit) [five].
+mo	moi	th	2024-08-02	other	數に後置し序數を指す. $nは第…	convert number to ordinal selbri; $x_{1}$ is (n)th member of set $x_{2}$ ordered by rule $x_{3}$.
+ma	mo'a	least	2024-02-13	numeral	最少量	digit/number: too few; subjective.
+ca		done	2024-02-13	preverb	受動態. 前置詞と動詞に前置し, 動詞の同格を前置詞に對應する格に作用させる. 對格前置詞は省略し得る	
+du		do	2024-02-13	preverb	現在	
+de	de'a	rest	2025-08-05	preverb	停止相. …し已んでゐる	event contour for a temporary halt and ensuing pause in a process.
+do	do	thou	2024-02-13	verb	$nは汝	pro-sumti: you listener(s); identified by vocative.
+bi	bi	eight	2024-02-13	numeral	8	digit/number: 8 (digit) [eight].
+by		end	2024-05-26	preverb	終了相. …し終へる	
+be		by	2024-02-13	preposition	主格. …が	
+ba	ba'o	already	2025-08-05	preverb	已然相. 既に	interval event contour: in the aftermath of ...; since ...; retrospective/perfect | |----.
+ki	ki'o	kilo	2024-02-13	numeral	1000. 3桁ごとの區切り	digit/number: number comma; thousands.
+ke		_period	2025-07-30	other	文が終はり發話が終はる	
+ko	ko'a	he	2024-02-13	verb	$nは彼, あれ, それ, これ	pro-sumti: he/she/it/they #1 (specified by goi).
+ka	ka'e	if	2025-07-19	preverb	叙想	modal aspect: innate capability; possibly unrealized.
+tw		_loan	2024-02-13	other	言語外の表現に前置して動詞化する. $nを表現$a…が指す	
+te		to	2024-02-13	preposition	與格. …へ	
+ta		_comma	2025-07-30	other	文が終はり別の文が始まる	
+pi	pi	decimal	2024-02-13	numeral	小數点	digit/number: radix (number base) point; default decimal.
+pu	pu'o	yet	2025-08-05	preverb	未然相. 未だに	interval event contour: in anticipation of ...; until ... ; inchoative ----| |.
+po		of	2024-08-02	other	數に後置し基數を指す. $nは…個	
+pa	pa	one	2024-02-13	numeral	1	digit/number: 1 (digit) [one].
+xu		while	2025-08-04	preverb	時點同期. 同時に	
+xe		with	2024-12-24	preposition	共格. …が關はって	
+xo		did	2024-02-13	preverb	過去	
+xa	xa	six	2024-02-13	numeral	6	digit/number: 6 (digit) [six].
+li	ci	three	2024-02-13	numeral	3	digit/number: 3 (digit) [three].
+le		because	2025-07-15	preposition	因格. …に因って	
+la	ca'o	keep	2024-05-26	preverb	進行相. …してゐる	interval event contour: during ...; continuative |-----|.
+su	so	nine	2024-02-13	numeral	9	digit/number: 9 (digit) [nine].
+so	so'i	much	2024-09-29	numeral	多量	digit/number: many.
+sa	so'u	little	2024-09-29	numeral	少量	digit/number: few.
+fe	fe	and	2024-02-13	joiner	連言. かつ	sumti place tag: tag 2nd sumti place.
+fo	fo	or	2024-02-13	joiner	選言. または	sumti place tag: tag 4th sumti place.
+fa	fa	iff	2024-02-13	joiner	同値. 即ち	sumti place tag: tag 1st sumti place.
+hu		begin	2024-05-26	preverb	開始相. …し始める	
+je		_close	2024-02-13	other	構造を閉ぢる. 非曖昧な時に省略する	
+ja	ja'au	up	2024-09-29	numeral	增加量	subjective number which is decreasing over time
+zw		so	2024-02-13	preverb	非制限修飾. 當然に…である	
+zu	ze'au	down	2024-09-29	numeral	減少量	subjective number which is increasing over time
+ze		ly	2024-02-13	preposition	己格. この文自身が指す事象を…として	
+za	ze	seven	2024-02-13	numeral	7	digit/number: 7 (digit) [seven].
+vi		will	2024-02-13	preverb	未來	
+vo	vo	four	2024-02-13	numeral	4	digit/number: 4 (digit) [four].
+re		him	2024-02-13	preposition	對格. …を	
+ro	ro	most	2024-02-13	numeral	最多量	digit/number: each, all.
+ra	re	two	2024-02-13	numeral	2	digit/number: 2 (digit) [two].
+nir	ni	how_many	2024-02-13	numeral	數量疑問. 幾つ	abstractor: quantity/amount abstractor; $x_{1}$ is quantity/amount of [bridi] measured on scale $x_{2}$.
+cex	ge'a	null	2026-05-12	numeral	null. 空値	mathematical operator: null mathematical expression (mex) operator (used in >2-ary ops).
+dex	de'o	_log	2024-08-24	numeral	對數	binary mathematical operator: logarithm; [log/ln a to base b]; default base 10 or e.
+tex	te'a	_exp	2024-08-24	numeral	冪乘	binary mathematical operator: to the power; exponential; [a to the b power].
+pix	pi'i	_mul	2024-02-13	numeral	乘算, ×	n-ary mathematical operator: times; multiplication operator; [(((a * b) * c) * ...)].
+lix	ci'i	infinite	2024-09-06	numeral	(加算または非可算の) 無限. ∞. ℵ	digit/number: infinity; followed by digits => aleph cardinality.
+lan		less_than	2024-08-31	numeral	…未滿. <	
+sux	su'i	_add	2024-02-13	numeral	加算. +	n-ary mathematical operator: plus; addition operator; [(((a + b) + c) + ...)].
+suf	su'e	at_most	2024-02-13	numeral	最大…. ≤	digit/number: at most (all); no more than.
+fex	fe'i	_div	2024-02-13	numeral	除算. /	n-ary mathematical operator: divided by; division operator; [(((a / b) / c) / ...)].
+fol		_var	2025-02-27	other	變項選言と本文を區切る	
+vex	vei'u	_mod	2024-08-24	numeral	剩餘	binary mekso operator: mod(ulus)/remainder; $X_1$ \% $X_2$, $\,\,\, X_1$ (mod($X_2$)).
+vox	vu'u	_sub	2024-02-13	numeral	減算. -	n-ary mathematical operator: minus; subtraction operator; [(((a - b) - c) - ...)].
+gemi		mass	2024-08-31	verb	$nの質量は$a	
+gono		oblique	2024-12-23	verb	$nは非主格	
+goza		sperm	2026-05-13	verb	$nは精子	
+gale		simulate	2024-08-27	verb	$nは$aを模倣する (擬裝する)	
+gafe		wont	2024-09-01	verb	$nは$aに慣れる (意外性=小)	
+nige	sligu	solid	2024-02-13	verb	$nは個體	$x_{1}$ is solid, of composition/material including $x_{2}$, under conditions $x_{3}$.
+niny	lindi	thunder	2024-08-19	verb	$nは雷	$x_{1}$ is lightning/electrical arc/thunderbolt striking at/extending to $x_{2}$ from $x_{3}$.
+nimy	ninmu	woman	2024-08-19	verb	$nは卵巢	$x_{1}$ is a woman/women; $x_{1}$ is a female humanoid person [not necessarily adult].
+nily	nicte	night	2024-08-19	verb	$nは$a (惑星) の夜	$x_{1}$ is a nighttime of day $x_{2}$ at location $x_{3}$; (adjective:) $x_{1}$ is at night/nocturnal.
+nivy	cliva	come	2024-08-26	verb	$nは始點 (起源, 由來) $aから來る	$x_{1}$ leaves/goes away/departs/parts/separates from $x_{2}$ via route $x_{3}$.
+nive	cribe	bear	2024-02-13	verb	$nは熊 (熊科)	$x_{1}$ is a bear/ursoid of species/breed $x_{2}$.
+nwla		want	2024-02-13	verb	$nは$aを求む	
+nwja		host	2026-05-13	verb	主人$nは客人$aを持て成す	
+nuru	nupre	promise	2024-08-19	verb	$nは$aを約束する	$x_{1}$ (agent) promises/commits/assures/threatens $x_{2}$ (event/state) to $x_{3}$ [beneficiary/victim].
+neni	nejni	energy	2024-08-31	verb	$nの能源は$a	$x_{1}$ is energy of type $x_{2}$ in form $x_{3}$.
+neli	nelci	like	2026-05-09	verb	$nは$aを好む	$x_{1}$ is fond of/likes/has a taste for $x_{2}$ (object/state).
+nesa	cnita	below	2024-02-13	verb	$nは$aより下に有る (重心へ近い)	$x_{1}$ is directly/vertically beneath/below/under/underneath/down from $x_{2}$ in frame of reference $x_{3}$.
+nqze		lick	2024-08-19	verb	$nは$aを舐める	
+nqve		randy	2024-09-12	verb	$nは$aに欲情する	
+nola	rokci	stone	2024-08-19	verb	$nは石 (巖, 鑛物)	$x_{1}$ is a quantity of/is made of/contains rock/stone of type/composition $x_{2}$ from location $x_{3}$.
+noru	nobli	noble	2024-10-01	verb	$nは特權を持つ (貴族)	$x_{1}$ is noble/aristocratic/elite/high-born/titled in/under culture/society/standard $x_{2}$.
+nana	nakni	man	2024-08-19	verb	$nは精巢	$x_1$ is a male/buck of species $x_2$ evidencing masculine physical/biological/genetic trait(s) $x_3$ (ka); $x_1$ is masculine.
+name	natmi	nation	2024-08-24	verb	$nは國家	$x_{1}$ is a nation/ethnic group of peoples $x_{2}$; [people sharing a history/culture].
+nala	nanca	year	2024-08-30	verb	$nは$a (惑星) の年 (公轉周期)	$x_{1}$ is $x_{2}$ years in duration (default is 1 year) by standard $x_{3}$; (adjective:) $x_{1}$ is annual.
+nasw	srasu	grass	2026-05-13	verb	$nは草本植物	$x_{1}$ is a blade/expanse of grass of species $x_{2}$.
+nafe	natfe	deny	2024-08-30	verb	$nは$aを否定 (に矛盾) する	$x_{1}$ (du'u) contradicts/denies/refutes/negates $x_{2}$ (du'u) under rules/logic $x_{3}$.
+naja	narju	orange	2024-02-13	verb	$nは橙色を呈する	$x_{1}$ is orange [color adjective].
+nazo	nazbi	nose	2024-02-13	verb	$nは鼻	$x_{1}$ is the nose [body-part] of $x_{2}$ with nostril(s)/nasal passage(s) $x_{3}$; [metaphor: protrusion].
+naza	snada	success	2026-05-13	verb	$nは成功 (成就) する	$x_{1}$ [agent] succeeds in/achieves/completes/accomplishes $x_{2}$ as a result of effort/attempt/try $x_{3}$.
+mine	mintu	same	2024-08-27	verb	$nは$aに等しい (差分=最小)	$x_{1}$ is the same/identical thing as $x_{2}$ by standard $x_{3}$; ($x_{1}$ and $x_{2}$ interchangeable).
+mime	cmima	element	2024-08-06	verb	$nは 集合 (列擧) $aに屬する	$x_{1}$ is a member/element of set $x_{2}$; $x_{1}$ belongs to group $x_{2}$; $x_{1}$ is amid/among/amongst group $x_{2}$.
+mili	mirli	deer	2024-02-13	verb	$nは鹿 (鹿科)	$x_{1}$ is a deer/elk/moose/[hart/stag/doe] of species/breed $x_{2}$.
+mize	minde	command	2024-09-29	verb	$nは$aを命令する (要求する, 推奬する)	$x_{1}$ issues commands/orders to $x_{2}$ for result $x_{3}$ (event/state) to happen; $x_{3}$ is commanded to occur.
+mwla		polygon	2026-05-12	verb	$nは多邊形, 多面體	
+muno	munje	world	2024-02-13	verb	$nは世界 (宇宙, 時空間)	$x_{1}$ is a universe/cosmos [complete and ordered entirety] of domain/sphere $x_{2}$ defined by rules $x_{3}$.
+mumu	mluni	moon	2024-02-13	verb	$nは衞星 (月)	$x_{1}$ is a satellite/moon orbiting $x_{2}$ with characteristics $x_{3}$, orbital parameters $x_{4}$.
+muvo	muvdu	move	2024-08-31	verb	$nは動く (速度=有)	$x_{1}$ (object) moves to destination/receiver $x_{2}$ [away] from origin $x_{3}$ over path/route $x_{4}$.
+mqre	mlatu	cat	2024-02-13	verb	$nは猫 (猫屬)	$x_{1}$ is a cat/[puss/pussy/kitten] [feline animal] of species/breed $x_{2}$; (adjective:) $x_{1}$ is feline.
+monu	moklu	mouth	2024-02-13	verb	$nは口	$x_{1}$ is a/the mouth/oral cavity [body-part] of $x_{2}$; (metaphor: entrance/intake for consumption).
+mosu	mokca	point	2024-10-01	verb	$nは點 (位置)	$x_{1}$ is a point/instant/moment [0-dimensional shape/form] in/on/at time/place $x_{2}$.
+moso	morsi	die	2024-08-24	verb	$nは死ぬ (生命=最小)	$x_{1}$ is dead/has ceased to be alive.
+mano	masno	slow	2024-09-06	verb	$nは遲い (速度=小)	$x_{1}$ is slow/sluggish at doing/being/bringing about $x_{2}$ (event/state).
+mamw	manti	ant	2026-05-13	verb	$nは蟻	$x_{1}$ is an ant of species/breed $x_{2}$.
+maxe	manku	dark	2024-08-19	verb	$nは暗い (明度=小)	$x_{1}$ is dark/lacking in illumination.
+maxa	marxa	chew	2024-08-24	verb	$nは$aを咀嚼する	$x_{1}$ [force] mashes/crushes/squashes/smashes $x_{2}$ into pulp/mash/crumbs/deformed mass $x_{3}$.
+mavw	mabru	mammal	2024-02-13	verb	$nは哺乳綱動物	$x_{1}$ is a mammal/'animal'/beast of species $x_{2}$.
+cimi	ckini	family	2025-02-08	verb	$nは$aの血族	$x_{1}$ is related to/associated with/akin to $x_{2}$ by relationship $x_{3}$.
+cise	ciska	write	2024-06-14	verb	$nはを$a (表現) を書く	$x_{1}$ inscribes/writes $x_{2}$ on display/storage medium $x_{3}$ with writing implement $x_{4}$; $x_{1}$ is a scribe.
+civi	gidva	lead	2024-09-01	verb	$nは$aを導く	$x_{1}$ (person/object/event) guides/conducts/pilots/leads $x_{2}$ (active participants) in/at $x_{3}$ (event).
+cire	jgira	pride	2024-09-10	verb	$nは$aを誇る (矜恃=+)	$x_{1}$ (person) feels/has pride in/about $x_{2}$ (abstraction).
+cuxu	gunka	work	2024-02-13	verb	$nは勞働する	$x_{1}$ [person] labors/works on/at $x_{2}$ [activity] with goal/objective $x_{3}$.
+cuzu	gusni	light	2024-02-13	verb	$nは光 (電磁波)	$x_1$ [energy] is light/illumination illuminating $x_2$ from light source $x_3$.
+cena	genja	root	2024-09-02	verb	$nは根	$x_{1}$ is a root [body-part] of plant/species $x_{2}$; [metaphor: immobile, supporting, nourishing].
+cema	genrkasu	case	2024-10-05	verb	$nは格	
+ceji	ckeji	shame	2024-09-10	verb	$nは$aを恥づ (矜恃=-)	$x_{1}$ feels ashamed/mortified/humiliated under conditions $x_{2}$ before community/audience $x_{3}$.
+ceri	gletu	fuck	2024-02-13	verb	$nは$aと性交する	$x_{1}$ copulates/mates/has coitus/sexual intercourse with $x_{2}$.
+cere	gleki	glad	2024-08-02	verb	$nは$aを喜ぶ	$x_{1}$ is happy/merry/glad/gleeful about $x_{2}$ (event/state).
+cera	gerku	dog	2024-02-13	verb	$nは犬 (犬屬)	$x_{1}$ is a dog/canine/[bitch] of species/breed $x_{2}$.
+cosu	grasu	fat	2024-09-16	verb	$nは體脂肪	$x_{1}$ is a quantity of/is made of/contains grease/fat/oil from source $x_{2}$.
+cora	gutra	womb	2024-09-22	verb	$nは前立腺 (子宮)	$x_{1}$ is a/the womb/uterus [body-part] of $x_{2}$; [metaphor: nourishing, protective, giving birth].
+cama	grana	rod	2024-07-28	verb	$nは棒 (杖, 棍)	$x_{1}$ is a rod/pole/staff/stick/cane [shape/form] of material $x_{2}$.
+cale	gapci	gas	2024-02-13	verb	$nは氣體	$x_{1}$ is gaseous/fumes/a gas/vapor of material/composition including $x_{2}$, under conditions $x_{3}$.
+case	ganse	sense	2024-02-13	verb	$nは$a (刺戟) を感ずる	$x_{1}$ [observer] senses/detects/notices stimulus $x_{2}$ (object/nu) by means $x_{3}$ under conditions $x_{4}$.
+cafa	gapru	above	2024-02-13	verb	$nは$aより上に有る (重心へ遠い)	$x_{1}$ is directly/vertically above/upwards-from $x_{2}$ in gravity/frame of reference $x_{3}$.
+caja	glare	hot	2024-08-30	verb	$nは熱い (暑い, 温かい) (温度=大)	$x_{1}$ is hot/[warm] by standard $x_{2}$.
+diny	dilnu	cloud	2024-08-19	verb	$nは雲	$x_{1}$ is a cloud/mass of clouds of material $x_{2}$ in air mass $x_{3}$ at floor/base elevation $x_{4}$.
+dile	dikca	electric	2024-08-31	verb	$nの電荷は$a	$x_{1}$ is electricity [electric charge or current] in/on $x_{2}$ of polarity/quantity $x_{3}$ (def. negative).
+dunu	dunda	give	2024-02-13	verb	$nは$aを$dへ與ふ	$x_{1}$ [donor] gives/donates gift/present $x_{2}$ to recipient/beneficiary $x_{3}$ [without payment/exchange].
+dumu	dunra	winter	2024-08-30	verb	$nは$a (惑星) の冬 (最も寒い季節)	$x_{1}$ is winter/wintertime [cold season] of year $x_{2}$ at location $x_{3}$.
+deni	denci	tooth	2024-02-13	verb	$nは齒牙	$x_{1}$ is a/the tooth [body-part] of $x_{2}$; (adjective:) $x_{1}$ is dental.
+denq	didni	reason	2024-08-31	verb	$nは$aを判ずる (推論する, 理性に照らす)	$x_1$ deduces/reasons by deduction/establishes by deduction that $x_2$ is true about $x_3$ from general rule $x_4$
+demi	denmi	dense	2024-07-15	verb	$nは高密度 (密度=大)	$x_{1}$ is dense/concentrated/packed/intense in property $x_{2}$ (ka) at location/locus $x_{3}$.
+deje	djedi	day	2024-08-19	verb	$nは$a (惑星) の日 (自轉周期)	$x_{1}$ is $x_{2}$ full days in duration (default is 1 day) by standard $x_{3}$; (adjective:) $x_{1}$ is diurnal.
+donu	donri	diurnal	2024-08-19	verb	$nは$a (惑星) の晝	$x_{1}$ is the daytime of day $x_{2}$ at location $x_{3}$; (adjective:) $x_{1}$ is diurnal (vs. nocturnal).
+dofa		spear	2024-07-28	verb	$nは槍 (鋲, 串)	
+dohu	djuno	know	2024-02-13	verb	$nは$a (事象, 存在) を知る	$x_{1}$ knows fact(s) $x_{2}$ (du'u) about subject $x_{3}$ by epistemology $x_{4}$.
+doja	djacu	water	2024-02-13	verb	$nは水 (H₂O)	$x_{1}$ is made of/contains/is a quantity/expanse of water; (adjective:) $x_{1}$ is aqueous/[aquatic].
+dano	darno	far	2024-08-08	verb	$nは$aから遠い (距離=大)	$x_{1}$ is far/distant from $x_{2}$ in property $x_{3}$ (ka).
+dame	damri	drum	2026-05-13	verb	$nは打樂器	$x_{1}$ is a drum/cymbal/gong [percussion musical instrument] with beater/actuator $x_{2}$.
+damo	danmo	smoke	2024-09-16	verb	$nは煙 (氣體中の固體または液體の粒子)	$x_{1}$ is made of/contains/is a quantity of smoke/smog/air pollution from source $x_{2}$.
+daxe	darxi	hit	2024-11-23	verb	$nは$aを打つ (毆る, 蹴る)	$x_{1}$ hits/strikes/[beats] $x_{2}$ with instrument [or body-part] $x_{3}$ at locus $x_{4}$.
+dale	dacti	thing	2024-02-13	verb	$nは物理的存在物 (物體)	$x_{1}$ is a material object enduring in space-time; $x_{1}$ is a thing.
+dala	darca	go	2024-08-26	verb	$nは終點 (到達點) $aへ往く	$x_1$ arrives at $x_2$ via route $x_3$
+dasw	dansu	dance	2024-02-13	verb	$nは$a (振り付け) を踊る	$x_{1}$ (individual, mass) dances to accompaniment/music/rhythm $x_{2}$.
+dafw	dakfu	knife	2024-07-28	verb	$nは刃 (刀, 剣, 庖丁)	$x_{1}$ is a knife (tool) for cutting $x_{2}$, with blade of material $x_{3}$.
+dafo	daplu	island	2026-05-12	verb	$nは島	$x_{1}$ is an island/atoll/key of [material/properties] $x_{2}$ in surroundings/body $x_{3}$; $x_{1}$ is insular.
+dafa	danfu	answer	2024-07-28	verb	$nはを$aを$dへ答ふ	$x_{1}$ is the answer/response/solution/[reply] to question/problem $x_{2}$.
+bimy	bilma	sick	2024-02-13	verb	$nは病む (故障する)	$x_{1}$ is ill/sick/diseased with symptoms $x_{2}$ from disease $x_{3}$.
+bife	bifce	bee	2026-05-13	verb	$nは蜂	$x_{1}$ is a bee/wasp/hornet of species/breed $x_{2}$.
+bize	bridi	verb	2024-10-05	verb	$nは動詞	$x_{1}$ (du'u) is a predicate relationship with relation $x_{2}$ among arguments (sequence/set) $x_{3}$.
+bire	birka	arm	2024-11-24	verb	$nは腕	$x_{1}$ is a/the arm [body-part] of $x_{2}$; [metaphor: branch with strength].
+bwma	bradi	foe	2026-05-12	verb	$nは$aの敵	$x_{1}$ is an enemy/opponent/adversary/foe of $x_{2}$ in struggle $x_{3}$.
+bwja	blabi	white	2024-02-13	verb	$nは白い (明度=最大)	$x_{1}$ is white/very-light colored [color adjective].
+bugu		accusative	2024-12-23	verb	$nは對格	
+bumu	bumru	fog	2024-08-19	verb	$nは霧	$x_{1}$ is foggy/misty/covered by a fog/mist/vapor of liquid $x_{2}$.
+beli	batci	bite	2024-08-24	verb	$nは$aを嚙む	$x_{1}$ bites/pinches $x_{2}$ on/at specific locus $x_{3}$ with $x_{4}$.
+befa	betfu	maw	2024-09-02	verb	$nは胃	$x_{1}$ is a/the abdomen/belly/lower trunk [body-part] of $x_{2}$; [metaphor: midsection].
+berq	berti	north	2024-08-24	verb	$nは$aより北 (反時計回りする極點) へ近い	$x_{1}$ is to the north/northern side [right-hand-rule pole] of $x_{2}$ according to frame of reference $x_{3}$.
+bqme		nominative	2024-12-23	verb	$nは主格	
+bonu	bongu	bone	2024-02-13	verb	$nは骨	$x_{1}$ is a/the bone/ivory [body-part], performing function $x_{2}$ in body of $x_{3}$; [metaphor: calcium].
+bono	bloti	ship	2024-10-05	verb	$nは舟	$x_{1}$ is a boat/ship/vessel [vehicle] for carrying $x_{2}$, propelled by $x_{3}$.
+bomu	blanu	blue	2024-02-13	verb	$nは青い	$x_{1}$ is blue [color adjective].
+boxa	boxna	wave	2024-08-19	verb	$n (媒體) の波は$a (形狀) を成す	$x_{1}$ is a wave [periodic pattern] in medium $x_{2}$, wave-form $x_{3}$, wave-length $x_{4}$, frequency $x_{5}$.
+bosu	bratu	sleet	2024-08-19	verb	$nは雹	$x_{1}$ is hail/sleet/freezing rain/solid precipitation of material/composition including $x_{2}$.
+banw	bakni	cow	2024-02-13	verb	$nは牛 (牛族)	$x_{1}$ is a cow/cattle/kine/ox/[bull/steer/calf] [beef-producer/bovine] of species/breed $x_{2}$.
+bafw	banfi	amphibia	2024-02-13	verb	$nは兩棲綱に屬する	$x_{1}$ is an amphibian of species/breed $x_{2}$.
+bafe	bapli	force	2024-10-01	verb	$nは力	$x_{1}$ [force] (ka) forces/compels event $x_{2}$ to occur; $x_{1}$ determines property $x_{2}$ to manifest.
+baja	bajra	run	2024-06-18	verb	$nは$aを走る (驅ける)	$x_{1}$ runs on surface $x_{2}$ using limbs $x_{3}$ with gait $x_{4}$.
+bazw	barda	big	2024-02-13	verb	$nは大きい	$x_{1}$ is big/large in property/dimension(s) $x_{2}$ (ka) as compared with standard/norm $x_{3}$.
+bazo	badri	sad	2024-09-10	verb	$nは$aを悲しむ	$x_{1}$ is sad/depressed/dejected/[unhappy/feels sorrow/grief] about $x_{2}$ (abstraction).
+bavw	balvi	after	2024-02-13	verb	$nは$aの未來に有る (時間方向で大きい)	$x_{1}$ is in the future of/later than/after $x_{2}$ in time sequence; $x_{1}$ is latter; $x_{2}$ is former.
+kini	kinli	sharp	2024-07-28	verb	$nは鋭い (曲線=大)	$x_{1}$ is sharp/keen at locus $x_{2}$.
+kimi	cmila	laugh	2024-02-13	verb	$nは笑ふ	$x_{1}$ laughs (emotional expression).
+kixe	krixa	yell	2024-06-14	verb	$nは$a (聲) を叫ぶ (鳴く)	$x_{1}$ cries out/yells/howls sound $x_{2}$; $x_{1}$ is a crier.
+kihe	ckire	thank	2024-02-13	verb	$nは$aに感謝する	$x_{1}$ is grateful/thankful to/appreciative of $x_{2}$ for $x_{3}$ (event/property).
+kwna	katna	cut	2024-11-21	verb	$nは$aを切る (斷つ)	$x_{1}$ (tool/blade/force) cuts [through]/splits/divides $x_{2}$ (object) into pieces $x_{3}$.
+kugu	kukru	perpendicular	2026-05-12	verb	$nは$aに對して垂直	$x_1$ is orthogonal/perpendicular/right/at right angle/rectified/square/normal to $x_2$, where they (are projected to) intersect orthogonally at locus/on set $x_3$, otherwise being utterly distinct (and not even on the same axis/scale) in sense $x_4$
+kugo	kruvi	curve	2026-05-12	verb	$nは曲線 (曲面) (曲率=有)	$x_{1}$ is a curve/turn/bend in $x_{2}$, at locus $x_{3}$, and defined by set of points/properties $x_{4}$.
+kumo	kunti	empty	2024-08-02	verb	$nは$aを缺く (密度=最小)	$x_{1}$ [container] is empty/vacant of $x_{2}$ [material]; $x_{1}$ is hollow.
+kusu	kuspe	interval	2024-10-01	verb	$nは區間 (容積, 領域)	$x_{1}$ ranges/extends/spans/persists/reaches across/over interval/gap/area/scope/extent/range $x_{2}$.
+kele	kecti	pity	2024-09-10	verb	$nは$aを憐れむ (に同情する)	$x_{1}$ (person) pities/feels sorry for $x_{2}$ (person) about $x_{3}$ (abstraction).
+kere	kerlo	ear	2024-02-13	verb	$nは耳	$x_{1}$ is a/the ear [body-part] of $x_{2}$; [metaphor: sensory apparatus, information gathering].
+kera	kerfa	hair	2024-02-13	verb	$nは毛	$x_{1}$ is a/the hair/fur [body-part] of $x_{2}$ at body location $x_{3}$.
+kqge		pick	2024-09-09	verb	$nは$aを拾ふ (狩る, 収穫する)	
+koxu	klaku	weep	2024-02-13	verb	$nは$a (涙) を泣く	$x_{1}$ weeps/cries tears $x_{2}$ about/for reason $x_{3}$ (event/state).
+kofa		scorn	2024-09-10	verb	$nは$aを侮る (軽蔑する, 見くびる)	
+kovo	korvo	crow	2024-07-15	verb	$nは烏 (烏科)	$s_1$ is a crow/raven of species $s_2$.
+kana	kanla	eye	2024-02-13	verb	$nは目	$x_{1}$ is a/the eye [body-part] of $x_{2}$; [metaphor: sensory apparatus]; (adjective:) $x_{1}$ is ocular.
+kamw	karbi	compare	2024-07-26	verb	$nは$aを比較する	$x_{1}$ [observer] compares $x_{2}$ with $x_{3}$ in property $x_{4}$ (ka), determining comparison $x_{5}$ (state).
+kale	karce	car	2026-05-13	verb	$nは車	$x_{1}$ is a car/automobile/truck/van [a wheeled motor vehicle] for carrying $x_{2}$, propelled by $x_{3}$
+kase	kalci	shit	2024-06-14	verb	$nは$a (糞尿) を排泄する	$x_{1}$ is a/the feces/excrement/dung/shit of $x_{2}$ (animal/person); (adjective:) $x_{1}$ is fecal (matter).
+kafw	kanpe	expect	2024-09-10	verb	$nは$aを豫期する (意外性=小)	$x_1$ expects/looks for the occurence of $x_2$ (event), expected likelihood $x_3$ (0-1, default {li} {so'a} i.e. near 1); $x_1$ subjectively evaluates the likelihood of $x_2$ (event) to be $x_3$.
+kaha	krali	right	2026-05-12	verb	$nは權利$aを持つ	$x_1$ (NU) is a legal/moral entitlement of $x_2$ (individual/mass) by standard $x_3$. $x_2$ is a legal person.
+kava	kanba	goat	2024-02-13	verb	$nは山羊 (山羊屬)	$x_{1}$ is a goat/angora/[billy-goat/kid] of species/breed $x_{2}$.
+karo	kanro	healthy	2024-08-24	verb	$nは健康	$x_{1}$ is healthy/fit/well/in good health by standard $x_{2}$.
+tini	tinri	bore	2024-09-10	verb	$nは$aに飽きる (意外性=-)	$x_1$ (abstraction) bores $x_2$ in manner $x_3$; $x_2$ is bored by/experiences boredom about $x_1$, the boredom being of type/form $x_3$.
+time	snime	snow	2024-08-19	verb	$nは雪	$x_{1}$ is made of/contains/is a quantity/expanse of snow.
+tihe	trixe	hind	2024-02-13	verb	$nは$aの後 (進行方向の逆) に有る	$x_{1}$ is posterior/behind/back/in the rear of $x_{2}$ which faces/in-frame-of-reference $x_{3}$.
+tije	tilju	heavy	2024-07-14	verb	$nは重い (質量=大)	$x_{1}$ is heavy/weighty in mass/weight by standard $x_{2}$.
+tiri	tirna	hear	2024-02-13	verb	$nは$a (音) を聞く	$x_{1}$ hears $x_{2}$ against background/noise $x_{3}$; $x_{2}$ is audible; (adjective:) $x_{1}$ is aural.
+twna	snanu	south	2025-03-01	verb	$nは$aよりの南 (時計回りする極點) へ近い	$x_{1}$ is to the south/southern side of $x_{2}$ according to frame of reference $x_{3}$.
+twsa	tsani	sky	2024-08-19	verb	$nは空 (大氣)	$x_{1}$ is an expanse of sky/the heavens at place $x_{2}$; [celestial].
+tunu	tunta	stab	2024-11-24	verb	$nは$aを刺す	$x_{1}$ (object, usually pointed) pokes/jabs/stabs/prods $x_{2}$ (experiencer).
+tumo	tunba	sibling	2025-02-08	verb	$nは$aの同胞 (と親を共有する)	$x_{1}$ is a sibling of $x_{2}$ by bond/tie/standard/parent(s) $x_{3}$.
+tufo	tuple	leg	2024-11-24	verb	$nは肢 (腕, 脚)	$x_{1}$ is a/the leg [body-part] of $x_{2}$; [metaphor: supporting branch].
+tuhu	truni	govern	2024-07-28	verb	$nは$aを統治する (支配する)	
+temi	temci	time	2024-02-13	verb	$nは1次元物理的時間	$x_{1}$ is the time-duration/interval/period/[elapsed time] from time/event $x_{2}$ to time/event $x_{3}$.
+teje	tcidu	read	2024-06-14	verb	$nはを$a (表現) を讀む	$x_{1}$ [agent] reads $x_{2}$ [text] from surface/document/reading material $x_{3}$; $x_{1}$ is a reader.
+tejq	tricu	tree	2024-08-19	verb	$nは木本植物	$x_{1}$ is a tree of species/cultivar $x_{2}$.
+tere	terpa	fear	2024-09-10	verb	$nは$aを恐れる	$x_{1}$ fears $x_{2}$; $x_{1}$ is afraid/scared/frightened by/fearful of $x_{2}$ (event/tu'a object).
+terq	terdi	earth	2024-02-13	verb	$nは惑星 (地球)	$x_{1}$ is the Earth/the home planet of race $x_{2}$; (adjective:) $x_{1}$ is terrestrial/earthbound.
+tono	tunlo	swallow	2024-08-24	verb	$nは$aを嚥下する	$x_{1}$ gulps/swallows.
+toma	tumla	land	2024-02-13	verb	$nは陸地	$x_{1}$ is a parcel/expanse of land at location $x_{2}$; $x_{1}$ is terrain.
+tozu	tordu	short	2024-09-26	verb	$nは短い (長さ=小)	$x_{1}$ is short in dimension/direction $x_{2}$ (default longest dimension) by measurement standard $x_{3}$.
+tora	toldi	butterfly	2026-05-13	verb	$nは蝶 (蛾)	$x_{1}$ is a butterfly/moth of species/breed $x_{2}$.
+tamw	tabra	trumpet	2026-05-13	verb	$nは金管樂器	$x_{1}$ is a horn/trumpet/trombone/bugle [brass-wind/lip-reed musical instrument].
+tale	tance	tongue	2024-02-13	verb	$nは舌	$x_{1}$ is a/the tongue [body-part] of $x_{2}$; (metaphor: similar to nazbi, tamji, degji).
+tava	tavla	speak	2024-06-14	verb	$nは$a (言語, 規約) で話す (交信する)	$x_{1}$ talks/speaks to $x_{2}$ about subject $x_{3}$ in language $x_{4}$.
+tarw	tatru	breast	2024-09-22	verb	$nは胸	$x_{1}$ is a/the breast/mammary/teat [body-part] of $x_{2}$; [metaphor: projection providing liquid].
+pini	pilno	use	2024-06-14	verb	$nは$a (道具) を使ふ	$x_1$ uses/employs $x_2$ [tool, apparatus, machine, agent, acting entity, material] for purpose $x_3$.
+pife	plipe	leap	2024-07-28	verb	$nは$aを跳躍する	$x_{1}$ (agent/object) leaps/jumps/springs/bounds to $x_{2}$ from $x_{3}$ reaching height $x_{4}$ propelled by $x_{5}$.
+piji	pinji	penis	2024-09-22	verb	$nは陰莖 (陰核)	$x_{1}$ is a/the clitoris/penis [projecting reproductive organ; body-part] of $x_{2}$.
+pymi	plasimi	plasm	2024-07-15	verb	$nは電漿	
+pyji	pritu	right	2025-02-07	verb	$nは$aの右に有る	$x_{1}$ is to the right/right-hand side of $x_{2}$ which faces/in-frame-of-reference $x_{3}$.
+pwna	prami	love	2024-09-10	verb	$nは$aを愛する (を戀ふ)	$x_{1}$ loves/feels strong affectionate devotion towards $x_{2}$ (object/state).
+puru	purci	before	2024-02-13	verb	$nは$aの過去に有る (時間方向で小さい)	$x_{1}$ is in the past of/earlier than/before $x_{2}$ in time sequence; $x_{1}$ is former; $x_{2}$ is latter.
+penq	pendo	friend	2026-05-12	verb	$nは$aの友	$x_{1}$ is/acts as a friend of/to $x_{2}$ (experiencer); $x_{2}$ befriends $x_{1}$.
+pena	pensi	think	2024-02-13	verb	$nは$aを考ふ (思ふ)	$x_{1}$ thinks/considers/cogitates/reasons/is pensive about/reflects upon subject/concept $x_{2}$.
+peme	speni	counter	2024-06-14	verb	$nは$aを補完する (の雙對)	$x_{1}$ is married to $x_{2}$; $x_{1}$ is a spouse of $x_{2}$ under law/custom/tradition/system/convention $x_{3}$.
+pelq	pencu	touch	2024-02-13	verb	$nは$a (力) を觸覺する	$x_{1}$ (agent) touches $x_{2}$ with $x_{3}$ [a locus on $x_{1}$ or an instrument] at $x_{4}$ [a locus on $x_{2}$].
+peze	pezli	leaf	2024-09-02	verb	$nは葉	$x_{1}$ is a leaf of plant $x_{2}$; $x_{1}$ is foliage of $x_{2}$.
+pera	pelxu	yellow	2024-02-13	verb	$nは黃色を呈する	$x_{1}$ is yellow/golden [color adjective].
+pqne	prenu	person	2024-02-13	verb	$nは人間 (個人, 市民, 權利享有主體)	$x_{1}$ is a person/people (noun) [not necessarily human]; $x_{1}$ displays personality/a persona.
+pqxe		serene	2024-09-10	verb	$nは$aに平穩 (冷靜)	
+pono	ponse	have	2024-08-19	verb	$nは$aを有する (保持する)	$x_{1}$ possesses/owns/has $x_{2}$ under law/custom $x_{3}$; $x_{1}$ is owner/proprietor of $x_{2}$ under $x_{3}$.
+poru	porpi	break	2024-06-14	verb	$nは$aを$d (部品) へ壞す (分解する)	$x_{1}$ breaks/fractures/shatters/[splits/splinters/cracks] into pieces $x_{2}$.
+panw	panra	parallel	2026-05-12	verb	$nは$aに對して平行	$x_{1}$ parallels $x_{2}$ differing only in property $x_{3}$ (ka; jo'u/fa'u term) by standard/geometry $x_{4}$.
+pamo	pagbu	part	2024-08-06	verb	$nは全體$aの部分	$x_{1}$ is a part/component/piece/portion/segment of $x_{2}$ [where $x_{2}$ is a whole/mass]; $x_{2}$ is partly $x_{1}$.
+paxe	palci	bad	2024-08-02	verb	$nは邪惡	$x_{1}$ is evil/depraved/wicked [morally bad] by standard $x_{2}$.
+pafo	palta	dish	2024-12-23	verb	$nは器 (皿, 碗, 盆, 杯, 壺, 瓶, 罐)	$x_{1}$ is a plate/dish/platter/saucer [flat/mildly concave food service bed] made of material $x_{2}$.
+pahe	pagre	pass	2024-08-26	verb	$nは通過點 (途中, 媒體) $aを通る	$x_{1}$ passes through/penetrates barrier/medium/portal $x_{2}$ to destination side $x_{3}$ from origin side $x_{4}$.
+xwma	cmana	hill	2024-02-13	verb	$nは山 (丘)	$x_{1}$ is a mountain/hill/mound/[rise]/[peak]/[summit]/[highlands] projecting from land mass $x_{2}$.
+xwfa		mosquito	2026-05-13	verb	$nは蚊	
+xwja	xrani	harm	2024-08-19	verb	$nは$aを害する (傷附ける)	$x_{1}$ (event) injures/harms/damages victim $x_{2}$ in property $x_{3}$ (ka) resulting in injury $x_{4}$ (state).
+xugo	xrula	flower	2024-09-02	verb	$nは花	$x_{1}$ is a/the flower/blossom/bloom [body-part] of plant/species $x_{2}$; (adjective:) $x_{1}$ is floral.
+xuso	xutla	smooth	2024-09-26	verb	$nは$aに對して滑らか (摩擦=小)	$x_{1}$ is smooth/even/[soft/silky] in texture/regularity.
+xema	xirma	horse	2024-02-13	verb	$nは馬 (馬屬)	$x_{1}$ is a horse/equine/[colt/mare/stallion/pony] of species/breed $x_{2}$.
+xeji	xekri	black	2024-04-26	verb	$nは黑い (明度=最小)	$x_{1}$ is black/extremely dark-colored [color adjective].
+xevi	xebni	hate	2024-09-10	verb	$nは$aを憎惡する	$x_{1}$ hates/despises $x_{2}$ (object/abstraction); $x_{1}$ is full of hate for $x_{2}$; $x_{2}$ is odious to $x_{1}$.
+xera	xilva	heal	2024-12-24	verb	$nは恢復する	$x_1$ heals/recovers from $x_2$
+xoma	cmalu	small	2024-09-26	verb	$nは小さい	$x_{1}$ is small in property/dimension(s) $x_{2}$ (ka) as compared with standard/norm $x_{3}$.
+xoru	xunre	red	2024-02-13	verb	$nは赤い	$x_{1}$ is red/crimson/ruddy [color adjective].
+xoro	cukla	circle	2026-05-12	verb	$nは圓, 球	$x_{1}$ is round/circular [2-dimensional shape/form]; $x_{1}$ is a disk/circle/ring.
+xanw	xadni	body	2024-02-13	verb	$nは肉體	$x_{1}$ is a/the body/corpus/corpse of $x_{2}$; (adjective:) $x_{1}$ is corporal/corporeal.
+xane	xance	hand	2024-11-24	verb	$nは手	$x_{1}$ is a/the hand [body-part] of $x_{2}$; [metaphor: manipulating tool, waldo].
+xafe	xamsi	sea	2024-02-13	verb	$nは海	$x_{1}$ is a sea/ocean/gulf/[atmosphere] of planet $x_{2}$, of fluid $x_{3}$; (adjective:) $x_{1}$ is marine.
+xafa	cfari	happen	2024-08-23	verb	$nは存在する (起こる, 實現する, 實際である)	$x_{1}$ [state/event/process] commences/initiates/starts/begins to occur; (intransitive verb).
+xaje	xabju	dwell	2024-12-20	verb	$nは$a (家) に居住する	$x_{1}$ dwells/lives/resides/abides at/inhabits/is a resident of location/habitat/nest/home/abode $x_{2}$.
+xaro	xarju	pig	2024-02-13	verb	$nは豚 (猪屬)	$x_{1}$ is a pig/hog/swine/[boar] [pork/ham/bacon-producer] of species/breed $x_{2}$.
+xara	xagri	reed	2026-05-13	verb	$nは木管樂器	$x_{1}$ is a oboe/clarinet/saxophone [reed musical instrument] with reed $x_{2}$.
+lini	cikna	wake	2024-02-13	verb	$nは起きる (意識=有)	(adjective:) $x_{1}$ is awake/alert/conscious.
+liny	citno	new	2026-05-10	verb	$nは$aを基準として新た (若い) (經過時間=小)	$x_{1}$ is young/youthful [relatively short in elapsed duration] by standard $x_{2}$.
+limy	cimra	frog	2024-07-15	verb	$nは蛙 (無尾目)	$x_1$ is a frog/toad of species/variety $x_2$
+lime	cinmo	emotion	2024-08-02	verb	$nは$a (感情) を感ず	$x_{1}$ feels emotion $x_{2}$ (ka) about $x_{3}$.
+lify	cisma	smile	2024-02-13	verb	$nは笑む	$x_{1}$ smiles/grins (facial expression).
+lihe	citka	eat	2024-02-13	verb	$nは$a (食料) を食ふ	$x_{1}$ eats/ingests/consumes (transitive verb) $x_{2}$.
+liji	cipra	test	2024-07-26	verb	$nは$aを確認する (檢查する, 精查する, 試驗する)	$x_{1}$ (process/event) is a test for/proof of property/state $x_{2}$ in subject $x_{3}$ (individ./set/mass).
+lije	ciblu	blood	2024-07-29	verb	$nは血	$x_{1}$ is blood/vital fluid of organism $x_{2}$.
+lize	cinza	tong	2024-12-23	verb	$nは箸 (鉗子)	$x_{1}$ is a/are tong(s)/chopsticks/pincers/tweezers/pliers [tool/body-part] for $x_{2}$ to pinch $x_{3}$.
+livi	cinba	kiss	2024-11-23	verb	$nは$aに口附ける	$x_{1}$ (agent) kisses/busses $x_{2}$ at locus $x_{3}$.
+liri	cilmo	wet	2024-09-16	verb	$nは濕る	$x_{1}$ is moist/wet/damp with liquid $x_{2}$.
+liry	cinla	thin	2025-07-17	verb	$nは薄い (厚さ=小)	$x_{1}$ is thin in direction/dimension $x_{2}$ by standard $x_{3}$; [relatively short in smallest dimension].
+lymi	cinki	insect	2026-05-13	verb	$nは昆蟲	$x_{1}$ is an insect/arthropod of species $x_{2}$; [bug/beetle].
+lege	cnebo	neck	2024-02-13	verb	$nは首	$x_{1}$ is a/the neck [body-part] of $x_{2}$; [metaphor: a relatively narrow point].
+leni	cerni	dawn	2026-05-12	verb	$nは$a (惑星) の曉	$x_{1}$ is a morning [dawn until after typical start-of-work for locale] of day $x_{2}$ at location $x_{3}$.
+lemi	ctebi	lip	2024-02-13	verb	$nは脣	$x_{1}$ is a/the lip [body-part]/rim of orifice $x_{2}$ of body $x_{3}$; (adjective:) $x_{1}$ is labial.
+lela	crisa	summer	2024-08-30	verb	$nは$a (惑星) の夏 (最も暑い季節)	$x_{1}$ is summer/summertime [hot season] of year $x_{2}$ at location $x_{3}$.
+lefq	cipni	bird	2024-02-13	verb	$nは鳥 (鳥類)	$x_{1}$ is a bird/avian/fowl of species $x_{2}$.
+leje	cilre	learn	2024-08-01	verb	$nは$aを學ぶ	$x_{1}$ learns $x_{2}$ (du'u) about subject $x_{3}$ from source $x_{4}$ (obj./event) by method $x_{5}$ (event/process).
+leri	cortu	hurt	2025-03-01	verb	$nは$a (力) に痛む	$x_{1}$ hurts/feels pain/hurt at locus $x_{2}$.
+lqme	cmene	name	2024-07-28	verb	$nは$aを意味する (の名である)	$x_{1}$ (quoted word(s)) is a/the name/title/tag of $x_{2}$ to/used-by namer/name-user $x_{3}$ (person).
+lqze	cripu	bridge	2025-02-08	verb	$nは橋梁	$x_{1}$ is a bridge/span over/across $x_{2}$ between $x_{3}$ and $x_{4}$ [unordered, typically destination first].
+lqve	cpedu	ask	2024-07-28	verb	$nはを$a (質問) を$dへ問ふ	$x_{1}$ requests/asks/petitions/solicits for $x_{2}$ of/from $x_{3}$ in manner/form $x_{4}$.
+lage	crane	front	2025-02-07	verb	$nは$aの前 (進行方向) に有る	$x_{1}$ is anterior/ahead/forward/(in/on) the front of $x_{2}$ which faces/in-frame-of-reference $x_{3}$.
+lanw	canlu	space	2024-02-13	verb	$nは3次元物理的空間	$x_{1}$ is space/volume/region/room [at-least-3-dimensional area] occupied by $x_{2}$.
+lana	canti	viscera	2024-02-13	verb	$nは內臟	$x_{1}$ is a/the gut(s)/entrails/intestines/viscera/innards/digestive system [body-part] of $x_{2}$.
+laxa	cukta	book	2025-07-19	verb	$nは本 (卷, 册)	$x_{1}$ is a book containing work $x_{2}$ by author $x_{3}$ for audience $x_{4}$ preserved in medium $x_{5}$.
+lafa	catra	kill	2024-08-24	verb	$nは殺す	$x_{1}$ (agent) kills/slaughters/murders $x_{2}$ by action/method $x_{3}$.
+lazo	cadzu	walk	2024-06-18	verb	$nは$aを步く	$x_{1}$ walks/strides/paces on surface $x_{2}$ using limbs $x_{3}$.
+lavw	carvi	rain	2024-08-19	verb	$nは雨	$x_{1}$ rains/showers/[precipitates] to $x_{2}$ from $x_{3}$; $x_{1}$ is precipitation [not limited to 'rain'].
+laro	carmi	bright	2024-08-19	verb	$nは明るい (明度=大)	$x_{1}$ is intense/bright/saturated/brilliant in property (ka) $x_{2}$ as received/measured by observer $x_{3}$.
+lara	carna	turn	2024-08-19	verb	$nは$a (中心, 軸) を回る	$x_1$ turns about vector $x_2$ towards direction $x_3$, turning angular distance / to face point $x_4$
+swga	skapi	skin	2024-02-13	verb	$nは皮膚 (皮革)	$x_{1}$ is a pelt/skin/hide/leather from $x_{2}$.
+swxa	skari	colour	2024-02-13	verb	$nは$a (色) を發する	$x_{1}$ is/appears to be of color/hue $x_{2}$ as perceived/seen by $x_{3}$ under conditions $x_{4}$.
+swsa	stani	trunk	2024-02-13	verb	$nは胴 (幹, 莖)	$x_{1}$ is a/the stalk/stem/trunk [body-part] of plant/species $x_{2}$; [metaphor: main support].
+swra	srana	relate	2024-09-14	verb	$nは$aに關はる ($a的)	$x_{1}$ pertains to/is germane/relevant to/concerns/is related/associated with/is about $x_{2}$.
+sugu	sudga	dry	2024-09-16	verb	$nは乾く	$x_{1}$ is dry of liquid $x_{2}$; (adjective:) $x_{1}$ is arid.
+suno	culno	full	2024-08-02	verb	$nは$aに滿ちる (密度=最大)	$x_{1}$ is full/completely filled with $x_{2}$.
+sumu	sumne	smell	2024-02-13	verb	$nは$a (化學物質) を嗅ぐ	$x_{1}$ (experiencer) smells/scents (transitive verb) $x_{2}$; $x_{2}$ smells/has odor/scent to observer $x_{1}$.
+susu	cusku	say	2024-06-14	verb	$nはを$a (表現) を言ふ	$x_{1}$ (agent) expresses/says $x_{2}$ (sedu'u/text/lu'e concept) for audience $x_{3}$ via expressive medium $x_{4}$.
+sena	sinma	respect	2024-09-10	verb	$nは$aを敬ふ	$x_{1}$ esteems/respects/venerates/highly regards $x_{2}$ [object of respect].
+semq	simsa	similar	2026-05-10	verb	$nは$aに似る (差分=小)	$x_{1}$ is similar/parallel to $x_{2}$ in property/quantity $x_{3}$ (ka/ni); $x_{1}$ looks/appears like $x_{2}$.
+sele	since	snake	2024-07-15	verb	$nは蛇 (蛇亞目)	$x_{1}$ is a snake/serpent of species/breed $x_{2}$.
+sese	sisti	stop	2024-08-31	verb	$nは止まる (速度=最小)	$x_{1}$ [agent] ceases/stops/halts/ends activity/process/state $x_{2}$ [not necessarily completing it].
+sefa	senpi	doubt	2024-09-10	verb	$nは$aを疑ふ	$x_{1}$ doubts/is dubious/doubtful/skeptical/questions that $x_{2}$ (du'u) is true.
+seja	sidju	help	2024-06-18	verb	$nは$aを助ける (支援する)	$x_{1}$ helps/assists/aids object/person $x_{2}$ do/achieve/maintain event/activity $x_{3}$.
+seza	stedu	head	2024-02-13	verb	$nは頭	$x_{1}$ is a/the head [body-part] of $x_{2}$; [metaphor: uppermost portion].
+seva	senva	dream	2024-10-16	verb	$nは$aを夢見る	$x_{1}$ dreams about/that $x_{2}$ (fact/idea/event/state); $x_{2}$ is a dream/reverie of $x_{1}$.
+seri	sirji	straight	2026-05-12	verb	$nは直線 (平面) (曲率=最小)	$x_{1}$ is straight/direct/line segment/interval between $x_{2}$ and $x_{3}$; (adjective:) $x_{1}$ is linear.
+soma	stuna	east	2025-03-01	verb	$nは$aの東 (自轉方向) に有る	$x_{1}$ is to the east/eastern side of $x_{2}$ according to frame of reference $x_{3}$.
+soxo	skori	rope	2025-02-08	verb	$nは紐 (繩, 糸)	$x_{1}$ is cord/cable/rope/line/twine/cordage/woven strands of material $x_{2}$.
+soza	sovda	egg	2024-09-16	verb	$nは卵 (卵子)	$x_{1}$ is an egg/ovum/sperm/pollen/gamete of/from organism [mother/father] $x_{2}$.
+soru	sutra	swift	2024-06-18	verb	$nは速い (速度=大)	$x_{1}$ is fast/swift/quick/hastes/rapid at doing/being/bringing about $x_{2}$ (event/state).
+soro	solri	sun	2024-02-13	verb	$nは恆星 (太陽)	$x_{1}$ is the sun of home planet $x_{2}$ (default Earth) of race $x_{3}$; (adjective:) $x_{1}$ is solar.
+sagw	slabu	old	2026-05-10	verb	$nは$aを基準として古い (老いる) (經過時間=大)	$x_{1}$ is old/familiar/well-known to observer $x_{2}$ in feature $x_{3}$ (ka) by standard $x_{4}$.
+sanw	sance	sound	2024-08-19	verb	$nは音	$x_{1}$ is sound produced/emitted by $x_{2}$.
+sane	sanli	stand	2024-08-30	verb	$nは$aに立つ	$x_{1}$ stands [is vertically oriented] on surface $x_{2}$ supported by limbs/support/pedestal $x_{3}$.
+sale	sakci	suck	2026-05-13	verb	$nは$aを吸ふ	$x_{1}$ sucks/is suction/vacuum/relatively low pressure of fluid/gas $x_{2}$ relative to high pressure $x_{3}$.
+saso	salta	salt	2024-02-13	verb	$nは鹽 (NaCl)	$x_{1}$ (mass) is a quantity of salad [food] with ingredients/components including $x_{2}$.
+safw	setfa	surface	2026-05-12	verb	$nは線 (曲線, 直線)	
+safa	stali	stay	2024-02-13	verb	$nは地點 (時點) $aに有る (存在する)	$x_{1}$ remains/stays at/abides/lasts with $x_{2}$.
+saha	sanga	sing	2024-02-13	verb	$nは$a (歌, 曲) を歌ふ (演奏する)	$x_{1}$ sings/chants $x_{2}$ [song/hymn/melody/melodic sounds] to audience $x_{3}$.
+sazw	spaji	amaze	2024-08-02	verb	$nは$aに驚く (意外性=大)	$x_{1}$ (event/action abstract) surprises/startles/is unexpected [and generally sudden] to $x_{2}$.
+savw	spati	plant	2024-08-19	verb	$nは植物	$x_{1}$ is a plant/herb/greenery of species/strain/cultivar $x_{2}$.
+sara	sanra	scatter	2026-05-13	verb	$nは散る (分散する)	$x_1$ scatters/disperses/diffuses/dissolves in medium $x_2$ from starting point $x_3$
+finy	finpe	fish	2024-02-13	verb	$nは魚 (魚類)	$x_{1}$ is a fish of species $x_{2}$ [metaphorical extension to sharks, non-fish aquatic vertebrates].
+fily	firca	flirt	2026-05-13	verb	$nは$aと じゃれる (いちゃつく)	$x_1$ flirts with $x_2$ by doing $x_3$
+fise	citsi	season	2024-08-30	verb	$nは$a (惑星) の季節	$x_{1}$ is a season/is seasonal [cyclical interval], defined by interval/property $x_{2}$, of year(s) $x_{3}$.
+fife	sipna	sleep	2024-04-26	verb	$nは眠る (意識=最小)	$x_{1}$ is asleep (adjective); $x_{1}$ sleeps/is sleeping.
+five	fliba	fail	2026-05-13	verb	$nは失敗する	$x_{1}$ fails at doing $x_{2}$ (state/event); $x_{1}$ is a failure at its role in $x_{2}$.
+fyli	stici	west	2024-08-24	verb	$nは$aの西 (自轉方向の逆) に有る	$x_{1}$ is to the west/western side of $x_{2}$ according to frame of reference $x_{3}$.
+fyji	flira	face	2026-05-13	verb	$nは顔	$x_{1}$ is a/the face [head/body-part] of $x_{2}$; (adjective:) $x_{1}$ is facial.
+fyri	frica	differ	2024-02-13	verb	$nは$aと異なる (差分=有)	$x_{1}$ differs/is distinct from/contrasts with/is unlike $x_{2}$ in property/dimension/quantity $x_{3}$.
+fena	fengu	angry	2024-09-10	verb	$nは$aに怒る	$x_{1}$ is angry/mad at $x_{2}$ for $x_{3}$ (action/state/property).
+feje	flecu	river	2024-02-13	verb	$nは河川	$x_{1}$ is a current/flow/river of/in $x_{2}$ flowing in direction to/towards $x_{3}$ from direction/source $x_{4}$.
+ferq	fepri	lung	2024-09-02	verb	$nは肺	$x_{1}$ is a/the lung [body-part] of $x_{2}$; [metaphor: breathing/respiratory apparatus/bellows].
+fogu		forget	2024-08-01	verb	$nは$aを忘る	
+fomu	frumu	frown	2024-02-13	verb	$nは顰む	$x_{1}$ frowns/grimaces (facial expression).
+fola	forca	fork	2024-12-23	verb	$nは叉	$x_{1}$ is a fork/fork-type tool/utensil for purpose $x_{2}$ with tines/prongs $x_{3}$ on base/support $x_{4}$.
+fosa	fusra	rot	2024-02-13	verb	$nは腐敗する	$x_{1}$ rots/decays/ferments with decay/fermentation agent $x_{2}$; $x_{1}$ is rotten/decayed/fermented.
+faxe	fraxu	forgive	2024-02-13	verb	$nは$aを許す	$x_{1}$ forgives $x_{2}$ for event/state/activity $x_{3}$.
+fase	fatne	back	2024-06-14	verb	$nは$aの逆行	$x_{1}$ [sequence] is in reverse order from $x_{2}$ [sequence]; $x_{1}$ (object) is inverted from $x_{2}$ (object).
+faso	fraksino	ash	2024-09-16	verb	$nは灰	
+fave	farvi	develop	2026-05-13	verb	$nは發展する	$x_{1}$ develops/evolves towards/into $x_{2}$ from $x_{3}$ through stages $x_{4}$.
+hwga		dislike	2026-05-09	verb	$nは$aを厭ふ	
+hemq		hue	2024-11-20	verb	$nは$a (色相) を發する	
+haxw		dull	2024-08-19	verb	$nは鈍い (彩度=小)	
+hase	cause	gasnu	2026-05-10	verb	原因$nは$結果aを引き起こす	
+hafe		volume	2026-05-12	verb	$nは立體	
+hara	clani	long	2024-02-13	verb	$nは長い (長さ=大)	$x_{1}$ is long in dimension/direction $x_{2}$ (default longest dimension) by measurement standard $x_{3}$.
+jimi	jirna	horn	2024-02-13	verb	$nは角	$x_{1}$ is a/the horn [body-part] of $x_{2}$; [metaphor: pointed extremity].
+jimy	jimca	limb	2024-02-13	verb	$nは肢 (腕, 脚, 枝)	$x_{1}$ is a branch/bough/limb of $x_{2}$; $x_{2}$ forks into branches $x_{1}$; [preferred over metaphorical birka].
+jime	jinme	metal	2025-07-17	verb	$nは金屬	$x_{1}$ is a quantity of/contains/is made of made of metal of composition including $x_{2}$.
+jiri	jilra	envy	2024-09-12	verb	$nは$aを羨む (妬む)	$x_{1}$ (person) is jealous of/envies $x_{2}$ (person) about/for $x_{3}$ (property - ka).
+jymi	jmive	live	2024-02-13	verb	$nは生く (生命=有)	$x_{1}$ lives/is alive by standard $x_{2}$; $x_{1}$ is an organism/living thing.
+jyvi	jibni	near	2024-08-08	verb	$nは$aへ近い (距離=小)	$x_{1}$ is near/close to/approximates $x_{2}$ in property/quantity $x_{3}$ (ka/ni).
+jege	jgena	knot	2024-12-23	verb	$nは結び目 (絡まり)	$x_{1}$ is a knot/tangle in/between $x_{2}$ (object/jo'u-objects).
+jeme	jimpe	understand	2024-06-14	verb	$nはを$a (表現) を理解する	$x_{1}$ understands/comprehends fact/truth $x_{2}$ (du'u) about subject $x_{3}$; $x_{1}$ understands (fi) $x_{3}$.
+jelq	jelca	burn	2024-12-08	verb	$n (燃料) は$a (酸化劑) で燃焼する	$x_{1}$ burns/[ignites/is flammable/inflammable] at temperature $x_{2}$ in atmosphere $x_{3}$.
+jese	jensi	scissor	2024-07-28	verb	$nは鋏	$x_1$ is a (set/pair) of scissors/shears/clippers/(hedge) trimmers/tongs [tool] with parts/blades $x_2$ (scissor) and used for purpose $x_3$
+jeja	jcalu	nail	2024-02-13	verb	$nは爪	
+jeri	jgari	hug	2024-11-23	verb	$nは$aを抱擁する	$x_{1}$ grasps/holds/clutches/seizes/grips/[hugs] $x_{2}$ with $x_{3}$ (part of $x_{1}$) at locus $x_{4}$ (part of $x_{2}$).
+jqze	jdini	money	2024-08-25	verb	$nは金 (貨幣, 紙幣, 硬貨)	$x_{1}$ is money/currency issued by $x_{2}$; (adjective:) $x_{1}$ is financial/monetary/pecuniary/fiscal.
+jqre	crino	green	2024-02-13	verb	$nは綠色を呈する	$x_{1}$ is green/verdant [color adjective].
+jage	jgita	guitar	2026-05-13	verb	$nは弦樂器	$x_{1}$ is guitar/violin/fiddle/harp [stringed musical instrument] with actuator/plectrum/bow $x_{2}$.
+janw		_self	2024-02-17	verb	$nは この言語	
+jale	janco	shoulder	2024-02-13	verb	$nは肩 (尻)	$x_{1}$ is a/the shoulder/hip/joint [body-part] attaching limb/extremity $x_{2}$ to body $x_{3}$.
+jafo	jamfu	foot	2024-11-24	verb	$nは足	$x_{1}$ is a/the foot [body-part] of $x_{2}$; [metaphor: lowest portion] (adjective:) $x_{1}$ is pedal.
+jaje	jadji	locust	2026-05-13	verb	$nは蝗	$x_1$ is a locust/grasshopper/cricket of species/variety $x_2$
+jaza	jdari	hard	2024-09-26	verb	$nは$aに對して硬い (力に對する變形=小)	$x_{1}$ is firm/hard/resistant/unyielding to force $x_{2}$ under conditions $x_{3}$.
+zuno	zulna	left	2024-02-13	verb	$nは$aの左に有る	
+zusu	zutse	sit	2024-08-30	verb	$nは$aに座る	$x_{1}$ sits [assumes sitting position] on surface $x_{2}$.
+zufo	jufra	sentence	2024-10-05	verb	$nは文 (命題)	$x_{1}$ (text) is a sentence/statement about $x_{2}$ [topic/subject/predicate/focus] in language $x_{3}$.
+zeje	zdile	enjoy	2024-09-10	verb	$nは$aを樂しむ	$x_{1}$ (abstract) is amusing/entertaining to $x_{2}$ in property/aspect $x_{3}$; $x_{3}$ is what amuses $x_{2}$ about $x_{1}$.
+zeri	zirpu	purple	2024-02-13	verb	$nは紫色を呈する	$x_{1}$ is purple/violet [color adjective].
+zona	sraku	scratch	2026-05-13	verb	$nは$aを掻く	$x_{1}$ [abrasive/cutting/scratching object/implement] scratches/[carves]/erodes/cuts [into] $x_{2}$.
+zomu	smuci	spoon	2024-12-23	verb	$nは匙	$x_{1}$ is a spoon/scoop (tool) for use $x_{2}$, made of material $x_{3}$.
+zamw		imagine	2024-02-13	verb	$nは$aを想像する (夢想する)	
+zaso	zbasu	make	2024-08-02	verb	$nは材料 (部品) $aから$dを作る (構成する)	$x_{1}$ makes/assembles/builds/manufactures/creates $x_{2}$ out of materials/parts/components $x_{3}$.
+zafa	sfani	fly	2026-05-13	verb	$nは蠅	$x_{1}$ is a fly [a small non-stinging flying insect] of species/breed $x_{2}$.
+zarw	satre	caress	2024-11-23	verb	$nは$aを撫でる (愛撫する)	$x_{1}$ (agent) strokes/rubs/pets $x_{2}$ with $x_{3}$.
+viny	vibna	vagina	2024-09-22	verb	$nは膣	$x_{1}$ is a/the vagina [body-part] of $x_{2}$.
+vify	viska	see	2024-02-13	verb	$nは$a (光) を見る	$x_{1}$ sees/views/perceives visually $x_{2}$ under conditions $x_{3}$.
+vife	vifne	fresh	2024-07-24	verb	$nは新鮮	(adjective:) $x_{1}$ is fresh/unspoiled.
+vire	vidru	vidru	2026-05-13	verb	$nは ゐるす	$x_{1}$ is a virus of species/breed/defining property $x_{2}$ capable of infecting [at] $x_{3}$.
+vyli	critu	autumn	2024-11-21	verb	$nは$a (惑星) の秋 (冷える季節)	$x_{1}$ is autumn/fall [harvest/cooling season] of year $x_{2}$ at location $x_{3}$.
+vwga		shun	2024-09-27	verb	$nは$aを避く	
+vwma		spine	2025-02-06	verb	$nは脊椎	
+veni	vente	belly	2024-09-22	verb	$nは腹	$x_1$ is the ventral part of body $x_2$
+venq	vecnu	sell	2026-05-13	verb	販賣者$nは商品$aを購買者$dへ賣る	$x_{1}$ [seller] sells/vends $x_{2}$ [goods/service/commodity] to buyer $x_{3}$ for amount/cost/expense $x_{4}$.
+vena	vensa	spring	2024-11-21	verb	$nは$a (惑星) の春 (暖まる季節)	$x_{1}$ is spring/springtime [warming season] of year $x_{2}$ at location $x_{3}$; (adjective:) $x_{1}$ is vernal.
+vese		preejaculate	2024-08-31	verb	$nは尿道球腺液	
+veje		clause	2024-10-05	verb	$nは節	
+vqse		gray	2024-08-19	verb	$nは無彩色を呈する (彩度=最小)	
+vomu	vrude	good	2024-08-02	verb	$nは善良	$x_{1}$ is virtuous/saintly/[fine/moral/nice/holy/morally good] by standard $x_{2}$.
+vohu	vrusi	taste	2024-02-13	verb	$nは$a (化學物質) を味はふ	$x_{1}$ (ka) is a taste/flavor of/emitted by $x_{2}$; $x_{2}$ tastes of/like $x_{1}$.
+voru	vofli	fly	2024-07-28	verb	$nは$aを飛翔する	$x_{1}$ flies [in air/atmosphere] using lifting/propulsion means $x_{2}$.
+vanw	vajni	care	2024-09-10	verb	$nは$aを氣に掛ける (關心=有)	$x_{1}$ (object/event) is important/significant to $x_{2}$ (person/event) in aspect/for reason $x_{3}$ (nu/ka).
+vana	vanci	dusk	2026-05-12	verb	$nは$a (惑星) の昏	$x_{1}$ is an evening [from end-of-work until sleep typical for locale] of day $x_{2}$ at location $x_{3}$.
+vama	vamtu	vomit	2024-06-14	verb	$nは$aを嘔吐する	$x_{1}$ vomits/regurgitates $x_{2}$; $x_{1}$ throws $x_{2}$ up; [violent] digestive expulsion.
+vasw	valsi	word	2024-10-05	verb	$nは單詞	$x_{1}$ is a word meaning/causing $x_{2}$ in language $x_{3}$; (adjective: $x_{1}$ is lexical/verbal).
+vasa	vasru	contain	2024-08-02	verb	$nは$aを內側に持つ (密度=有)	$x_{1}$ contains/holds/encloses/includes contents $x_{2}$ within; $x_{1}$ is a vessel containing $x_{2}$.
+vare	vreta	lie	2024-08-30	verb	$nは$aに寢る (臥す)	$x_{1}$ lies/rests/reclines/reposes on $x_{2}$; $x_{1}$ is reclining/recumbent/lying on $x_{2}$.
+rise	rinsa	greet	2024-02-13	verb	$nは$aへ挨拶する	$x_{1}$ (agent) greets/hails/[welcomes/says hello to]/responds to arrival of $x_{2}$ in manner $x_{3}$ (action).
+rify	risna	heart	2024-09-02	verb	$nは心臟	$x_{1}$ is a/the heart [body-part] of $x_{2}$; [emotional/shape metaphors are NOT culturally neutral].
+riji	linji	line	2026-05-12	verb	$nは線 (曲線, 直線)	$x_{1}$ is a line/among lines [1-dimensional shape/form] defined by set of points $x_{2}$.
+rivy	limfa	lymph	2024-08-31	verb	$nは りんぱ	$x_1$ is a lymph of body $x_2$
+rive	livga	liver	2024-09-02	verb	$nは肝臟	$x_{1}$ is a/the liver [body-part] of $x_{2}$.
+rena	lenku	cold	2024-08-30	verb	$nは冷たい (寒い, 涼しい) (温度=小)	$x_{1}$ is cold/cool by standard $x_{2}$.
+remi	remna	human	2024-02-13	verb	$nは人 (人屬)	$x_{1}$ is a human/human being/man (non-specific gender-free sense); (adjective:) $x_{1}$ is human.
+rema	limna	swim	2024-08-19	verb	$nは$a (流體) を泳ぐ	$x_{1}$ (agent) swims in fluid $x_{2}$.
+rexa	litki	liquid	2024-02-13	verb	$nは液體	$x_{1}$ is liquid/fluid, of composition/material including $x_{2}$, under conditions $x_{3}$.
+rele	rectu	flesh	2024-02-13	verb	$nは筋肉	$x_{1}$ is a quantity of/contains meat/flesh from source/animal $x_{2}$.
+rela	ractu	hare	2024-02-13	verb	$nは兔 (兔形目)	$x_{1}$ is a rabbit/hare/[doe] of species/breed $x_{2}$.
+rehe		dative	2024-12-23	verb	$nは與格	
+reza	respa	reptile	2024-02-13	verb	$nは爬虫綱に屬する	$x_{1}$ is a reptile of species/breed $x_{2}$.
+reva	rebla	tail	2024-02-13	verb	$nは尾	$x_{1}$ is a/the tail/appendix [body-part] of $x_{2}$; [metaphor: trailing, following portion/appendage].
+roma	runme	digest	2024-02-13	verb	$nは$aを消化する	$x_{1}$ melts [becomes liquid from solid state] at temperature $x_{2}$ and pressure $x_{3}$.
+roxu	lorxu	fox	2024-02-13	verb	$nは狐	$x_{1}$ is a fox [bushy-tailed wild dog/canine] of species/breed $x_{2}$.
+rosu	rotsu	thick	2024-02-13	verb	$nは厚い (厚さ=大)	$x_{1}$ is thick in dimension/direction $x_{2}$ by standard $x_{3}$; [relatively long in smallest dimension].
+rofo	rufsu	rough	2024-08-24	verb	$nは$aに對して粗い (摩擦=大)	$x_{1}$ is rough/coarse/uneven/[grainy/scabrous/rugged] in texture/regularity.
+rora	rorci	beget	2024-08-19	verb	$nは生殖する ($aを生む, $aの親である)	$x_{1}$ engenders/procreates/begets $x_{2}$ with coparent $x_{3}$.
+ranw	ranti	soft	2024-09-26	verb	$nは$aに對して軟らかい (力に對する變形=大)	$x_{1}$ is soft/malleable/moldable/yielding to force $x_{2}$ in conditions $x_{3}$.
+rane	lanme	sheep	2024-02-13	verb	$nは羊 (羊屬)	$x_{1}$ is a sheep/[lamb/ewe/ram] of species/breed $x_{2}$ of flock $x_{3}$.
+rama	lamji	contact	2024-08-08	verb	$nは$aに接する (距離=最小)	$x_{1}$ is adjacent/beside/next to/in contact with $x_{2}$ in property/sequence $x_{3}$ in direction $x_{4}$.
+raxw	ratcu	rat	2024-02-13	verb	$nは鼠 (齧歯目)	$x_{1}$ is a rat of species/breed $x_{2}$.
+rala	lacri	trust	2024-08-02	verb	$nは$aを信ずる	$x_{1}$ relies/depends/counts on/trusts $x_{2}$ to bring about/ensure/maintain $x_{3}$ (event/state).
+ravo	labno	wolf	2024-02-13	verb	$nは狼	$x_{1}$ is a wolf/lupine of species/breed $x_{2}$.
+rare	ladru	milk	2024-08-31	verb	$nは乳	$x_{1}$ is made of/contains/is a quantity of milk from source $x_{2}$; (adjective:) $x_{1}$ is lactic/dairy.
+raro	lalxu	lake	2026-05-10	verb	$nは湖	$x_{1}$ is a lake/lagoon/pool at site/within land mass $x_{2}$.
+nenicaja		heat	2024-09-06	verb	$nの熱量は$a	$x_{1}$ is energy of type $x_{2}$ in form $x_{3}$. + $x_{1}$ is hot/[warm] by standard $x_{2}$.
+daxetufo		kick	2024-11-23	verb	$nは$aを蹴る	$x_{1}$ hits/strikes/[beats] $x_{2}$ with instrument [or body-part] $x_{3}$ at locus $x_{4}$. + $x_{1}$ is a/the leg [body-part] of $x_{2}$; [metaphor: supporting branch].
+vanwma		neglect	2024-09-10	verb	$nは$aを無視する (關心=最小)	$x_{1}$ (object/event) is important/significant to $x_{2}$ (person/event) in aspect/for reason $x_{3}$ (nu/ka). + digit/number: too few; subjective.
+daxexane		punch	2024-11-23	verb	$nは$aを毆る	$x_{1}$ hits/strikes/[beats] $x_{2}$ with instrument [or body-part] $x_{3}$ at locus $x_{4}$. + $x_{1}$ is a/the hand [body-part] of $x_{2}$; [metaphor: manipulating tool, waldo].

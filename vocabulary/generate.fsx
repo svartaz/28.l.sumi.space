@@ -1,63 +1,162 @@
 open System
+open System.Collections.Generic
 open System.Diagnostics
 open System.IO
 open System.Text.RegularExpressions
 
 let consonants =
-    [ "g" // [ŋ]
-      "n"
-      "m"
-      "c" // [g]
-      "d"
-      "b"
-      "k"
-      "t"
-      "p"
-      "x"
-      "š" // [ɕ]
-      "s"
-      "f"
-      "h" // [ɣ]
-      "ž" // [ʑ]
-      "z"
-      "v"
-      "r" ]
+    [ 'g' // [ŋ]
+      'n'
+      'm'
+      'c' // [g]
+      'd'
+      'b'
+      'k'
+      't'
+      'p'
+      'x'
+      'l' // [ɕ]
+      's'
+      'f'
+      'h' // [ɣ]
+      'j' // [ʑ]
+      'z'
+      'v'
+      'r' ]
 
-let vowels = [ "i"; "y"; "u"; "e"; "a"; "o"; "ja"; "jo"; "ju" ]
+let vowels = [ 'i'; 'y'; 'w'; 'u'; 'e'; 'q'; 'o'; 'a' ]
+
+let graph =
+    let trails =
+        [ // velar
+          [ 'g'; 'c'; 'k'; 'x'; 'h'; 'c' ]
+          // palatal
+          [ 'N'; 'D'; 'T'; 'l'; 'j'; 'D' ]
+          [ 'J'; 'j'; 'r' ]
+          // dental
+          [ 'n'; 'd'; 't'; 's'; 'z'; 'd' ]
+          [ 'n'; 'r'; 'd' ]
+          // labial
+          [ 'm'; 'b'; 'p'; 'f'; 'v'; 'b' ]
+          [ 'v'; 'W' ]
+          //nasal
+          [ 'g'; 'N'; 'n'; 'm' ]
+          // voiced plosive
+          [ 'c'; 'D'; 'd'; 'b' ]
+          // unvoiced plosive
+          [ 'k'; 'T'; 't'; 'p' ]
+          // unvoiced fricative
+          [ 'x'; 'l'; 's'; 'f' ]
+          // voiced fricative
+          [ 'h'; 'j'; 'z'; 'v' ]
+          // vowel
+          [ 'J'; 'i'; 'e'; 'a'; 'o'; 'u'; 'W' ]
+          // front round
+          [ 'y'; 'q' ]
+          // center
+          [ 'a'; 'w' ]
+          // high
+          [ 'i'; 'y' ]
+          // mid
+          [ 'e'; 'q' ] ]
+
+    let nodes = trails |> List.collect id |> Set.ofList
+
+    let undirectedEdges =
+        trails
+        |> List.collect (fun trail ->
+            trail
+            |> List.pairwise
+            |> List.collect (fun (left, right) -> [ left, right; right, left ]))
+
+    nodes
+    |> Seq.map (fun node ->
+        let neighbors =
+            undirectedEdges
+            |> List.choose (fun (left, right) -> if left = node then Some right else None)
+            |> Set.ofList
+
+        node, neighbors)
+    |> Map.ofSeq
+
+let realLetters = graph.Keys |> Seq.filter (Char.IsUpper >> not) |> Set.ofSeq
+
+let shortestPathLengthsFrom start =
+    let distances = Dictionary<char, int>()
+    let queue = Queue<char>()
+    distances[start] <- 0
+    queue.Enqueue start
+
+    while queue.Count > 0 do
+        let current = queue.Dequeue()
+        let nextDistance = distances[current] + 1
+
+        for neighbor in graph[current] do
+            if not (distances.ContainsKey neighbor) then
+                distances[neighbor] <- nextDistance
+                queue.Enqueue neighbor
+
+    distances |> Seq.map (fun pair -> pair.Key, pair.Value) |> Map.ofSeq
+
+let letterDistances =
+    realLetters
+    |> Seq.map (fun letter -> letter, shortestPathLengthsFrom letter)
+    |> Map.ofSeq
+
+let distance left right =
+    if left = right then
+        Some 0
+    else
+        Map.tryFind left letterDistances |> Option.bind (Map.tryFind right)
 
 (*
-         jjj www
-  ieaouy aou iea
-g !      !!!
-ck
-xh!      !!! !!!
-šž       !!! !!!
-n            !!!
-dt       !!!
-sz!      !!!
-m            !!!
-bp           !!!
-fv           !!!
-r        !!! !!!
+  iwueao qy
+g !      !!
+cq
+xh! !    !!
+lj !！ ！
+n
+dt       !!
+sz!      !!
+m
+bp
+fv  !
+r
 *)
 
-let invalid = @"[gxhsz]i|[gxhšždtszr]j|[xhšžnmbpfvr]w|[^iyueaognmktpxssfr]$"
+let isValidToken (token: string) =
+    not (
+        Regex.IsMatch(
+            token,
+            [ @"[lj][wuo]"
+              @"[gxhsz]i"
+              @"[fv]u"
+              @"[gxhdtsz][qy]"
+              // no intervocalic plosive
+              @"[iywueqoa][cdbktp][iywueqoa]"
+              // only continuant coda
+              @"[^iywueqoanxlsfr]$"
+              // no two iotated vowels
+              @"[wyq].+[wyq]" ]
+            |> String.concat "|"
+        )
+    )
 
 let cv =
     [ for c in consonants do
           for v in vowels do
-              let token = c + v
+              let token = System.String [| c; v |]
 
-              if not (Regex.IsMatch(token, invalid)) then
+              if isValidToken token then
                   yield token ]
 
 let cvc =
     [ for c0 in consonants do
           for v in vowels do
               for c1 in consonants do
-                  let token = c0 + v + c1
+                  let token = System.String [| c0; v; c1 |]
 
-                  if not (Regex.IsMatch(token, invalid)) then
+                  if isValidToken token then
                       yield token ]
 
 let cvcv =
@@ -65,85 +164,176 @@ let cvcv =
           for v0 in vowels do
               for c1 in consonants do
                   for v1 in vowels do
-                      let token = c0 + v0 + c1 + v1
+                      let token = System.String [| c0; v0; c1; v1 |]
 
-                      if token.Length < 6 && not (Regex.IsMatch(token, invalid)) then
+                      if
+                          isValidToken token
+                          && (match distance v0 v1 with
+                              | Some distance -> distance < 2
+                              | None -> false)
+                      then
                           yield token ]
 
 let tokens = cv @ cvc @ cvcv
 
-let pathResourceDir = Path.Combine(__SOURCE_DIRECTORY__, "resource")
+let pathDirResource = Path.Combine(__SOURCE_DIRECTORY__, "resource")
 let pathDirIn = Path.Combine(__SOURCE_DIRECTORY__, "input")
 let pathDirOut = Path.Combine(__SOURCE_DIRECTORY__, "output")
 
 Directory.CreateDirectory(pathDirOut) |> ignore
 
-let pathDictionaryEn = Path.Combine(pathResourceDir, "dictionary-en.tsv")
-let pathGismuTsv = Path.Combine(pathDirOut, "gismu_english_order.tsv")
-
 let pathGismuToDefinition = Path.Combine(pathDirIn, "gismu_to_definition.tsv")
-
-let pathSyllables = Path.Combine(pathDirOut, "syllables.txt")
+let pathLojbanTsv = Path.Combine(pathDirResource, "dictionary-en.tsv")
+let pathTokens = Path.Combine(pathDirOut, "tokens.txt")
 let pathFull = Path.Combine(pathDirOut, "full.tsv")
 let pathDefined = Path.Combine(pathDirOut, "defined.tsv")
 
-
 printfn "%d syllables" tokens.Length
-File.WriteAllLines(pathSyllables, tokens)
+File.WriteAllLines(pathTokens, tokens)
 
 let normalizeWhitespace (text: string) = Regex.Replace(text.Trim(), @"\s+", " ")
 
-let isSimpleHeadword (text: string) = Regex.IsMatch(text, @"^[a-z'.]+$")
+let fieldOrEmpty index (fields: string array) =
+    if index < fields.Length then fields[index].Trim() else ""
+
+let isHeadwordSimple (text: string) = Regex.IsMatch(text, @"^[a-z'.]+$")
+
+let tryParseRequiredSyllableLength (text: string) =
+    match Int32.TryParse text with
+    | true, value -> Some value
+    | false, _ -> None
+
+type InputDefinitionRow =
+    { Word: string
+      SyllableLength: int option
+      Keyword: string
+      Date: string
+      WordClass: string
+      Definition: string }
+
+type GeneratedOverrideRow =
+    { Keyword: string
+      Date: string
+      WordClass: string
+      Definition: string
+      FixedSyllable: string option
+      RequiredSyllableLength: int option }
+
+type CompoundOverrideRow =
+    { Components: string list
+      Keyword: string
+      Date: string
+      WordClass: string
+      Definition: string
+      RequiredSyllableLength: int option }
+
+let isCommentOrBlankLine (line: string) =
+    String.IsNullOrWhiteSpace line || line.StartsWith("#")
+
+let isCompound (word: string) = word.Contains("+")
+
+let tryParseInputDefinitionRow (line: string) =
+    if isCommentOrBlankLine line then
+        None
+    else
+        let fields = line.Split '\t'
+        let word = fieldOrEmpty 0 fields
+        let syllableLengthText = fieldOrEmpty 1 fields
+        let keyword = fieldOrEmpty 2 fields
+        let date = fieldOrEmpty 3 fields
+        let wordClass = fieldOrEmpty 4 fields
+        let definition = fieldOrEmpty 5 fields
+
+        if word = "jbo or string" && syllableLengthText = "length" then
+            None
+        else
+            Some
+                { Word = word
+                  SyllableLength = tryParseRequiredSyllableLength syllableLengthText
+                  Keyword = keyword
+                  Date = date
+                  WordClass = wordClass
+                  Definition = definition }
+
+let inputDefinitionRows =
+    File.ReadLines(pathGismuToDefinition)
+    |> Seq.choose tryParseInputDefinitionRow
+    |> Seq.toList
 
 let overrideLexiconRows =
-    File.ReadLines(pathGismuToDefinition)
-    |> Seq.choose (fun line ->
-        let fields = line.Split '\t'
-        let word = if fields.Length > 0 then fields[0].Trim() else ""
-        let keyword = if fields.Length > 1 then fields[1].Trim() else ""
-        let definition = if fields.Length > 4 then fields[4].Trim() else ""
-
+    inputDefinitionRows
+    |> List.choose (fun row ->
         if
-            String.IsNullOrWhiteSpace word
-            || word.StartsWith("#")
-            || String.IsNullOrWhiteSpace definition
+            String.IsNullOrWhiteSpace row.Word
+            || row.Word.StartsWith("=")
+            || isCompound row.Word
+            || String.IsNullOrWhiteSpace row.Definition
         then
             None
         else
-            Some(word, keyword, definition))
-    |> Seq.toList
+            Some(row.Word, row.Keyword, row.Definition))
+
+let compoundOverrideRows =
+    inputDefinitionRows
+    |> List.choose (fun row ->
+        if
+            not (isCompound row.Word)
+            || String.IsNullOrWhiteSpace row.Keyword
+            || String.IsNullOrWhiteSpace row.Definition
+        then
+            None
+        else
+            Some
+                { Components = row.Word.Split('+', StringSplitOptions.RemoveEmptyEntries) |> Array.toList
+                  Keyword = row.Keyword
+                  Date = row.Date
+                  WordClass = row.WordClass
+                  Definition = row.Definition
+                  RequiredSyllableLength = row.SyllableLength })
 
 let generatedOverrideRows =
-    File.ReadLines(pathGismuToDefinition)
-    |> Seq.choose (fun line ->
-        let fields = line.Split '\t'
-        let word = if fields.Length > 0 then fields[0].Trim() else ""
-        let keyword = if fields.Length > 1 then fields[1].Trim() else ""
-        let date = if fields.Length > 2 then fields[2].Trim() else ""
-        let wordClass = if fields.Length > 3 then fields[3].Trim() else ""
-        let definition = if fields.Length > 4 then fields[4].Trim() else ""
-
+    inputDefinitionRows
+    |> List.choose (fun row ->
         if
-            (not (String.IsNullOrWhiteSpace word) && not (word.StartsWith "="))
-            || String.IsNullOrWhiteSpace keyword
-            || String.IsNullOrWhiteSpace definition
+            (not (String.IsNullOrWhiteSpace row.Word) && not (row.Word.StartsWith "="))
+            || String.IsNullOrWhiteSpace row.Keyword
+            || String.IsNullOrWhiteSpace row.Definition
         then
             None
         else
             let fixedSyllable =
-                if word.StartsWith "=" then
-                    Some(word.Substring(1))
+                if row.Word.StartsWith("=") then
+                    Some(row.Word.Substring(1))
                 else
                     None
 
-            Some(keyword, date, wordClass, definition, fixedSyllable))
-    |> Seq.toList
+            Some
+                { Keyword = row.Keyword
+                  Date = row.Date
+                  WordClass = row.WordClass
+                  Definition = row.Definition
+                  FixedSyllable = fixedSyllable
+                  RequiredSyllableLength = row.SyllableLength })
 
 let overrideWords =
     overrideLexiconRows |> List.map (fun (word, _, _) -> word) |> Set.ofList
 
+let normalizeEntryType entryType =
+    match entryType with
+    | "experimental gismu" -> "gismu"
+    | "experimental cmavo" -> "cmavo"
+    | other -> other
+
+type ParsedLexiconEntry =
+    { Word: string
+      EntryType: string
+      RafsiForms: string list
+      PrimaryKeyword: string
+      SecondaryKeyword: string
+      DefaultMeaning: string }
+
 let parsedLexiconEntries =
-    let lines = File.ReadAllLines pathDictionaryEn
+    let lines = File.ReadAllLines pathLojbanTsv
     let header = lines[0].Split '\t'
     let headerIndex = header |> Array.mapi (fun i name -> name, i) |> Map.ofArray
 
@@ -158,66 +348,72 @@ let parsedLexiconEntries =
         |> Seq.map (fun line ->
             let fields = line.Split '\t'
             let word = fieldAt "word" fields
-            let entryType = fieldAt "type" fields |> normalizeWhitespace
+            let entryType = fieldAt "type" fields |> normalizeWhitespace |> normalizeEntryType
 
-            let rafsi =
+            let rafsiForms =
                 fieldAt "rafsi" fields
                 |> normalizeWhitespace
                 |> fun value -> value.Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                |> Array.filter isSimpleHeadword
-                |> String.concat " "
+                |> Array.filter isHeadwordSimple
+                |> Array.toList
 
             let definition = fieldAt "definition" fields |> normalizeWhitespace
             let primaryKeyword = fieldAt "glossword_1" fields |> normalizeWhitespace
             let secondaryKeyword = fieldAt "glossword_2" fields |> normalizeWhitespace
-            word, entryType, rafsi, primaryKeyword, secondaryKeyword, definition)
-        |> Seq.filter (fun (word, entryType, _, _, _, definition) ->
-            isSimpleHeadword word
-            && (entryType = "gismu" || (entryType = "cmavo" && Set.contains word overrideWords))
-            && not (String.IsNullOrWhiteSpace definition))
+
+            { Word = word
+              EntryType = entryType
+              RafsiForms = rafsiForms
+              PrimaryKeyword = primaryKeyword
+              SecondaryKeyword = secondaryKeyword
+              DefaultMeaning = definition })
+        |> Seq.filter (fun entry ->
+            isHeadwordSimple entry.Word
+            && (entry.EntryType = "gismu"
+                || (entry.EntryType = "cmavo" && Set.contains entry.Word overrideWords))
+            && not (String.IsNullOrWhiteSpace entry.DefaultMeaning))
         |> Seq.toList
 
-    let dictionaryWords =
-        dictionaryEntries |> List.map (fun (word, _, _, _, _, _) -> word) |> Set.ofList
+    let dictionaryWords = dictionaryEntries |> List.map _.Word |> Set.ofList
 
     let fallbackEntries =
         overrideLexiconRows
         |> List.choose (fun (word, keyword, definition) ->
-            if Set.contains word dictionaryWords || not (isSimpleHeadword word) then
+            if Set.contains word dictionaryWords || not (isHeadwordSimple word) then
                 None
             else
-                Some(word, "override", "", keyword, "", normalizeWhitespace definition))
+                Some
+                    { Word = word
+                      EntryType = "override"
+                      RafsiForms = []
+                      PrimaryKeyword = keyword
+                      SecondaryKeyword = ""
+                      DefaultMeaning = normalizeWhitespace definition })
 
     dictionaryEntries @ fallbackEntries
-    |> List.distinctBy (fun (word, _, _, _, _, _) -> word)
-    |> List.sortBy (fun (_, _, _, primaryKeyword, secondaryKeyword, definition) ->
-        primaryKeyword, secondaryKeyword, definition)
+    |> List.distinctBy _.Word
+    |> List.sortBy (fun entry -> entry.PrimaryKeyword, entry.SecondaryKeyword, entry.DefaultMeaning)
 
 printfn
     "%d gismu"
     (parsedLexiconEntries
-     |> List.filter (fun (_, entryType, _, _, _, _) -> entryType = "gismu")
+     |> List.filter (fun entry -> entry.EntryType = "gismu")
      |> List.length)
 
 printfn
     "%d cmavo"
     (parsedLexiconEntries
-     |> List.filter (fun (_, entryType, _, _, _, _) -> entryType = "cmavo")
+     |> List.filter (fun entry -> entry.EntryType = "cmavo")
      |> List.length)
 
-printfn "%d generated overrides" generatedOverrideRows.Length
-
-File.WriteAllLines(
-    pathGismuTsv,
-    parsedLexiconEntries
-    |> List.map (fun (word, entryType, rafsi, primaryKeyword, secondaryKeyword, definition) ->
-        $"{word}\t{rafsi}\t{primaryKeyword}\t{secondaryKeyword}\t{definition}\t{entryType}")
-)
+printfn "%d randoms" generatedOverrideRows.Length
+printfn "%d compounds" compoundOverrideRows.Length
 
 let syllableArray = List.toArray tokens
 let syllablePriorityArray: float array = Array.zeroCreate syllableArray.Length
-let allSyllableIndices = Array.init syllableArray.Length id
+let cvSyllableIndices = Array.init cv.Length id
 let shortSyllableIndices = Array.init (cv.Length + cvc.Length) id
+let syllableFirstVowelArray = Array.zeroCreate<char option> syllableArray.Length
 
 let cvcvSyllableIndices =
     Array.init cvcv.Length (fun index -> cv.Length + cvc.Length + index)
@@ -227,70 +423,45 @@ let syllableIndexByToken =
     |> Array.mapi (fun index syllable -> syllable, index)
     |> Map.ofArray
 
-let isVowel c = Set.contains c (set "iyueao")
+let isVowel c = Set.contains c (set "iywueqoa")
+
+let tryFindFirstVowel (text: string) = text |> Seq.tryFind isVowel
+
+do
+    syllableArray
+    |> Array.iteri (fun index syllable -> syllableFirstVowelArray[index] <- tryFindFirstVowel syllable)
 
 let normalizeGismu =
     String.collect (function
         | '\'' -> "h"
         | '.' -> ""
-        | 'c' -> "š"
+        | 'c' -> "l"
         | 'g' -> "c"
-        | 'j' -> "ž"
+        | 'j' -> "j"
         | 'l' -> "r"
-        | 'y' -> "i"
         | c -> string c)
 
 let scoreCandidate =
-    let ccvcv = Regex("^[^aeiou]{2}[aeiou][^aeiou][aeiou]$")
-    let cvccv = Regex("^[^aeiou][aeiou][^aeiou]{2}[aeiou]$")
+    let vowelPattern = "iywueqoa"
+    let consonantPattern = $"[^{vowelPattern}]"
+    let vowelClass = $"[{vowelPattern}]"
 
-    (*
-    g  n  m
-    c  d  b  k  t  p
-    h ž z v  x š s f
-      j r w
-      i   u      y
-      e   o      a
-    *)
-    let space =
-        Map.ofList
-            [ ('g', (0., 0., 0.))
-              ('n', (0., 0., 1.5))
-              ('m', (0., 0., 3.))
-              ('c', (0., 1., 0))
-              ('d', (0., 1., 1.5))
-              ('b', (0., 1., 3.))
-              ('k', (1., 1., 0))
-              ('t', (1., 1., 1.5))
-              ('p', (1., 1., 3.))
-              ('x', (1., 2., 0))
-              ('š', (1., 2., 1.))
-              ('s', (1., 2., 2.))
-              ('f', (1., 2., 3.))
-              ('h', (0., 2., 0))
-              ('ž', (0., 2., 1.))
-              ('z', (0., 2., 2.))
-              ('v', (0., 2., 3.))
-              ('j', (0., 3., 1.))
-              ('r', (0., 3., 2.))
-              ('w', (0., 4., 3.))
-              ('i', (0., 4., 1.))
-              ('u', (0., 4., 3.))
-              ('y', (1., 4., 2.))
-              ('e', (0., 5., 1.))
-              ('o', (0., 5., 3.))
-              ('a', (1., 5., 2.)) ]
+    let ccvcv =
+        Regex($"^{consonantPattern}{{2}}{vowelClass}{consonantPattern}{vowelClass}$")
+
+    let cvccv =
+        Regex($"^{consonantPattern}{vowelClass}{consonantPattern}{{2}}{vowelClass}$")
 
     let substitutionCost left right =
-        let (x0, y0, z0) = space[left]
-        let (x1, y1, z1) = space[right]
-        sqrt ((x1 - x0) ** 2. + (y1 - y0) ** 2. + (z1 - z0) ** 2.)
+        match distance left right with
+        | Some distance -> float distance
+        | None -> failwithf "letters '%c' and '%c' are disconnected in trails" left right
 
     let nearestNeighborDistance =
-        space.Keys
+        realLetters
         |> Seq.map (fun token ->
             let nearest =
-                space.Keys
+                realLetters
                 |> Seq.filter ((<>) token)
                 |> Seq.map (substitutionCost token)
                 |> Seq.min
@@ -302,60 +473,87 @@ let scoreCandidate =
         nearestNeighborDistance[token] + if isVowel token then 0.4 else 0.25
 
     let weightedDistance (source: string) (target: string) =
-        let rows = source.Length + 1
         let cols = target.Length + 1
-        let dp = Array2D.zeroCreate<float> rows cols
-
-        for row in 1 .. source.Length do
-            dp[row, 0] <- dp[row - 1, 0] + insertionCost source.[row - 1]
+        let previous = Array.zeroCreate<float> cols
+        let current = Array.zeroCreate<float> cols
 
         for col in 1 .. target.Length do
-            dp[0, col] <- dp[0, col - 1] + insertionCost target.[col - 1]
+            previous[col] <- previous[col - 1] + insertionCost target.[col - 1]
 
         for row in 1 .. source.Length do
+            current[0] <- previous[0] + insertionCost source.[row - 1]
+
             for col in 1 .. target.Length do
-                let delete = dp[row - 1, col] + insertionCost source.[row - 1]
-                let insert = dp[row, col - 1] + insertionCost target.[col - 1]
+                let delete = previous[col] + insertionCost source.[row - 1]
+                let insert = current[col - 1] + insertionCost target.[col - 1]
 
                 let substitute =
-                    dp[row - 1, col - 1] + substitutionCost source.[row - 1] target.[col - 1]
+                    previous[col - 1] + substitutionCost source.[row - 1] target.[col - 1]
 
-                dp[row, col] <- min delete (min insert substitute)
+                current[col] <- min delete (min insert substitute)
 
-        dp[source.Length, target.Length]
+            Array.blit current 0 previous 0 cols
 
-    fun (normalized: string) (candidate: string) ->
-        let projectShapes =
-            let chars = normalized.ToCharArray()
+        previous[target.Length]
 
-            [ normalized
-              if ccvcv.IsMatch normalized then
-                  String.Concat(chars.[0], chars.[1], chars.[2], chars.[3])
-                  String.Concat(chars.[0], chars.[1], chars.[2])
-              elif cvccv.IsMatch normalized then
-                  String.Concat(chars.[0], chars.[1], chars.[2])
-                  String.Concat(chars.[0], chars.[1], chars.[3])
-                  String.Concat(chars.[0], chars.[1], chars.[2], chars.[3]) ]
-            |> List.distinct
+    let buildProjectShapes (normalized: string) =
+        let chars = normalized.ToCharArray()
 
-        let firstVowel = normalized |> Seq.tryFind isVowel
+        [ normalized
+          if ccvcv.IsMatch normalized then
+              String.Concat(chars.[0], chars.[1], chars.[2], chars.[3])
+              String.Concat(chars.[0], chars.[1], chars.[2])
+          elif cvccv.IsMatch normalized then
+              String.Concat(chars.[0], chars.[1], chars.[2])
+              String.Concat(chars.[0], chars.[1], chars.[3])
+              String.Concat(chars.[0], chars.[1], chars.[2], chars.[3]) ]
+        |> List.distinct
+        |> List.toArray
 
-        let bonus =
-            [ if normalized.[0] = candidate.[0] then
-                  nearestNeighborDistance[normalized.[0]] * 0.75
-              match firstVowel, candidate |> Seq.tryFind isVowel with
-              | Some left, Some right when left = right -> nearestNeighborDistance[left] * 0.5
-              | _ -> 0.0 ]
-            |> List.sum
+    fun (normalized: string) ->
+        let projectShapes = buildProjectShapes normalized
+        let firstVowel = tryFindFirstVowel normalized
+        let firstCharacter = normalized[0]
+        let firstCharacterBonus = nearestNeighborDistance[firstCharacter] * 0.75
 
-        projectShapes
-        |> List.map (fun projection -> weightedDistance projection candidate - bonus)
-        |> List.min
+        let firstVowelBonus =
+            firstVowel |> Option.map (fun vowel -> nearestNeighborDistance[vowel] * 0.5)
+
+        let normalizedLength = normalized.Length
+
+        fun (candidateIndex: int) ->
+            let candidate = syllableArray[candidateIndex]
+
+            let bonus =
+                let mutable total = 0.0
+
+                if firstCharacter = candidate[0] then
+                    total <- total + firstCharacterBonus
+
+                match firstVowelBonus, syllableFirstVowelArray[candidateIndex] with
+                | Some vowelBonus, Some leftVowel when Some leftVowel = firstVowel -> total <- total + vowelBonus
+                | _ -> ()
+
+                total
+
+            let mutable best = Double.PositiveInfinity
+
+            for projection in projectShapes do
+                let score = weightedDistance projection candidate - bonus
+
+                if score < best then
+                    best <- score
+
+            best, abs (normalizedLength - candidate.Length)
+
+[<Struct>]
+type ReferenceProfile = { ScoreCandidate: int -> float * int }
 
 type DefinitionOverride =
     { Keyword: string
       Date: string
       WordClass: string
+      RequiredSyllableLength: int option
       Definition: string }
 
 type HeadwordEntry =
@@ -363,125 +561,158 @@ type HeadwordEntry =
       Word: string
       EntryType: string
       WordClass: string
+      RequiredSyllableLength: int option
       FixedSyllable: string option
       Rafsi: string list
       EnglishKeyword: string
       Meaning: string
+      LojbanMeaning: string
       ReferenceForms: string list
       DefinitionOverride: DefinitionOverride option }
 
-type RankedCandidate =
-    { Syllable: string
-      Score: float
-      LengthPenalty: int }
-
-let fieldOrEmpty index (fields: string array) =
-    if index < fields.Length then fields[index].Trim() else ""
+type CompoundAssignment =
+    { Token: string
+      Keyword: string
+      Date: string
+      WordClass: string
+      Definition: string
+      LojbanMeaning: string }
 
 let definitionOverrides =
-    File.ReadLines(pathGismuToDefinition)
-    |> Seq.choose (fun line ->
-        let fields = line.Split '\t'
-
-        if fields.Length < 5 then
+    inputDefinitionRows
+    |> Seq.choose (fun row ->
+        if
+            String.IsNullOrWhiteSpace row.Word
+            || row.Word.StartsWith("=")
+            || isCompound row.Word
+            || String.IsNullOrWhiteSpace row.Definition
+        then
             None
         else
-            let word = fieldOrEmpty 0 fields
-            let keyword = fieldOrEmpty 1 fields
-            let date = fieldOrEmpty 2 fields
-            let wordClass = fieldOrEmpty 3 fields
-            let definition = fieldOrEmpty 4 fields
-
-            if
-                String.IsNullOrWhiteSpace word
-                || word.StartsWith("#")
-                || String.IsNullOrWhiteSpace definition
-            then
-                None
-            else
-                Some(
-                    word,
-                    { Keyword = keyword
-                      Date = date
-                      WordClass = wordClass
-                      Definition = definition }
-                ))
+            Some(
+                row.Word,
+                { Keyword = row.Keyword
+                  Date = row.Date
+                  WordClass = row.WordClass
+                  RequiredSyllableLength = row.SyllableLength
+                  Definition = row.Definition }
+            ))
     |> Map.ofSeq
 
+let syllableLengthOfToken (token: string) = token.Length
+
+let syllableLengthArray = syllableArray |> Array.map syllableLengthOfToken
+
+let filterCandidateIndicesByRequiredLength requiredLength candidateIndices =
+    candidateIndices
+    |> Array.filter (fun index -> syllableLengthArray[index] = requiredLength)
+
+let usesCvOnlySyllables (entry: HeadwordEntry) =
+    entry.WordClass = "preposition" || entry.WordClass = "preverb"
+
+let constrainCandidateIndices (entry: HeadwordEntry) candidateIndices =
+    match entry.RequiredSyllableLength with
+    | Some requiredLength -> filterCandidateIndicesByRequiredLength requiredLength candidateIndices
+    | None -> candidateIndices
+
+let usesShortSyllables (entry: HeadwordEntry) =
+    entry.EntryType = "generated" && entry.WordClass <> "verb"
+    || entry.EntryType = "cmavo"
+    || entry.EntryType = "experimental cmavo"
+
+let defaultCandidateIndicesFor (entry: HeadwordEntry) =
+    if usesCvOnlySyllables entry then cvSyllableIndices
+    elif usesShortSyllables entry then shortSyllableIndices
+    else cvcvSyllableIndices
+
+let candidateIndicesFor (entry: HeadwordEntry) =
+    match entry.FixedSyllable with
+    | Some fixedSyllable ->
+        match Map.tryFind fixedSyllable syllableIndexByToken with
+        | Some index -> [| index |]
+        | None -> [||]
+    | None -> constrainCandidateIndices entry (defaultCandidateIndicesFor entry)
+
+let referenceFormsFor (entryType: string) (word: string) (rafsiForms: string list) =
+    if entryType = "gismu" && word.Length = 5 then [ word ]
+    elif List.isEmpty rafsiForms then [ word ]
+    else rafsiForms
+
 let dictionaryHeadwordEntries =
-    File.ReadLines(pathGismuTsv)
-    |> Seq.choose (fun line ->
-        let fields = line.Split '\t'
+    parsedLexiconEntries
+    |> List.map (fun entry ->
+        let definitionOverride = Map.tryFind entry.Word definitionOverrides
 
-        if fields.Length = 0 then
-            None
-        else
-            let word = fieldOrEmpty 0 fields
+        let wordClass =
+            definitionOverride |> Option.map _.WordClass |> Option.defaultValue ""
 
-            if String.IsNullOrWhiteSpace word then
-                None
+        let requiredSyllableLength =
+            definitionOverride |> Option.bind _.RequiredSyllableLength
+
+        let meaning =
+            definitionOverride
+            |> Option.map _.Definition
+            |> Option.defaultValue entry.DefaultMeaning
+
+        let lojbanMeaning =
+            if entry.EntryType = "override" then
+                ""
             else
-                let rafsiForms =
-                    let rafsiField = fieldOrEmpty 1 fields
+                entry.DefaultMeaning
 
-                    if String.IsNullOrWhiteSpace rafsiField then
-                        []
-                    else
-                        rafsiField.Split(' ', StringSplitOptions.RemoveEmptyEntries) |> Array.toList
+        let referenceForms = referenceFormsFor entry.EntryType entry.Word entry.RafsiForms
 
-                let englishKeyword =
-                    [ fieldOrEmpty 2 fields; fieldOrEmpty 3 fields ]
-                    |> List.filter (String.IsNullOrWhiteSpace >> not)
-                    |> String.concat " "
-
-                let defaultMeaning = fieldOrEmpty 4 fields
-                let entryType = fieldOrEmpty 5 fields
-                let definitionOverride = Map.tryFind word definitionOverrides
-
-                let wordClass =
-                    definitionOverride |> Option.map _.WordClass |> Option.defaultValue ""
-
-                let meaning =
-                    definitionOverride
-                    |> Option.map _.Definition
-                    |> Option.defaultValue defaultMeaning
-
-                let referenceForms = if List.isEmpty rafsiForms then [ word ] else rafsiForms
-
-                Some
-                    { Id = word
-                      Word = word
-                      EntryType = entryType
-                      WordClass = wordClass
-                      FixedSyllable = None
-                      Rafsi = rafsiForms
-                      EnglishKeyword = englishKeyword
-                      Meaning = meaning
-                      ReferenceForms = referenceForms
-                      DefinitionOverride = definitionOverride })
-    |> Seq.distinct
-    |> Seq.toList
+        { Id = entry.Word
+          Word = entry.Word
+          EntryType = entry.EntryType
+          WordClass = wordClass
+          RequiredSyllableLength = requiredSyllableLength
+          FixedSyllable = None
+          Rafsi = entry.RafsiForms
+          EnglishKeyword =
+            [ entry.PrimaryKeyword; entry.SecondaryKeyword ]
+            |> List.filter (String.IsNullOrWhiteSpace >> not)
+            |> String.concat " "
+          Meaning = meaning
+          LojbanMeaning = lojbanMeaning
+          ReferenceForms = referenceForms
+          DefinitionOverride = definitionOverride })
 
 let generatedHeadwordEntries =
     generatedOverrideRows
-    |> List.mapi (fun index (keyword, date, wordClass, definition, fixedSyllable) ->
-        { Id = $"_generated_{index}_{keyword}"
+    |> List.mapi (fun index row ->
+        { Id = $"_generated_{index}_{row.Keyword}"
           Word = ""
           EntryType = "generated"
-          WordClass = wordClass
-          FixedSyllable = fixedSyllable
+          WordClass = row.WordClass
+          RequiredSyllableLength = row.RequiredSyllableLength
+          FixedSyllable = row.FixedSyllable
           Rafsi = []
-          EnglishKeyword = keyword
-          Meaning = definition
+          EnglishKeyword = row.Keyword
+          Meaning = row.Definition
+          LojbanMeaning = ""
           ReferenceForms = []
           DefinitionOverride =
             Some
-                { Keyword = keyword
-                  Date = date
-                  WordClass = wordClass
-                  Definition = definition } })
+                { Keyword = row.Keyword
+                  Date = row.Date
+                  WordClass = row.WordClass
+                  RequiredSyllableLength = row.RequiredSyllableLength
+                  Definition = row.Definition } })
 
 let headwordEntries = dictionaryHeadwordEntries @ generatedHeadwordEntries
+
+do
+    headwordEntries
+    |> List.choose (fun entry ->
+        entry.FixedSyllable
+        |> Option.bind (fun fixedSyllable ->
+            if Map.containsKey fixedSyllable syllableIndexByToken then
+                None
+            else
+                Some(entry.EnglishKeyword, fixedSyllable)))
+    |> List.iter (fun (keyword, fixedSyllable) ->
+        printfn "warning: fixed syllable '%s' for '%s' is not in token inventory" fixedSyllable keyword)
 
 let assignmentSeed = 20579
 let assignmentRandom = Random(assignmentSeed)
@@ -510,20 +741,6 @@ type PreparedEntry =
       Candidates: ScoredCandidate array
       PriorityGap: float }
 
-let candidateIndicesFor entry =
-    match entry.FixedSyllable with
-    | Some fixedSyllable ->
-        match Map.tryFind fixedSyllable syllableIndexByToken with
-        | Some index -> [| index |]
-        | None -> [||]
-    | None when entry.EntryType = "generated" ->
-        if entry.WordClass = "verb" then
-            cvcvSyllableIndices
-        else
-            shortSyllableIndices
-    | None when entry.EntryType = "cmavo" -> shortSyllableIndices
-    | None -> cvcvSyllableIndices
-
 let isBetterCandidate left right =
     left.Score < right.Score
     || (left.Score = right.Score
@@ -532,8 +749,12 @@ let isBetterCandidate left right =
                 && syllablePriorityArray[left.Index] < syllablePriorityArray[right.Index])))
 
 let prepareEntry entry =
-    let normalizedReferences =
-        entry.ReferenceForms |> List.map normalizeGismu |> List.distinct |> List.toArray
+    let referenceProfiles =
+        entry.ReferenceForms
+        |> List.map normalizeGismu
+        |> List.distinct
+        |> List.map (fun normalized -> { ScoreCandidate = scoreCandidate normalized })
+        |> List.toArray
 
     let candidateIndices = candidateIndicesFor entry
     let candidates = Array.zeroCreate<ScoredCandidate> candidateIndices.Length
@@ -545,17 +766,15 @@ let prepareEntry entry =
 
     for candidatePosition in 0 .. candidateIndices.Length - 1 do
         let index = candidateIndices[candidatePosition]
-        let syllable = syllableArray[index]
         let mutable candidateScore = 0.0
         let mutable candidateLengthPenalty = 0
 
-        if normalizedReferences.Length > 0 then
+        if referenceProfiles.Length > 0 then
             candidateScore <- Double.PositiveInfinity
             candidateLengthPenalty <- Int32.MaxValue
 
-            for normalized in normalizedReferences do
-                let score = scoreCandidate normalized syllable
-                let lengthPenalty = abs (normalized.Length - syllable.Length)
+            for referenceProfile in referenceProfiles do
+                let score, lengthPenalty = referenceProfile.ScoreCandidate index
 
                 if
                     score < candidateScore
@@ -646,32 +865,102 @@ printfn "%d headwords" headwordEntries.Length
 let assignmentsBySyllable =
     assignments |> List.map (fun (entry, syllable) -> syllable, entry) |> Map.ofList
 
-File.WriteAllLines(
-    pathFull,
-    tokens
-    |> List.map (fun token ->
-        match Map.tryFind token assignmentsBySyllable with
-        | Some entry ->
-            let rafsiText = String.concat " " entry.Rafsi
+let compoundAssignments =
+    let baseAssignmentsByKeyword =
+        assignments
+        |> List.choose (fun (entry, syllable) ->
+            entry.DefinitionOverride
+            |> Option.map (fun definitionOverride -> definitionOverride.Keyword, (syllable, entry)))
+        |> Map.ofList
 
-            let outputWord =
-                if String.IsNullOrWhiteSpace entry.Word then
-                    token
+    let rec resolve resolved pending =
+        let resolvedNow, pendingNow, progress =
+            ((resolved, [], false), pending)
+            ||> List.fold (fun (resolvedAcc, pendingAcc, progressAcc) row ->
+                let componentTokens =
+                    row.Components
+                    |> List.map (fun componentKey ->
+                        Map.tryFind componentKey resolvedAcc
+                        |> Option.map _.Token
+                        |> Option.orElseWith (fun () ->
+                            Map.tryFind componentKey baseAssignmentsByKeyword |> Option.map fst))
+
+                if List.forall Option.isSome componentTokens then
+                    let token = componentTokens |> List.choose id |> String.concat ""
+
+                    let lojbanMeaning =
+                        row.Components
+                        |> List.choose (fun componentKey ->
+                            Map.tryFind componentKey resolvedAcc
+                            |> Option.map _.LojbanMeaning
+                            |> Option.orElseWith (fun () ->
+                                Map.tryFind componentKey baseAssignmentsByKeyword
+                                |> Option.map (fun (_, entry) -> entry.LojbanMeaning))
+                            |> Option.filter (String.IsNullOrWhiteSpace >> not))
+                        |> String.concat " + "
+
+                    let assignment =
+                        { Token = token
+                          Keyword = row.Keyword
+                          Date = row.Date
+                          WordClass = row.WordClass
+                          Definition = row.Definition
+                          LojbanMeaning = lojbanMeaning }
+
+                    Map.add row.Keyword assignment resolvedAcc, pendingAcc, true
                 else
-                    entry.Word
+                    resolvedAcc, row :: pendingAcc, progressAcc)
 
-            $"{token}\t{outputWord}\t{rafsiText}\t{entry.EnglishKeyword}\t{entry.Meaning}"
-        | None -> $"{token}\t\t\t\t")
+        if progress then
+            resolve resolvedNow (List.rev pendingNow)
+        else
+            resolvedNow, List.rev pendingNow
+
+    let resolved, unresolved = resolve Map.empty compoundOverrideRows
+
+    unresolved
+    |> List.iter (fun row ->
+        printfn "warning: compound '%s' for '%s' could not be resolved" (String.concat "+" row.Components) row.Keyword)
+
+    resolved |> Map.values |> Seq.toList
+
+File.WriteAllLines(
+    Path.Combine(pathDirOut, "full.tsv"),
+    [ "token\tjbo\trafsi\ten\tdescription\tjbo description" ]
+    @ (tokens
+       |> List.map (fun token ->
+           match Map.tryFind token assignmentsBySyllable with
+           | Some entry ->
+               let rafsiText = String.concat " " entry.Rafsi
+
+               let description =
+                   entry.DefinitionOverride |> Option.map _.Definition |> Option.defaultValue ""
+
+               let outputWord =
+                   if String.IsNullOrWhiteSpace entry.Word then
+                       ""
+                   else
+                       entry.Word
+
+               $"{token}\t{outputWord}\t{rafsiText}\t{entry.EnglishKeyword}\t{description}\t{entry.LojbanMeaning}"
+           | None -> $"{token}\t\t\t\t\t"))
+    @ (compoundAssignments
+       |> List.map (fun assignment ->
+           $"{assignment.Token}\t\t\t{assignment.Keyword}\t{assignment.Definition}\t{assignment.LojbanMeaning}"))
 )
 
 File.WriteAllLines(
     pathDefined,
-    tokens
-    |> List.choose (fun token ->
-        match Map.tryFind token assignmentsBySyllable with
-        | Some entry ->
-            entry.DefinitionOverride
-            |> Option.map (fun definitionOverride ->
-                $"{token}\t{entry.Word}\t{definitionOverride.Keyword}\t{definitionOverride.Date}\t{definitionOverride.WordClass}\t{definitionOverride.Definition}")
-        | None -> None)
+    [ "token\tjbo\ten\tdate\tclass\tdescription\tjbo description" ]
+    @ (tokens
+       |> List.choose (fun token ->
+           match Map.tryFind token assignmentsBySyllable with
+           | Some entry ->
+               entry.DefinitionOverride
+               |> Option.map (fun definitionOverride ->
+                   $"{token}\t{entry.Word}\t{definitionOverride.Keyword}\t{definitionOverride.Date}\t{definitionOverride.WordClass}\t{definitionOverride.Definition}\t{entry.LojbanMeaning}")
+           | None -> None))
+    @ (compoundAssignments
+       |> List.map (fun assignment ->
+           $"{assignment.Token}\t\t{assignment.Keyword}\t{assignment.Date}\t{assignment.WordClass}\t{assignment.Definition}\t{assignment.LojbanMeaning}"))
 )
